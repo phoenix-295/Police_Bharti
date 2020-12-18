@@ -1,0 +1,7 @@
+50651/
+
+
+iisexpress.exe /path:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles" /vpath:"/WebAdmin" /port:50651 /clr:4.0 /ntlm
+
+
+http://localhost:50651/WebAdmin/default.aspx?applicationPhysicalPath=D:\GitHub\Police_Bharti\Police_Bharti\Police_Bharti&applicationUrl=/AppAdmin
