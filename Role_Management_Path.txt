@@ -5,3 +5,13 @@ iisexpress.exe /path:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAd
 
 
 http://localhost:50651/WebAdmin/default.aspx?applicationPhysicalPath=D:\GitHub\Police_Bharti\Police_Bharti\Police_Bharti&applicationUrl=/AppAdmin
+
+
+Dsp
+dsp123!
+
+Psi
+psi123!
+
+Admin
+admin1!
