@@ -155,9 +155,24 @@
             <a href="Admin_Home.aspx" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Layout Options
+                View records
+                  <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="View_City_Records.aspx" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>City Data</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="View_Gramin_Records.aspx" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Gramin Data</p>
+                </a>
+              </li>
+                  </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">

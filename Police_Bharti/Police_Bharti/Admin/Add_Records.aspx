@@ -42,9 +42,17 @@
         <td style="width: 191px"><h5>Import Excel File:</h5></td>
         <td>
             <asp:FileUpload ID="FileUpload1" runat="server" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="FileUpload1" ErrorMessage="File Required"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Excel File required" ValidationExpression="(.*?)\.(xls|xlsx|XLS|XLSX)$"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="FileUpload1" ErrorMessage="File Required" style="color: #FF0000"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Excel File required" ValidationExpression="(.*?)\.(xls|xlsx|XLS|XLSX)$" style="color: #FF0000"></asp:RegularExpressionValidator>
         </td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px"><h5>Sheet Name:</h5></td>
+        <td>
+            <asp:TextBox ID="sheettxt" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="sheettxt" ErrorMessage="Sheet Name Required" style="color: #FF0000"></asp:RequiredFieldValidator>
+            </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
@@ -71,11 +79,12 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="text-align:right">
+        <td style="width: 191px; height: 80px;"></td>
+        <td style="text-align:right; height: 80px;">
+            <h6><asp:CheckBox ID="chkbx1" runat="server" Text="Delete previous data" /></h6>
             <asp:Button ID="btninsert" runat="server" Text="Insert Records" OnClick="btninsert_Click" CausesValidation="False" />
         </td>
-        <td>&nbsp;</td>
+        <td style="height: 80px"></td>
     </tr>
     <tr>
         <td style="width: 191px">&nbsp;</td>
