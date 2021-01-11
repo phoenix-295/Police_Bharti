@@ -2,7 +2,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head runat="server">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard</title>
@@ -116,7 +117,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">
+          <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
           <a href="#" class="d-block">Admin</a>
@@ -142,6 +143,29 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             
+               <li class="nav-item">
+            <a href="Admin_Home.aspx" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Registration
+                  <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="City_Admin_registration.aspx" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>City Admin Registration</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="Gramin_Admin_Registration.aspx" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Gramin Admin Registration</p>
+                </a>
+              </li>
+                  </ul>
+          </li>
              
           <li class="nav-item">
             <a href="Add_Records.aspx" class="nav-link">

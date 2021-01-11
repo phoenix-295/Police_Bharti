@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>C:\Users\Nikhil\Desktop\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -126,6 +129,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Admin\Add_Records.aspx" />
+    <Content Include="Admin\City_Admin_registration.aspx" />
+    <Content Include="Admin\Gramin_Admin_Registration.aspx" />
     <Content Include="Admin\Home.aspx" />
     <Content Include="Admin\index.html" />
     <Content Include="Admin\View_City_Records.aspx" />
@@ -222,6 +227,20 @@
     </Compile>
     <Compile Include="Admin\Admin_Master.Master.designer.cs">
       <DependentUpon>Admin_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\City_Admin_registration.aspx.cs">
+      <DependentUpon>City_Admin_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\City_Admin_registration.aspx.designer.cs">
+      <DependentUpon>City_Admin_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gramin_Admin_Registration.aspx.cs">
+      <DependentUpon>Gramin_Admin_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gramin_Admin_Registration.aspx.designer.cs">
+      <DependentUpon>Gramin_Admin_Registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

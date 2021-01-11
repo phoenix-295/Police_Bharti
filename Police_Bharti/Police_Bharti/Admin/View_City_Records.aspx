@@ -3,12 +3,12 @@
     
     <table class="w-100">
     <tr>
-        <td style="width: 122px">&nbsp;</td>
+        <td style="width: 175px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 122px">&nbsp;</td>
+        <td style="width: 175px">&nbsp;</td>
         <td>
             <asp:GridView ID="gvcity" runat="server" style="color: #000000; font-size: large;" ForeColor="Black" AllowPaging="True" BackColor="White" CellPadding="10" BorderColor="#CCCCCC" BorderWidth="1px" CellSpacing="2" GridLines="Horizontal" AutoGenerateColumns="False" OnPageIndexChanging="gvcity_PageIndexChanging">
                 <Columns>
@@ -76,18 +76,18 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 122px">&nbsp;</td>
+        <td style="width: 175px">&nbsp;</td>
         <td style="text-align:right">
             <asp:Button ID="btnsend" runat="server" Text="Send to City Staff" OnClick="btnsend_Click" /></td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 122px; height: 32px;"></td>
+        <td style="width: 175px; height: 32px;"></td>
         <td style="height: 32px"></td>
         <td style="height: 32px"></td>
     </tr>
     <tr>
-        <td style="width: 122px">&nbsp;</td>
+        <td style="width: 175px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
