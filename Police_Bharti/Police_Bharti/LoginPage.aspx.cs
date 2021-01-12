@@ -12,6 +12,8 @@ namespace Police_Bharti
             getadmin();
             getdsp();
             getpsi();
+            cityadmin1();
+            graminadmin1();
         }
 
         protected void getadmin()
@@ -42,6 +44,26 @@ namespace Police_Bharti
             if (x == true)
             {
                 Response.Redirect("/Psi/PSI_Home.aspx");
+            }
+        }
+
+        protected void cityadmin1()
+        {
+            bool x;
+            x = Roles.IsUserInRole("CityAdmin");
+            if (x == true)
+            {
+                Response.Redirect("/CityAdmin/CityAdminHome.aspx");
+            }
+        }
+
+        protected void graminadmin1()
+        {
+            bool x;
+            x = Roles.IsUserInRole("GraminAdmin");
+            if (x == true)
+            {
+                Response.Redirect("/GraminAdmin/GraminAdminHome.aspx");
             }
         }
     }

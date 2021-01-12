@@ -83,7 +83,9 @@
     </tr>
     <tr>
         <td style="width: 175px; height: 32px;"></td>
-        <td style="height: 32px"></td>
+        <td style="height: 32px">
+            <asp:Label ID="Label11" runat="server"></asp:Label>
+        </td>
         <td style="height: 32px"></td>
     </tr>
     <tr>

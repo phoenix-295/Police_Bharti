@@ -135,6 +135,7 @@
     <Content Include="Admin\index.html" />
     <Content Include="Admin\View_City_Records.aspx" />
     <Content Include="Admin\View_Gramin_Records.aspx" />
+    <Content Include="CityAdmin\CityAdminHome.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -166,12 +167,15 @@
     <Content Include="css\bootstrap-reboot.min.css.map" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="GraminAdmin\GraminAdminHome.aspx" />
     <Content Include="js\bootstrap.bundle.js.map" />
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\bootstrap.js.map" />
     <Content Include="js\bootstrap.min.js.map" />
     <Content Include="Admin\Admin_Master.Master" />
     <Content Include="Admin\Web.config" />
+    <Content Include="CityAdmin\CityAdminMaster.Master" />
+    <Content Include="GraminAdmin\GraminAdmin.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -272,6 +276,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CityAdmin\CityAdminHome.aspx.cs">
+      <DependentUpon>CityAdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\CityAdminHome.aspx.designer.cs">
+      <DependentUpon>CityAdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityAdmin\CityAdminMaster.Master.cs">
+      <DependentUpon>CityAdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\CityAdminMaster.Master.designer.cs">
+      <DependentUpon>CityAdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,6 +313,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GraminAdmin\GraminAdmin.Master.cs">
+      <DependentUpon>GraminAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GraminAdmin\GraminAdmin.Master.designer.cs">
+      <DependentUpon>GraminAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GraminAdmin\GraminAdminHome.aspx.cs">
+      <DependentUpon>GraminAdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GraminAdmin\GraminAdminHome.aspx.designer.cs">
+      <DependentUpon>GraminAdminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
