@@ -32,10 +32,10 @@ namespace Police_Bharti.Admin
                 if (Convert.ToInt32(r1["show_data"]) == 1)
                 {
                     btnsend.Enabled = false;
+                    Label11.Text = "Data sent to City Admin";
+                    Label11.ForeColor = Color.Green;
                 }
             }
-            Label11.Text = "Data sent to City Admin";
-            Label11.ForeColor = Color.Green;
         }
 
         protected void fillgv()

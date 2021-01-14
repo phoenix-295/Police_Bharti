@@ -2,6 +2,7 @@
 using System;
 using System.Configuration;
 using System.Data;
+using System.Drawing;
 
 namespace Police_Bharti.Admin
 {
@@ -12,6 +13,27 @@ namespace Police_Bharti.Admin
             if (!IsPostBack)
             {
                 fillgv();
+            }
+            show_check();
+        }
+
+        protected void show_check()
+        {
+            string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            string s2 = "SELECT * FROM pb_gramin_data";
+            MySqlConnection con = new MySqlConnection(s1);
+            con.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(s2, s1);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "a");
+            foreach (DataRow r1 in ds.Tables["a"].Rows)
+            {
+                if (Convert.ToInt32(r1["show_data"]) == 1)
+                {
+                    btnsend.Enabled = false;
+                    Label11.Text = "Data sent to Gramin Admin";
+                    Label11.ForeColor = Color.Green;
+                }
             }
         }
 
@@ -37,6 +59,19 @@ namespace Police_Bharti.Admin
             gvcity.DataSource = myydatatable;
             gvcity.PageIndex = e.NewPageIndex;
             gvcity.DataBind();
+        }
+
+        protected void btnsend_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("UPDATE pb_gramin_data SET show_data=1", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            btnsend.Visible = false;
+            Label11.Text = "Sent Successfully!";
+            Label11.ForeColor = Color.Green;
         }
     }
 }

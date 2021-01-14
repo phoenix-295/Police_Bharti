@@ -136,6 +136,9 @@
     <Content Include="Admin\View_City_Records.aspx" />
     <Content Include="Admin\View_Gramin_Records.aspx" />
     <Content Include="CityAdmin\CityAdminHome.aspx" />
+    <Content Include="CityAdmin\City_DSP_Reg.aspx" />
+    <Content Include="CityAdmin\City_PSI_Reg.aspx" />
+    <Content Include="CityAdmin\View_Data.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -289,6 +292,27 @@
     </Compile>
     <Compile Include="CityAdmin\CityAdminMaster.Master.designer.cs">
       <DependentUpon>CityAdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CityAdmin\City_DSP_Reg.aspx.cs">
+      <DependentUpon>City_DSP_Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\City_DSP_Reg.aspx.designer.cs">
+      <DependentUpon>City_DSP_Reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityAdmin\City_PSI_Reg.aspx.cs">
+      <DependentUpon>City_PSI_Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\City_PSI_Reg.aspx.designer.cs">
+      <DependentUpon>City_PSI_Reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityAdmin\View_Data.aspx.cs">
+      <DependentUpon>View_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\View_Data.aspx.designer.cs">
+      <DependentUpon>View_Data.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

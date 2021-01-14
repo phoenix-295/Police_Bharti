@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Police_Bharti.Admin {
+namespace Police_Bharti.CityAdmin {
     
     
-    public partial class View_Gramin_Records {
+    public partial class View_Data {
         
         /// <summary>
         /// gvcity control.
@@ -20,15 +20,6 @@ namespace Police_Bharti.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvcity;
-        
-        /// <summary>
-        /// btnsend control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsend;
         
         /// <summary>
         /// Label11 control.

@@ -76,12 +76,15 @@
     </tr>
     <tr>
         <td style="width: 122px">&nbsp;</td>
-        <td>&nbsp;</td>
+        <td style="text-align:right">
+            <asp:Button ID="btnsend" runat="server" Text="Send to Gramin Admin" OnClick="btnsend_Click" /></td>
         <td>&nbsp;</td>
     </tr>
     <tr>
         <td style="width: 122px">&nbsp;</td>
-        <td>&nbsp;</td>
+        <td>
+            <asp:Label ID="Label11" runat="server"></asp:Label>
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>

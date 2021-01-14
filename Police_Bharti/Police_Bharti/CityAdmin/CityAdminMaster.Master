@@ -153,13 +153,13 @@
             </a>
               <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="City_Admin_registration.aspx" class="nav-link">
+                <a href="City_DSP_Reg.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>DSP Registration</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="Gramin_Admin_Registration.aspx" class="nav-link">
+                <a href="City_PSI_Reg.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>PSI Registration</p>
                 </a>
@@ -174,10 +174,10 @@
           </li>
              
           <li class="nav-item">
-            <a href="Add_Records.aspx" class="nav-link">
+            <a href="View_Data.aspx" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Add records
+                View Records
               </p>
             </a>
           </li>
