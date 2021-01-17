@@ -132,7 +132,6 @@
     <Content Include="Admin\City_Admin_registration.aspx" />
     <Content Include="Admin\Gramin_Admin_Registration.aspx" />
     <Content Include="Admin\Home.aspx" />
-    <Content Include="Admin\index.html" />
     <Content Include="Admin\View_City_Records.aspx" />
     <Content Include="Admin\View_Gramin_Records.aspx" />
     <Content Include="CityAdmin\CityAdminHome.aspx" />
@@ -171,6 +170,8 @@
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
     <Content Include="GraminAdmin\GraminAdminHome.aspx" />
+    <Content Include="GraminAdmin\Gramin_DSP_Reg.aspx" />
+    <Content Include="GraminAdmin\Gramin_PSI_Reg.aspx" />
     <Content Include="js\bootstrap.bundle.js.map" />
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\bootstrap.js.map" />
@@ -179,6 +180,8 @@
     <Content Include="Admin\Web.config" />
     <Content Include="CityAdmin\CityAdminMaster.Master" />
     <Content Include="GraminAdmin\GraminAdmin.Master" />
+    <Content Include="GraminAdmin\Web.config" />
+    <Content Include="CityAdmin\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -351,6 +354,20 @@
     </Compile>
     <Compile Include="GraminAdmin\GraminAdminHome.aspx.designer.cs">
       <DependentUpon>GraminAdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GraminAdmin\Gramin_DSP_Reg.aspx.cs">
+      <DependentUpon>Gramin_DSP_Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GraminAdmin\Gramin_DSP_Reg.aspx.designer.cs">
+      <DependentUpon>Gramin_DSP_Reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GraminAdmin\Gramin_PSI_Reg.aspx.cs">
+      <DependentUpon>Gramin_PSI_Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GraminAdmin\Gramin_PSI_Reg.aspx.designer.cs">
+      <DependentUpon>Gramin_PSI_Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
