@@ -1,16 +1,22 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
+using System.Web;
 using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Police_Bharti.CityAdmin
 {
-    public partial class City_PSI_Reg : System.Web.UI.Page
+    public partial class City_Ground_Reg : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
         protected void areg()
         {
             try
@@ -21,7 +27,7 @@ namespace Police_Bharti.CityAdmin
                 string mUserName = CreateUserWizard1.UserName;
                 string pass = CreateUserWizard1.Password;
                 string mailid = CreateUserWizard1.Email;
-                MySqlCommand cmd = new MySqlCommand("INSERT into pb_city_psi (police_id,buckle_no,name,birth_date,joining_date,address) values(@a,@b,@c,@d,@e,@f)", ocon);
+                MySqlCommand cmd = new MySqlCommand("INSERT into pb_city_physical (police_id,buckle_no,name,birth_date,joining_date,address) values(@a,@b,@c,@d,@e,@f)", ocon);
                 cmd.Parameters.AddWithValue("@a", txtid.Text);
                 cmd.Parameters.AddWithValue("@b", txtbklno.Text);
                 cmd.Parameters.AddWithValue("@c", txtname.Text);
@@ -39,7 +45,7 @@ namespace Police_Bharti.CityAdmin
 
         protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
         {
-            string newRole = "CPSI";
+            string newRole = "CPhysical";
             Roles.AddUserToRole(CreateUserWizard1.UserName, newRole);
             areg();
         }

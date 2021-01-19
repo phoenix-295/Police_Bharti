@@ -136,9 +136,10 @@
     <Content Include="Admin\View_City_Records.aspx" />
     <Content Include="Admin\View_Gramin_Records.aspx" />
     <Content Include="CityAdmin\CityAdminHome.aspx" />
-    <Content Include="CityAdmin\City_DSP_Reg.aspx" />
-    <Content Include="CityAdmin\City_PSI_Reg.aspx" />
+    <Content Include="CityAdmin\City_Ground_Reg.aspx" />
+    <Content Include="CityAdmin\City_Written_Reg.aspx" />
     <Content Include="CityAdmin\View_Data.aspx" />
+    <Content Include="CityGround\Physical_Test.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -183,12 +184,12 @@
     <Content Include="GraminAdmin\GraminAdmin.Master" />
     <Content Include="GraminAdmin\Web.config" />
     <Content Include="CityAdmin\Web.config" />
-    <Content Include="CityDSP\Web.config" />
+    <Content Include="CityGround\Web.config" />
     <Content Include="CityMedical\Web.config" />
-    <Content Include="CityPSI\Web.config" />
-    <Content Include="GraminDSP\Web.config" />
+    <Content Include="CityWritten\Web.config" />
+    <Content Include="GraminGround\Web.config" />
     <Content Include="GraminMedical\Web.config" />
-    <Content Include="GraminPSI\Web.config" />
+    <Content Include="GraminWritten\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -310,19 +311,19 @@
     <Compile Include="CityAdmin\CityAdminMaster.Master.designer.cs">
       <DependentUpon>CityAdminMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="CityAdmin\City_DSP_Reg.aspx.cs">
-      <DependentUpon>City_DSP_Reg.aspx</DependentUpon>
+    <Compile Include="CityAdmin\City_Ground_Reg.aspx.cs">
+      <DependentUpon>City_Ground_Reg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CityAdmin\City_DSP_Reg.aspx.designer.cs">
-      <DependentUpon>City_DSP_Reg.aspx</DependentUpon>
+    <Compile Include="CityAdmin\City_Ground_Reg.aspx.designer.cs">
+      <DependentUpon>City_Ground_Reg.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CityAdmin\City_PSI_Reg.aspx.cs">
-      <DependentUpon>City_PSI_Reg.aspx</DependentUpon>
+    <Compile Include="CityAdmin\City_Written_Reg.aspx.cs">
+      <DependentUpon>City_Written_Reg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CityAdmin\City_PSI_Reg.aspx.designer.cs">
-      <DependentUpon>City_PSI_Reg.aspx</DependentUpon>
+    <Compile Include="CityAdmin\City_Written_Reg.aspx.designer.cs">
+      <DependentUpon>City_Written_Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityAdmin\View_Data.aspx.cs">
       <DependentUpon>View_Data.aspx</DependentUpon>
@@ -330,6 +331,13 @@
     </Compile>
     <Compile Include="CityAdmin\View_Data.aspx.designer.cs">
       <DependentUpon>View_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityGround\Physical_Test.aspx.cs">
+      <DependentUpon>Physical_Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityGround\Physical_Test.aspx.designer.cs">
+      <DependentUpon>Physical_Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

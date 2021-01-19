@@ -10,7 +10,7 @@
 namespace Police_Bharti.CityAdmin {
     
     
-    public partial class City_PSI_Reg {
+    public partial class City_Ground_Reg {
         
         /// <summary>
         /// CreateUserWizard1 control.

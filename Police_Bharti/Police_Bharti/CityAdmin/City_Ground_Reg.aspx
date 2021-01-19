@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityAdmin/CityAdminMaster.Master" AutoEventWireup="true" CodeBehind="City_PSI_Reg.aspx.cs" Inherits="Police_Bharti.CityAdmin.City_PSI_Reg" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityAdmin/CityAdminMaster.Master" AutoEventWireup="true" CodeBehind="City_Ground_Reg.aspx.cs" Inherits="Police_Bharti.CityAdmin.City_Ground_Reg" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
@@ -16,7 +16,7 @@
                             <table style="font-size:100%;width:502px;">
                                 <tr>
                                     <td align="center" colspan="2">
-                                        <h4>PSI office member Registration</h4>
+                                        <h4>Ground Test Admin Registration</h4>
                                     </td>
                                 </tr>
                                 <tr>
@@ -88,7 +88,7 @@
                                 <table style="font-size:100%;width:515px;">
                                     <tr>
                                         <td align="center" colspan="2" style="height: 24px">
-                                            <h4>PSI office member Registration</h4>
+                                            <h4>Ground Test Admin Registration</h4>
                                         </td>
                                     </tr>
                                     <tr>

@@ -10,7 +10,7 @@
 namespace Police_Bharti.CityAdmin {
     
     
-    public partial class City_DSP_Reg {
+    public partial class City_Written_Reg {
         
         /// <summary>
         /// CreateUserWizard1 control.
@@ -76,22 +76,22 @@ namespace Police_Bharti.CityAdmin {
         protected global::System.Web.UI.WebControls.TextBox txtbdate;
         
         /// <summary>
-        /// toolScriptManageer2 control.
+        /// toolScriptManageer4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager toolScriptManageer2;
+        protected global::AjaxControlToolkit.ToolkitScriptManager toolScriptManageer4;
         
         /// <summary>
-        /// cal2 control.
+        /// cal4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender cal2;
+        protected global::AjaxControlToolkit.CalendarExtender cal4;
         
         /// <summary>
         /// txtjdate control.
@@ -103,13 +103,13 @@ namespace Police_Bharti.CityAdmin {
         protected global::System.Web.UI.WebControls.TextBox txtjdate;
         
         /// <summary>
-        /// CalendarExtender2 control.
+        /// CalendarExtender4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender4;
         
         /// <summary>
         /// txtadd control.

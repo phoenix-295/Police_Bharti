@@ -41,10 +41,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <%--<a href="index3.html" class="nav-link">Home</a>--%>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <%--<a href="#" class="nav-link">Contact</a>--%>
       </li>
     </ul>
 
@@ -153,15 +153,15 @@
             </a>
               <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="City_DSP_Reg.aspx" class="nav-link">
+                <a href="City_Ground_Reg.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>DSP Registration</p>
+                  <p>Ground Test</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="City_PSI_Reg.aspx" class="nav-link">
+                <a href="City_Written_Reg.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>PSI Registration</p>
+                  <p>Written Test</p>
                 </a>
               </li>
             <li class="nav-item">
