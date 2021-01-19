@@ -89,7 +89,9 @@
     </tr>
     <tr>
         <td style="width: 122px">&nbsp;</td>
-        <td>&nbsp;</td>
+        <td>
+            <asp:Button ID="btnplan" runat="server" OnClick="btnplan_Click" Text="Plan Events" Visible="False" />
+        </td>
         <td>&nbsp;</td>
     </tr>
 </table>

@@ -132,6 +132,7 @@
     <Content Include="Admin\City_Admin_registration.aspx" />
     <Content Include="Admin\Gramin_Admin_Registration.aspx" />
     <Content Include="Admin\Home.aspx" />
+    <Content Include="Admin\PlanGraminEvents.aspx" />
     <Content Include="Admin\View_City_Records.aspx" />
     <Content Include="Admin\View_Gramin_Records.aspx" />
     <Content Include="CityAdmin\CityAdminHome.aspx" />
@@ -182,6 +183,12 @@
     <Content Include="GraminAdmin\GraminAdmin.Master" />
     <Content Include="GraminAdmin\Web.config" />
     <Content Include="CityAdmin\Web.config" />
+    <Content Include="CityDSP\Web.config" />
+    <Content Include="CityMedical\Web.config" />
+    <Content Include="CityPSI\Web.config" />
+    <Content Include="GraminDSP\Web.config" />
+    <Content Include="GraminMedical\Web.config" />
+    <Content Include="GraminPSI\Web.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -258,6 +265,13 @@
     </Compile>
     <Compile Include="Admin\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PlanGraminEvents.aspx.cs">
+      <DependentUpon>PlanGraminEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PlanGraminEvents.aspx.designer.cs">
+      <DependentUpon>PlanGraminEvents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\View_City_Records.aspx.cs">
       <DependentUpon>View_City_Records.aspx</DependentUpon>

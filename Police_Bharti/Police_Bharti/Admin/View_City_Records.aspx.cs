@@ -16,6 +16,7 @@ namespace Police_Bharti.Admin
                 fillgv();
             }
             show_check();
+            chnge();
         }
 
         protected void show_check()
@@ -71,8 +72,17 @@ namespace Police_Bharti.Admin
             cmd.ExecuteNonQuery();
             conn.Close();
             btnsend.Visible = false;
-            Label11.Text = "Sent Successfully!";
+            Label11.Text = "Data sent to City Admin";
+            btnplan.Visible = true;
             Label11.ForeColor = Color.Green;
+        }
+
+        protected void chnge()
+        {
+            if (Label11.Text == "Data sent to City Admin")
+            {
+                btnplan.Visible = true;
+            }
         }
     }
 }
