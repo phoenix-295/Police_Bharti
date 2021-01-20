@@ -138,6 +138,7 @@
     <Content Include="CityAdmin\CityAdminHome.aspx" />
     <Content Include="CityAdmin\City_Ground_Reg.aspx" />
     <Content Include="CityAdmin\City_Written_Reg.aspx" />
+    <Content Include="CityAdmin\Invite_Candidates.aspx" />
     <Content Include="CityAdmin\View_Data.aspx" />
     <Content Include="CityGround\Physical_Test.aspx" />
     <Content Include="Contact.aspx" />
@@ -324,6 +325,13 @@
     </Compile>
     <Compile Include="CityAdmin\City_Written_Reg.aspx.designer.cs">
       <DependentUpon>City_Written_Reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityAdmin\Invite_Candidates.aspx.cs">
+      <DependentUpon>Invite_Candidates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\Invite_Candidates.aspx.designer.cs">
+      <DependentUpon>Invite_Candidates.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityAdmin\View_Data.aspx.cs">
       <DependentUpon>View_Data.aspx</DependentUpon>

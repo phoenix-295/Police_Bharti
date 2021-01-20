@@ -49,7 +49,7 @@
                                                 <tr>
                                                     <td><span>Username: </span></td>
                                                     <td><span>
-                                                        <asp:TextBox ID="UserName" runat="server" CssClass="form-control" Width="291px"></asp:TextBox>
+                                                        <asp:TextBox ID="UserName" runat="server" CssClass="form-control" Width="291px" placeholder="Enter your Username"></asp:TextBox>
                                                         </span></td>
                                                     <td><span>
                                                         <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
@@ -68,7 +68,7 @@
                                                         <td><span>Password: </span></td>
                                                         <td><span>
                                                             &nbsp;&nbsp;
-                                                            <asp:TextBox ID="Password" runat="server" CssClass="form-control" TextMode="Password" Width="291px"></asp:TextBox>
+                                                            <asp:TextBox ID="Password" runat="server" CssClass="form-control" TextMode="Password" Width="291px" placeholder="Enter your password"></asp:TextBox>
                                                             </span></td>
                                                         <td><span>
                                                             <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>

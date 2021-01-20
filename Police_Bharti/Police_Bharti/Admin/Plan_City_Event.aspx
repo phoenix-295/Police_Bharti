@@ -3,17 +3,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script>
         function date() {
-            var d1 = new Date(document.getElementById('<%= txtform.ClientID %>').value);
-            var d2 = new Date(document.getElementById('<%= txtto.ClientID %>').value);
-            var d3 = document.getElementById('<%= txtto.ClientID %>').value;
-            //t1 = document.getElementById("txtfrom").value;
-            //t2 = document.getElementById("txtto").value;
+            var d1 = document.getElementById('<%= txtform.ClientID %>').value;
+            var d1parts = d1.split("/");
+            var d1Object = new Date(+d1parts[2], d1parts[1] - 1, +d1parts[0]);
 
-            if (d1 > d2) {
+            var x = document.getElementById('<%= Label2.ClientID %>').textContent;
+
+            var d2 = document.getElementById('<%= txtto.ClientID %>').value;
+            var d2parts = d2.split("/");
+            var d2Object = new Date(+d2parts[2], d2parts[1] - 1, +d2parts[0]);
+
+            if (d1Object > d2Object) {
                 alert("To date must be greater");
-                document.getElementById('<%= txtto.ClientID %>').value = ""
+                document.getElementById('<%= txtto.ClientID %>').value = x
             }
-            
         }
     </script>
                
@@ -68,6 +71,9 @@
                 <asp:Button ID="btnupdate" runat="server" Text="Update" OnClick="btnupdate_Click" />
                 <br />
                 <h4><asp:Label ID="Label1" runat="server"></asp:Label></h4>
+                <p>
+                    <asp:Label ID="Label2" runat="server" CssClass="fa-inverse"></asp:Label>
+                </p>
             </td>
             <td>&nbsp;</td>
         </tr>
