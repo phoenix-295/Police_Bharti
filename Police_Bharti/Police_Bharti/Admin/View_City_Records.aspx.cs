@@ -84,5 +84,10 @@ namespace Police_Bharti.Admin
                 btnplan.Visible = true;
             }
         }
+
+        protected void btnplan_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Plan_City_Event.aspx");
+        }
     }
 }

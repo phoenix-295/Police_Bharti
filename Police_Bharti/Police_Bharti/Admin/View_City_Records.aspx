@@ -91,7 +91,7 @@
     <tr>
         <td style="width: 175px">&nbsp;</td>
         <td>
-            <asp:Button ID="btnplan" runat="server" Text="Plan Events" Visible="False" />
+            <asp:Button ID="btnplan" runat="server" Text="Plan Events" Visible="False" OnClick="btnplan_Click" style="height: 39px" />
         </td>
         <td>&nbsp;</td>
     </tr>

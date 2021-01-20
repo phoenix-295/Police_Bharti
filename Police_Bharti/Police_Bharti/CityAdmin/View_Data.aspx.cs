@@ -19,7 +19,7 @@ namespace Police_Bharti.CityAdmin
         protected void fillgv()
         {
             string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-            string s2 = "SELECT * FROM pb_city_data where show_data=" + 1;
+            string s2 = "SELECT * FROM pb_city_data where show_data=" + 1+" and show_invite=" + 0;
             MySqlConnection con = new MySqlConnection(s1);
             con.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(s2, s1);

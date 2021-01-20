@@ -132,7 +132,7 @@
     <Content Include="Admin\City_Admin_registration.aspx" />
     <Content Include="Admin\Gramin_Admin_Registration.aspx" />
     <Content Include="Admin\Home.aspx" />
-    <Content Include="Admin\PlanGraminEvents.aspx" />
+    <Content Include="Admin\Plan_City_Event.aspx" />
     <Content Include="Admin\View_City_Records.aspx" />
     <Content Include="Admin\View_Gramin_Records.aspx" />
     <Content Include="CityAdmin\CityAdminHome.aspx" />
@@ -267,12 +267,12 @@
     <Compile Include="Admin\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\PlanGraminEvents.aspx.cs">
-      <DependentUpon>PlanGraminEvents.aspx</DependentUpon>
+    <Compile Include="Admin\Plan_City_Event.aspx.cs">
+      <DependentUpon>Plan_City_Event.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\PlanGraminEvents.aspx.designer.cs">
-      <DependentUpon>PlanGraminEvents.aspx</DependentUpon>
+    <Compile Include="Admin\Plan_City_Event.aspx.designer.cs">
+      <DependentUpon>Plan_City_Event.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\View_City_Records.aspx.cs">
       <DependentUpon>View_City_Records.aspx</DependentUpon>

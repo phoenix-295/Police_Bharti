@@ -75,9 +75,15 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td style="text-align:right">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 175px; height: 30px;"></td>
+            <td  height: 30px;">
+                <span>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Number of Records to Invite" Width="291px"></asp:TextBox> <asp:Button ID="btninv" runat="server" Text="Invite" />
+                
+
+                </span>
+            </td>
+            <td style="height: 30px"></td>
         </tr>
         <tr>
             <td style="width: 175px; height: 32px;"></td>
