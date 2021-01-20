@@ -77,7 +77,7 @@ CREATE TABLE `my_aspnet_membership` (
 
 LOCK TABLES `my_aspnet_membership` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_membership` DISABLE KEYS */;
-INSERT INTO `my_aspnet_membership` VALUES (1,'nikhil295@gmail.com','','iSJfCYhYs0Xrayh2dXqXvHlk5Ul4/8Z/gUFy896OJVw=','L4N8uGKD9J0femSZsg88Eg==',1,'1','MV8CXWFPYRxlc8wrRveoa1iqty0smlCEhjsmC9wGJoo=',1,'2021-01-19 13:54:26','2021-01-19 13:54:26','2020-12-19 08:49:50','2020-12-19 08:49:50',0,'2020-12-19 08:49:50',1,'2020-12-19 10:15:08',0,'2020-12-19 08:49:50'),(5,'nikhil295@gmail.com','','9Q3QGKQAZq9U+OJu/t7QiIpq5WWJT9FWIWz1Dxe10Zs=','T/te0hddWKa4b1WNc+WsFQ==',1,'1','mhb+8Z87EIttpjDE5o7L3HsPcqXca3BtVXYFdJg/EfE=',1,'2021-01-12 12:56:35','2021-01-12 12:56:35','2021-01-10 09:48:55','2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55'),(8,'nikhil295@gmail.com','','gQayERrrL2J4CuG5n9X/xc5Djpis0Tej+/PSLsh3uZU=','RlSmVvHxW5iCpKcemM+lsQ==',1,'1','4bpxkwlmoRwtz9Uyd/seHyd2fqNQ7oWyhCpWZrcdg9w=',1,'2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35'),(9,'nikhil295@gmail.com','','7q8jzCmAm0i02vAkLhc9JUfkffCQuZjkKpKeHGnrJi0=','rvMR658DH8bFXY30P/VnQg==',1,'1','Syazs2hXYNhte8pcvnl3f8gpQu9fP1fGO25jMTAfxfM=',1,'2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12');
+INSERT INTO `my_aspnet_membership` VALUES (1,'nikhil295@gmail.com','','iSJfCYhYs0Xrayh2dXqXvHlk5Ul4/8Z/gUFy896OJVw=','L4N8uGKD9J0femSZsg88Eg==',1,'1','MV8CXWFPYRxlc8wrRveoa1iqty0smlCEhjsmC9wGJoo=',1,'2021-01-19 13:54:26','2021-01-19 13:54:26','2020-12-19 08:49:50','2020-12-19 08:49:50',0,'2020-12-19 08:49:50',1,'2020-12-19 10:15:08',0,'2020-12-19 08:49:50'),(5,'nikhil295@gmail.com','','9Q3QGKQAZq9U+OJu/t7QiIpq5WWJT9FWIWz1Dxe10Zs=','T/te0hddWKa4b1WNc+WsFQ==',1,'1','mhb+8Z87EIttpjDE5o7L3HsPcqXca3BtVXYFdJg/EfE=',1,'2021-01-20 12:10:41','2021-01-20 12:10:41','2021-01-10 09:48:55','2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55'),(8,'nikhil295@gmail.com','','gQayERrrL2J4CuG5n9X/xc5Djpis0Tej+/PSLsh3uZU=','RlSmVvHxW5iCpKcemM+lsQ==',1,'1','4bpxkwlmoRwtz9Uyd/seHyd2fqNQ7oWyhCpWZrcdg9w=',1,'2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35'),(9,'nikhil295@gmail.com','','7q8jzCmAm0i02vAkLhc9JUfkffCQuZjkKpKeHGnrJi0=','rvMR658DH8bFXY30P/VnQg==',1,'1','Syazs2hXYNhte8pcvnl3f8gpQu9fP1fGO25jMTAfxfM=',1,'2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12');
 /*!40000 ALTER TABLE `my_aspnet_membership` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -251,7 +251,7 @@ CREATE TABLE `my_aspnet_sessioncleanup` (
 
 LOCK TABLES `my_aspnet_sessioncleanup` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` DISABLE KEYS */;
-INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2021-01-20 11:03:03',10,1);
+INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2021-01-20 18:03:57',10,1);
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,7 +283,7 @@ CREATE TABLE `my_aspnet_sessions` (
 
 LOCK TABLES `my_aspnet_sessions` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_sessions` DISABLE KEYS */;
-INSERT INTO `my_aspnet_sessions` VALUES ('b14t5ge1ef1z2r4o4utdek4n',1,'2021-01-20 10:56:41','2021-01-20 11:16:41','2021-01-20 10:56:41',1,20,0,NULL,0),('b5p50wvo4udsw4cyofmtmtxw',1,'2021-01-20 10:43:12','2021-01-20 11:03:55','2021-01-20 10:43:55',21,20,0,NULL,0),('bwteutsejx4xstc3htnalf3c',1,'2021-01-20 10:47:57','2021-01-20 11:07:57','2021-01-20 10:47:57',1,20,0,NULL,0),('kbmqhha4nzbfdxe20jmqei2w',1,'2021-01-20 10:43:16','2021-01-20 11:03:16','2021-01-20 10:43:16',1,20,0,NULL,0),('kubss2s0k4zt25ytw4vc25tx',1,'2021-01-20 11:03:29','2021-01-20 11:23:29','2021-01-20 11:03:29',1,20,0,NULL,0),('onvcbapxbtwhjfriy04szarn',1,'2021-01-20 10:43:19','2021-01-20 11:03:19','2021-01-20 10:43:19',1,20,0,NULL,0),('vlm4g55m42at0vkax4xdsv4c',1,'2021-01-20 11:03:03','2021-01-20 11:23:04','2021-01-20 11:03:03',1,20,0,NULL,0),('w3hrilf2soiakyaqamhhzb02',1,'2021-01-20 10:44:41','2021-01-20 11:04:41','2021-01-20 10:44:41',1,20,0,NULL,0);
+INSERT INTO `my_aspnet_sessions` VALUES ('02tdm1owq22gpzjbefwjub1m',1,'2021-01-20 18:03:59','2021-01-20 18:23:59','2021-01-20 18:03:59',1,20,0,NULL,0),('0axuy10pbfvmufsaikbllcgy',1,'2021-01-20 18:09:21','2021-01-20 18:29:31','2021-01-20 18:09:31',5,20,0,NULL,0),('0hftfbnqb5sldwjjpjecdi1u',1,'2021-01-20 18:10:41','2021-01-20 18:30:41','2021-01-20 18:10:41',1,20,0,NULL,0),('0rd5ddbg5aazrwbi2q0dy23f',1,'2021-01-20 18:05:56','2021-01-20 18:26:04','2021-01-20 18:06:04',4,20,0,NULL,0),('0ujo33f2kuiq0xnaakphp0pf',1,'2021-01-20 18:11:45','2021-01-20 18:31:46','2021-01-20 18:11:46',1,20,0,NULL,0),('1rgun1pvmvmrdmtzie4e04rq',1,'2021-01-20 18:10:04','2021-01-20 18:30:19','2021-01-20 18:10:09',2,20,0,NULL,0),('3i3nrikkjcuk2vvyrvhkyrot',1,'2021-01-20 18:08:28','2021-01-20 18:28:38','2021-01-20 18:08:28',1,20,0,NULL,0),('4015v4ckq1101r5r3bdvnkxo',1,'2021-01-20 18:12:14','2021-01-20 18:32:14','2021-01-20 18:12:14',1,20,0,NULL,0),('42fsxwjhp5ua3x5up2vaqv04',1,'2021-01-20 18:13:13','2021-01-20 18:33:13','2021-01-20 18:13:13',1,20,0,NULL,0),('5p3zb1x2jpsi4o2zndnmc53l',1,'2021-01-20 17:45:57','2021-01-20 18:06:02','2021-01-20 17:46:02',3,20,0,NULL,0),('5wouavcnbpzbqzkvjluojsbm',1,'2021-01-20 18:08:38','2021-01-20 18:28:39','2021-01-20 18:08:38',1,20,0,NULL,0),('c02cmesmlv35spiqzhnyrz0q',1,'2021-01-20 18:03:59','2021-01-20 18:23:59','2021-01-20 18:04:05',2,20,1,NULL,0),('c4jtyvwnuulpqo4bj1z3tgng',1,'2021-01-20 18:12:03','2021-01-20 18:32:03','2021-01-20 18:12:03',1,20,0,NULL,0),('di0uixxqolgjansgktpfse5s',1,'2021-01-20 18:09:22','2021-01-20 18:29:23','2021-01-20 18:09:23',1,20,0,NULL,0),('ds14da1vh1wnscxfqsw3syza',1,'2021-01-20 18:11:33','2021-01-20 18:31:53','2021-01-20 18:11:49',3,20,0,NULL,0),('fpxpr02posl1awihep5ytrxq',1,'2021-01-20 18:07:55','2021-01-20 18:27:55','2021-01-20 18:07:55',1,20,0,NULL,0),('hls2wwbcejlg34glfyeep5ir',1,'2021-01-20 18:07:16','2021-01-20 18:27:16','2021-01-20 18:07:16',1,20,0,NULL,0),('lbdxu42q4vfb3v0ie2b1hfto',1,'2021-01-20 18:09:28','2021-01-20 18:29:28','2021-01-20 18:09:28',1,20,0,NULL,0),('lpwmcfhbnileryfgr4p0z3cl',1,'2021-01-20 18:13:12','2021-01-20 18:33:18','2021-01-20 18:13:18',4,20,0,NULL,0),('mi50qu0v1i0gvmt1cmgesmxq',1,'2021-01-20 18:06:01','2021-01-20 18:26:01','2021-01-20 18:06:01',1,20,0,NULL,0),('o2stsc1s4ba33fohiyoi3dpy',1,'2021-01-20 17:45:58','2021-01-20 18:05:58','2021-01-20 17:45:58',1,20,0,NULL,0),('outgwvmopodw23lb1uk1zykf',1,'2021-01-20 18:10:05','2021-01-20 18:30:05','2021-01-20 18:10:05',1,20,0,NULL,0),('ozb4o4ujwgrqdghwiqwjm43k',1,'2021-01-20 18:06:23','2021-01-20 18:26:34','2021-01-20 18:06:34',2,20,0,NULL,0),('pf22djnik25k5o2vwj1bkab0',1,'2021-01-20 18:13:14','2021-01-20 18:33:14','2021-01-20 18:13:14',1,20,0,NULL,0),('qjcsbvsw4i52kyt2tx1ysov1',1,'2021-01-20 18:06:24','2021-01-20 18:26:24','2021-01-20 18:06:24',1,20,0,NULL,0),('qwwujkpxq5lsqhuljn3oih2l',1,'2021-01-20 18:05:56','2021-01-20 18:25:56','2021-01-20 18:05:56',1,20,0,NULL,0),('qyho3hocnla4rakd5bolbiz5',1,'2021-01-20 18:10:19','2021-01-20 18:30:19','2021-01-20 18:10:19',1,20,0,NULL,0),('r24mmkliy3kgjp4ttk233xbc',1,'2021-01-20 18:06:34','2021-01-20 18:26:34','2021-01-20 18:06:34',1,20,0,NULL,0),('rrdbliaqfafa2121d3cqiqmk',1,'2021-01-20 18:07:54','2021-01-20 18:27:55','2021-01-20 18:07:54',1,20,0,NULL,0),('rrvwwefqignxt0oagaqo5cgk',1,'2021-01-20 18:12:02','2021-01-20 18:32:14','2021-01-20 18:12:05',2,20,0,NULL,0),('rsyhwwiibst5ns55fg3c0nzk',1,'2021-01-20 18:07:12','2021-01-20 18:27:12','2021-01-20 18:07:12',1,20,0,NULL,0),('rvslz4vh3m0ha4ps0zkxejp1',1,'2021-01-20 17:46:01','2021-01-20 18:06:01','2021-01-20 17:46:01',1,20,0,NULL,0),('xpaohi1w4eipksdtjvvz5d0f',1,'2021-01-20 18:07:10','2021-01-20 18:27:41','2021-01-20 18:07:48',4,20,1,NULL,0),('y0xd2lt32sx5vokaejtf4mfl',1,'2021-01-20 18:10:40','2021-01-20 18:30:41','2021-01-20 18:10:43',2,20,1,NULL,0),('z3fzkkocmfodzqsvtm035n1g',1,'2021-01-20 18:11:34','2021-01-20 18:31:34','2021-01-20 18:11:34',1,20,0,NULL,0);
 /*!40000 ALTER TABLE `my_aspnet_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -337,7 +337,7 @@ CREATE TABLE `my_aspnet_users` (
 
 LOCK TABLES `my_aspnet_users` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_users` DISABLE KEYS */;
-INSERT INTO `my_aspnet_users` VALUES (1,1,'Admin',0,'2021-01-19 13:54:26'),(5,1,'cityadmin',0,'2021-01-12 12:56:35'),(8,1,'cground',0,'2021-01-19 11:23:35'),(9,1,'cwritten',0,'2021-01-19 11:25:12');
+INSERT INTO `my_aspnet_users` VALUES (1,1,'Admin',0,'2021-01-19 13:54:26'),(5,1,'cityadmin',0,'2021-01-20 12:10:41'),(8,1,'cground',0,'2021-01-19 11:23:35'),(9,1,'cwritten',0,'2021-01-19 11:25:12');
 /*!40000 ALTER TABLE `my_aspnet_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -452,7 +452,7 @@ CREATE TABLE `pb_city_event_plan` (
 
 LOCK TABLES `pb_city_event_plan` WRITE;
 /*!40000 ALTER TABLE `pb_city_event_plan` DISABLE KEYS */;
-INSERT INTO `pb_city_event_plan` VALUES (1,'physical','04/01/2021','14/01/2021',0),(2,'written','22/01/2021','',0),(3,'medical','22/01/2021','24/01/2021',0);
+INSERT INTO `pb_city_event_plan` VALUES (1,'physical','04/01/2021','14/01/2021',1),(2,'written','22/01/2021','24/01/2021',0),(3,'medical','22/01/2021','24/01/2021',1);
 /*!40000 ALTER TABLE `pb_city_event_plan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -641,4 +641,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-20 11:05:13
+-- Dump completed on 2021-01-20 18:14:47
