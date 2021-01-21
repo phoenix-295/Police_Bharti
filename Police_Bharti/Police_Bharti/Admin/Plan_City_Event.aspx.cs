@@ -12,8 +12,7 @@ namespace Police_Bharti.Admin
         {
             if(!IsPostBack)
             {
-
-            default1();
+                default1();
                 Label2.Text = txtto.Text;
             }
         }
@@ -35,6 +34,14 @@ namespace Police_Bharti.Admin
                 {
                     txtform.Text = r1["start_date"].ToString();
                     txtto.Text = r1["end_date"].ToString();
+                    if ((r1["c_invited"].ToString() == "1"))
+                    {
+                        btnupdate.Enabled = false;
+                    }
+                    else
+                    {
+                        btnupdate.Enabled = true;
+                    }
                 }
             }
         }
@@ -60,6 +67,7 @@ namespace Police_Bharti.Admin
             }
             con.Close();
             Label1.Text = "";
+            default1();
         }
 
         protected void btnupdate_Click(object sender, EventArgs e)

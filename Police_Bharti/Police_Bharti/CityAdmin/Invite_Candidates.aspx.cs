@@ -68,10 +68,12 @@ namespace Police_Bharti.CityAdmin
                     lblto.Text = r1["end_date"].ToString();
                     if ((r1["c_invited"].ToString() == "1"))
                     {
+                        btnupdate.Text = "Invited";
                         btnupdate.Enabled = false;
                     }
                     else
                     {
+                        btnupdate.Text = "Invite";
                         btnupdate.Enabled = true;
                     }
                 }
