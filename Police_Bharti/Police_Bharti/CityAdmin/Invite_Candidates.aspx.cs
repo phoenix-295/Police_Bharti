@@ -101,6 +101,49 @@ namespace Police_Bharti.CityAdmin
             conn.Close();
             Label1.Text = "Updated Successfully";
             Label1.ForeColor = Color.Green;
+
+            update_invitation_date_to_master_table();
+        }
+
+        protected void update_invitation_date_to_master_table()
+        {
+            String test = (DropDownList1.SelectedIndex + 1).ToString();
+            string s2;
+            s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            MySqlConnection conn = new MySqlConnection(s2);
+            conn.Open();
+            if (String.Equals(test, "Physical Test"))
+            {
+                MySqlCommand cmd = new MySqlCommand("Update security_police_bharti.pb_city_data set physical_date = '" + txtdate.Text + "' , physical_flag=@a order by id limit '" + int.Parse(txtno.Text) + "' ", conn);
+                cmd.Parameters.AddWithValue("@a", "1");
+                if(cmd.ExecuteNonQuery()==1)
+                {
+                    Response.Write("<script>alert('Data inserted successfully....!')</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Failed...!')</script>");
+                }
+                
+            }
+            else if (String.Equals(test, "Written Test"))
+            {
+                MySqlCommand cmd = new MySqlCommand("Update security_police_bharti.pb_city_data set written_date = '" + txtdate.Text + "' , written_flag=@a order by id limit '" + txtno.Text + "' ", conn);
+                cmd.Parameters.AddWithValue("@a", "1");
+                cmd.ExecuteNonQuery();
+            }
+            else if (String.Equals(test, "Medical Test"))
+            {
+                MySqlCommand cmd = new MySqlCommand("Update security_police_bharti.pb_city_data set medical_date = '" + txtdate.Text + "' , medical_flag=@a order by id limit '" + txtno.Text + "' ", conn);
+                cmd.Parameters.AddWithValue("@a", "1");
+                cmd.ExecuteNonQuery();
+            }
+
+            
+            conn.Close();
+
+
+
         }
     }
 }
