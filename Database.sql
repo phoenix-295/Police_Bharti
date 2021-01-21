@@ -251,7 +251,7 @@ CREATE TABLE `my_aspnet_sessioncleanup` (
 
 LOCK TABLES `my_aspnet_sessioncleanup` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` DISABLE KEYS */;
-INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2021-01-20 18:03:57',10,1);
+INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2021-01-21 10:23:13',10,1);
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,7 +283,7 @@ CREATE TABLE `my_aspnet_sessions` (
 
 LOCK TABLES `my_aspnet_sessions` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_sessions` DISABLE KEYS */;
-INSERT INTO `my_aspnet_sessions` VALUES ('02tdm1owq22gpzjbefwjub1m',1,'2021-01-20 18:03:59','2021-01-20 18:23:59','2021-01-20 18:03:59',1,20,0,NULL,0),('0axuy10pbfvmufsaikbllcgy',1,'2021-01-20 18:09:21','2021-01-20 18:29:31','2021-01-20 18:09:31',5,20,0,NULL,0),('0hftfbnqb5sldwjjpjecdi1u',1,'2021-01-20 18:10:41','2021-01-20 18:30:41','2021-01-20 18:10:41',1,20,0,NULL,0),('0rd5ddbg5aazrwbi2q0dy23f',1,'2021-01-20 18:05:56','2021-01-20 18:26:04','2021-01-20 18:06:04',4,20,0,NULL,0),('0ujo33f2kuiq0xnaakphp0pf',1,'2021-01-20 18:11:45','2021-01-20 18:31:46','2021-01-20 18:11:46',1,20,0,NULL,0),('1rgun1pvmvmrdmtzie4e04rq',1,'2021-01-20 18:10:04','2021-01-20 18:30:19','2021-01-20 18:10:09',2,20,0,NULL,0),('3i3nrikkjcuk2vvyrvhkyrot',1,'2021-01-20 18:08:28','2021-01-20 18:28:38','2021-01-20 18:08:28',1,20,0,NULL,0),('4015v4ckq1101r5r3bdvnkxo',1,'2021-01-20 18:12:14','2021-01-20 18:32:14','2021-01-20 18:12:14',1,20,0,NULL,0),('42fsxwjhp5ua3x5up2vaqv04',1,'2021-01-20 18:13:13','2021-01-20 18:33:13','2021-01-20 18:13:13',1,20,0,NULL,0),('5p3zb1x2jpsi4o2zndnmc53l',1,'2021-01-20 17:45:57','2021-01-20 18:06:02','2021-01-20 17:46:02',3,20,0,NULL,0),('5wouavcnbpzbqzkvjluojsbm',1,'2021-01-20 18:08:38','2021-01-20 18:28:39','2021-01-20 18:08:38',1,20,0,NULL,0),('c02cmesmlv35spiqzhnyrz0q',1,'2021-01-20 18:03:59','2021-01-20 18:23:59','2021-01-20 18:04:05',2,20,1,NULL,0),('c4jtyvwnuulpqo4bj1z3tgng',1,'2021-01-20 18:12:03','2021-01-20 18:32:03','2021-01-20 18:12:03',1,20,0,NULL,0),('di0uixxqolgjansgktpfse5s',1,'2021-01-20 18:09:22','2021-01-20 18:29:23','2021-01-20 18:09:23',1,20,0,NULL,0),('ds14da1vh1wnscxfqsw3syza',1,'2021-01-20 18:11:33','2021-01-20 18:31:53','2021-01-20 18:11:49',3,20,0,NULL,0),('fpxpr02posl1awihep5ytrxq',1,'2021-01-20 18:07:55','2021-01-20 18:27:55','2021-01-20 18:07:55',1,20,0,NULL,0),('hls2wwbcejlg34glfyeep5ir',1,'2021-01-20 18:07:16','2021-01-20 18:27:16','2021-01-20 18:07:16',1,20,0,NULL,0),('lbdxu42q4vfb3v0ie2b1hfto',1,'2021-01-20 18:09:28','2021-01-20 18:29:28','2021-01-20 18:09:28',1,20,0,NULL,0),('lpwmcfhbnileryfgr4p0z3cl',1,'2021-01-20 18:13:12','2021-01-20 18:33:18','2021-01-20 18:13:18',4,20,0,NULL,0),('mi50qu0v1i0gvmt1cmgesmxq',1,'2021-01-20 18:06:01','2021-01-20 18:26:01','2021-01-20 18:06:01',1,20,0,NULL,0),('o2stsc1s4ba33fohiyoi3dpy',1,'2021-01-20 17:45:58','2021-01-20 18:05:58','2021-01-20 17:45:58',1,20,0,NULL,0),('outgwvmopodw23lb1uk1zykf',1,'2021-01-20 18:10:05','2021-01-20 18:30:05','2021-01-20 18:10:05',1,20,0,NULL,0),('ozb4o4ujwgrqdghwiqwjm43k',1,'2021-01-20 18:06:23','2021-01-20 18:26:34','2021-01-20 18:06:34',2,20,0,NULL,0),('pf22djnik25k5o2vwj1bkab0',1,'2021-01-20 18:13:14','2021-01-20 18:33:14','2021-01-20 18:13:14',1,20,0,NULL,0),('qjcsbvsw4i52kyt2tx1ysov1',1,'2021-01-20 18:06:24','2021-01-20 18:26:24','2021-01-20 18:06:24',1,20,0,NULL,0),('qwwujkpxq5lsqhuljn3oih2l',1,'2021-01-20 18:05:56','2021-01-20 18:25:56','2021-01-20 18:05:56',1,20,0,NULL,0),('qyho3hocnla4rakd5bolbiz5',1,'2021-01-20 18:10:19','2021-01-20 18:30:19','2021-01-20 18:10:19',1,20,0,NULL,0),('r24mmkliy3kgjp4ttk233xbc',1,'2021-01-20 18:06:34','2021-01-20 18:26:34','2021-01-20 18:06:34',1,20,0,NULL,0),('rrdbliaqfafa2121d3cqiqmk',1,'2021-01-20 18:07:54','2021-01-20 18:27:55','2021-01-20 18:07:54',1,20,0,NULL,0),('rrvwwefqignxt0oagaqo5cgk',1,'2021-01-20 18:12:02','2021-01-20 18:32:14','2021-01-20 18:12:05',2,20,0,NULL,0),('rsyhwwiibst5ns55fg3c0nzk',1,'2021-01-20 18:07:12','2021-01-20 18:27:12','2021-01-20 18:07:12',1,20,0,NULL,0),('rvslz4vh3m0ha4ps0zkxejp1',1,'2021-01-20 17:46:01','2021-01-20 18:06:01','2021-01-20 17:46:01',1,20,0,NULL,0),('xpaohi1w4eipksdtjvvz5d0f',1,'2021-01-20 18:07:10','2021-01-20 18:27:41','2021-01-20 18:07:48',4,20,1,NULL,0),('y0xd2lt32sx5vokaejtf4mfl',1,'2021-01-20 18:10:40','2021-01-20 18:30:41','2021-01-20 18:10:43',2,20,1,NULL,0),('z3fzkkocmfodzqsvtm035n1g',1,'2021-01-20 18:11:34','2021-01-20 18:31:34','2021-01-20 18:11:34',1,20,0,NULL,0);
+INSERT INTO `my_aspnet_sessions` VALUES ('1gnatz1xi25zmiv35ntthznx',1,'2021-01-21 10:23:14','2021-01-21 10:43:28','2021-01-21 10:23:28',4,20,0,NULL,0),('cqldlcm5u5gp1x1pboq4zjgk',1,'2021-01-21 10:28:43','2021-01-21 10:48:58','2021-01-21 10:28:58',6,20,0,NULL,0),('eq5iv2ts3glne5dyxiw1slpn',1,'2021-01-21 10:26:46','2021-01-21 10:46:46','2021-01-21 10:26:46',1,20,0,NULL,0),('i4coyrg11wzfbqn2jo3g3esn',1,'2021-01-21 10:29:52','2021-01-21 10:50:10','2021-01-21 10:30:10',4,20,0,NULL,0),('p2gbxrqbytxqimttghn4gshy',1,'2021-01-21 10:30:37','2021-01-21 10:50:48','2021-01-21 10:30:48',4,20,0,NULL,0),('regqiklllnqf4u2c0lkv5jyf',1,'2021-01-21 10:23:56','2021-01-21 10:44:06','2021-01-21 10:24:06',4,20,0,NULL,0),('udl301czg1u5urz5fqhwaatn',1,'2021-01-21 10:11:55','2021-01-21 10:32:08','2021-01-21 10:12:08',5,20,0,NULL,0),('uvgfqt3zgocguvnbf1sc2zxv',1,'2021-01-21 10:31:11','2021-01-21 10:51:38','2021-01-21 10:31:34',5,20,0,NULL,0),('vwudgncuzuux1mjkebi0wh2a',1,'2021-01-21 10:07:21','2021-01-21 10:27:31','2021-01-21 10:07:31',4,20,0,NULL,0),('xv15psw4qwp5ouxenyw50uov',1,'2021-01-21 10:06:09','2021-01-21 10:26:26','2021-01-21 10:06:26',4,20,0,NULL,0),('zag0ndvztoqk0mumhaumc5zf',1,'2021-01-21 10:09:18','2021-01-21 10:29:51','2021-01-21 10:09:51',5,20,0,NULL,0),('zdyxibef4tujvcfo5mwbu24o',1,'2021-01-21 10:10:21','2021-01-21 10:30:29','2021-01-21 10:10:29',4,20,0,NULL,0);
 /*!40000 ALTER TABLE `my_aspnet_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -411,12 +411,12 @@ CREATE TABLE `pb_city_data` (
   `cast` varchar(45) DEFAULT NULL,
   `category` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
-  `phonenumber` int DEFAULT NULL,
+  `phonenumber` bigint DEFAULT NULL,
   `region` varchar(45) DEFAULT NULL,
   `show_data` tinyint DEFAULT '0',
   `show_invite` tinyint DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -425,7 +425,7 @@ CREATE TABLE `pb_city_data` (
 
 LOCK TABLES `pb_city_data` WRITE;
 /*!40000 ALTER TABLE `pb_city_data` DISABLE KEYS */;
-INSERT INTO `pb_city_data` VALUES (16,'A000001','Nilesh Sakpal','24/09/2013','Pune','M','Open','Maratha','a@a.com',9999,'City',1,0),(17,'A000004','Payal Deshmukh','&nbsp;','Pune','F','&nbsp;','&nbsp;','&nbsp;',9999,'City',1,0),(18,'A000010','Anjali Salvi','&nbsp;','Pune','F','&nbsp;','&nbsp;','&nbsp;',9999,'City',1,1);
+INSERT INTO `pb_city_data` VALUES (100,'A000001','Nilesh Sakpal','24/09/2013','Pune','M','Open','Maratha','a@a.com',9999,'City',0,0),(101,'A000003','Ramesh lalit','24/09/2013','Pune','M','SC','Mahar','r12@gmail.com',9999,'City',0,0),(102,'A000004','Payal Deshmukh','24/09/2013','Pune','F','SC','Mang','p12@gmail.com',9999,'City',0,0),(103,'A000005','Saurabh Meheta','24/09/2013','Pune','M','SC','Mahar','s12@gmail.com',9999,'City',0,0),(104,'A000006','Rajesh Purohit','24/09/2013','Pune','M','SC','Chambhar','rp12@gmail.com',9999,'City',0,0),(105,'A000008','Keshav Pandit','24/09/2013','Pune','M','ST','Koli','kp12@gmail.com',9999,'City',0,0),(106,'A000009','Vijender Shingh','24/09/2013','Pune','M','ST','Pardhi','vs@gmail.com',9999,'City',0,0),(107,'A000010','Anjali Salvi','24/09/2014','Pune','F','ST','Koli','as123@gmail.com',9999,'City',0,0),(108,'A000011','Akash chakor','24/09/2015','Pune','M','Open','Maratha','ac96@gmail.com',9876545678,'City',0,0),(109,'A000017','Aniket Tekwade','24/09/2021','Pune','M','OBC','Mali','at67@gmail.com',9050505050,'City',0,0),(110,'A000018','Swati Jadhav','24/09/2022','Pune','F','OBC','Kumbhar','sj@gmail.com',9040404040,'City',0,0),(111,'A000019','Akshay Dhende','24/09/2023','Pune','M','OBC','Kumbhar','ad@gmail.com',9878987890,'City',0,0),(112,'A000023','Harsha fara','24/09/2027','Pune','F','VJNT','Dhangar','hf1@gmail.com',9087656789,'City',0,0),(113,'A000024','Somnath Gaikwad','24/09/2028','Pune','M','VJNT','Dhangar','sg1@gmail.com',9087656789,'City',0,0),(114,'A000025','Ravi Avchar','24/09/2029','Pune','M','Open','Maratha','ra1@gmail.com',9087656789,'City',0,0),(115,'A000027','Baban Pandhare','24/09/2031','Pune','M','SC','Mahar','bp1@gmail.com',9087656789,'City',0,0),(116,'A000029','Nilam Sankpal','24/09/2033','Pune','F','ST','Koli','ns12@gmail.com',9087656789,'City',0,0);
 /*!40000 ALTER TABLE `pb_city_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -559,11 +559,11 @@ CREATE TABLE `pb_gramin_data` (
   `cast` varchar(45) DEFAULT NULL,
   `category` varchar(45) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `phonenumber` int DEFAULT NULL,
+  `phonenumber` bigint DEFAULT NULL,
   `region` varchar(45) DEFAULT NULL,
   `show_data` tinyint DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -572,7 +572,7 @@ CREATE TABLE `pb_gramin_data` (
 
 LOCK TABLES `pb_gramin_data` WRITE;
 /*!40000 ALTER TABLE `pb_gramin_data` DISABLE KEYS */;
-INSERT INTO `pb_gramin_data` VALUES (8,'A000002','Mahesh Raut','33/08/2010','Pune','M','OBC','Bhandari','m@m.com',9999,'Gramin',1),(9,'A000007','Prerna Shingh','&nbsp;','Pune','F','&nbsp;','&nbsp;','&nbsp;',9999,'Gramin',1);
+INSERT INTO `pb_gramin_data` VALUES (70,'A000002','Mahesh Raut','80/08/1999','Pune','M','OBC','Bhandari','m@m.com',9999,'Gramin',0),(71,'A000007','Prerna Shingh','24/09/2013','Pune','F','ST','Katkari','ps12@gmail.com',9999,'Gramin',0),(72,'A000012','Kishor Suryagandh','24/09/2016','Pune','M','Open','Bramhan','ks1@gmail.com',8798989809,'Gramin',0),(73,'A000013','Akshay Suryagandh','24/09/2017','Pune','M','Open','Muslim','as7@gmail.com',9090909098,'Gramin',0),(74,'A000014','Sudhakar Chakor','24/09/2018','Pune','M','Open','Muslim','sc5@gmail.com',8080808080,'Gramin',0),(75,'A000015','Nilam Sathe','24/09/2019','Pune','F','Open','Bramhan','ns99@gmail.com',7070707070,'Gramin',0),(76,'A000016','Ashwini Gawate','24/09/2020','Pune','F','OBC','Mali','ag234@gmail.com',6060606060,'Gramin',0),(77,'A000020','Vanita Machale','24/09/2024','Pune','F','VJNT','Dhangar','vm098@gmail.com',9087656789,'Gramin',0),(78,'A000021','Priyanka Gawali','24/09/2025','Pune','F','VJNT','Dhangar','pg12345@gmail.com',9087656789,'Gramin',0),(79,'A000022','Komal Kasabe','24/09/2026','Pune','F','VJNT','Dhangar','kk1@gmail.com',9087656789,'Gramin',0),(80,'A000026','Gunjan Shelar','24/09/2030','Pune','F','Open','Muslim','gs1@gmail.com',9087656789,'Gramin',0),(81,'A000028','Suman Dhorajkar','24/09/2032','Pune','F','SC','Mang','sd1@gmail.com',9087656789,'Gramin',0),(82,'A000030','Rushi Pawar','24/09/2034','Pune','M','ST','Pardhi','rp1@gmail.com',9087656789,'Gramin',0);
 /*!40000 ALTER TABLE `pb_gramin_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -641,4 +641,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-20 18:14:47
+-- Dump completed on 2021-01-21 10:37:13

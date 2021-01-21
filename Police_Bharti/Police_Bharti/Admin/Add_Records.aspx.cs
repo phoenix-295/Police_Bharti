@@ -13,8 +13,12 @@ namespace Police_Bharti.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            btninsert.Visible = false;
-            chkbx1.Visible = false;
+            if (!IsPostBack)
+            {
+                btninsert.Visible = false;
+                chkbx1.Visible = false;
+                hasdata();
+            }
         }
 
         protected void btnupload_Click(object sender, EventArgs e)
@@ -43,18 +47,38 @@ namespace Police_Bharti.Admin
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataAdapter da = new OleDbDataAdapter(cmd);
                 DataSet ds = new DataSet();
-                da.Fill(ds);
-                gvExcelFile.DataSource = ds.Tables[0];
+                da.Fill(ds, "a");
+                gvExcelFile.DataSource = ds.Tables["a"].DefaultView;
                 gvExcelFile.DataBind();
+                ViewState["mydataset"] = ds;
                 conn.Close();
                 btninsert.Visible = true;
                 chkbx1.Visible = true;
+                
             }
             catch(Exception e1)
             {
                 Response.Write("<script> alert('Error In Input'); </script>");
             }
             
+        }
+
+        protected void hasdata()
+        {
+            if (gvExcelFile.Rows.Count != 0)
+            {
+                if (lblmsg.Text == "Records Overridden" || lblmsg.Text == "Successfully Added")
+                {
+                    chkbx1.Visible = false;
+                    btninsert.Visible = false;
+                }
+                else
+                {
+                    chkbx1.Visible = true;
+                    btninsert.Visible = true;
+
+                }
+            }
         }
 
         protected void btninsert_Click(object sender, EventArgs e)
@@ -69,42 +93,65 @@ namespace Police_Bharti.Admin
                 com.ExecuteNonQuery();
                 com = new MySqlCommand("DELETE From pb_city_data", con);
                 com.ExecuteNonQuery();
-                foreach (GridViewRow g1 in gvExcelFile.Rows)
+                
+                int a = gvExcelFile.PageIndex;
+                for (int i = 0; i < gvExcelFile.PageCount; i++)
                 {
-                    if (((g1.Cells[9].Text) == ("city")) || ((g1.Cells[9].Text) == ("City")))
+                    gvExcelFile.SetPageIndex(i);
+                    foreach (GridViewRow g1 in gvExcelFile.Rows)
                     {
-                        com = new MySqlCommand("Insert into pb_city_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
-                        com.ExecuteNonQuery();
-                    }
-                    if (((g1.Cells[9].Text) == ("gramin")) || ((g1.Cells[9].Text) == ("Gramin")))
-                    {
-                        com = new MySqlCommand("Insert into pb_gramin_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
-                        com.ExecuteNonQuery();
+                        if (((g1.Cells[9].Text) == ("city")) || ((g1.Cells[9].Text) == ("City")))
+                        {
+                            com = new MySqlCommand("Insert into pb_city_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
+                            com.ExecuteNonQuery();
+                        }
+                        if (((g1.Cells[9].Text) == ("gramin")) || ((g1.Cells[9].Text) == ("Gramin")))
+                        {
+                            com = new MySqlCommand("Insert into pb_gramin_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
+                            com.ExecuteNonQuery();
+                        }
                     }
                 }
+                gvExcelFile.SetPageIndex(a);
+                
                 lblmsg.ForeColor = Color.Green;
                 lblmsg.Text = "Records Overridden";
             }
             else
             {
-                foreach (GridViewRow g1 in gvExcelFile.Rows)
+                int a = gvExcelFile.PageIndex;
+                for (int i = 0; i < gvExcelFile.PageCount; i++)
                 {
-                    if (((g1.Cells[9].Text) == ("city")) || ((g1.Cells[9].Text) == ("City")))
+                    gvExcelFile.SetPageIndex(i);
+                    foreach (GridViewRow g1 in gvExcelFile.Rows)
                     {
-                        com = new MySqlCommand("Insert into pb_city_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
-                        com.ExecuteNonQuery();
-                    }
-                    if (((g1.Cells[8].Text) == ("district")) || ((g1.Cells[8].Text) == ("District")))
-                    {
-                        com = new MySqlCommand("Insert into pb_gramin_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
-                        com.ExecuteNonQuery();
+                        if (((g1.Cells[9].Text) == ("city")) || ((g1.Cells[9].Text) == ("City")))
+                        {
+                            com = new MySqlCommand("Insert into pb_city_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
+                            com.ExecuteNonQuery();
+                        }
+                        if (((g1.Cells[8].Text) == ("district")) || ((g1.Cells[8].Text) == ("District")))
+                        {
+                            com = new MySqlCommand("Insert into pb_gramin_data(application_Id,full_name,date_of_birth,district,gender,cast,category,email,phonenumber,region) values ('" + g1.Cells[0].Text + "','" + g1.Cells[1].Text + "','" + g1.Cells[2].Text + "','" + g1.Cells[3].Text + "',  '" + g1.Cells[4].Text + "',  '" + g1.Cells[5].Text + "',  '" + g1.Cells[6].Text + "',  '" + g1.Cells[7].Text + "',  '" + g1.Cells[8].Text + "',  '" + g1.Cells[9].Text + "')", con);
+                            com.ExecuteNonQuery();
+                        }
                     }
                 }
+                gvExcelFile.SetPageIndex(a);
                 lblmsg.ForeColor = Color.Green;
                 lblmsg.Text = "Successfully Added";
             }
             con.Close();
+            hasdata();
         }
 
+        protected void gvExcelFile_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            DataSet mydataset = (DataSet)ViewState["mydataset"];
+            DataTable myydatatable = mydataset.Tables["a"];
+            gvExcelFile.DataSource = myydatatable;
+            gvExcelFile.PageIndex = e.NewPageIndex;
+            gvExcelFile.DataBind();
+        }
     }
 }
