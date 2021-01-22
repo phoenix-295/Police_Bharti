@@ -141,6 +141,8 @@ namespace Police_Bharti.CityAdmin
                 cmd.Parameters.AddWithValue("@a", "1");
                 cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
                 cmd.ExecuteNonQuery();
+                //Response.Write("<script>alert('Invitation sent successfully')</script>");
+                Label1.Text = "Invitation sent Sucessfully...";
             }
             else if (String.Equals(test, "2"))
             {
@@ -149,12 +151,20 @@ namespace Police_Bharti.CityAdmin
                 cmd.Parameters.AddWithValue("@a", "1");
                 cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
                 cmd.ExecuteNonQuery();
+                //Response.Write("<script>alert('Invitation sent successfully')</script>");
+                Label1.Text = "Invitation sent Sucessfully...";
+
             }
             else if (String.Equals(test, "Medical Test"))
             {
-                MySqlCommand cmd = new MySqlCommand("Update security_police_bharti.pb_city_data set medical_date = '" + txtdate.Text + "' , medical_flag=@a order by id limit '" + txtno.Text + "' ", conn);
+                MySqlCommand cmd = new MySqlCommand("Update pb_city_data set medical_date =@b, medical_flag=@a where medical_flag!=1 limit @c", conn);
                 cmd.Parameters.AddWithValue("@a", "1");
+                cmd.Parameters.AddWithValue("@b", txtdate.Text);
+                cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
                 cmd.ExecuteNonQuery();
+                //Response.Write("<script>alert('Invitation sent successfully')</script>");
+                Label1.Text = "Invitation sent Sucessfully...";
+
             }
             conn.Close();
         }
