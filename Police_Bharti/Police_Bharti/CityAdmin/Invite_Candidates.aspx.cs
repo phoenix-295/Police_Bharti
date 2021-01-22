@@ -12,6 +12,7 @@ namespace Police_Bharti.CityAdmin
         {
             if (!IsPostBack)
             {
+                count_city_rows();
                 default1();
             }
         }
@@ -31,29 +32,34 @@ namespace Police_Bharti.CityAdmin
             {
                 if ((r1["id"].ToString() == x))
                 {
-                    lblfrom.Text = r1["start_date"].ToString();                    
+                    lblfrom.Text = r1["start_date"].ToString();
                     lblto.Text = r1["end_date"].ToString();
                     if ((r1["c_invited"].ToString() == "1"))
                     {
                         btnupdate.Enabled = false;
+                        btnupdate.Text = "Invited";
                     }
                     else
                     {
                         btnupdate.Enabled = true;
+                        btnupdate.Text = "Invite";
                     }
                 }
-                
             }
+            con.Close();
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int rowcount = 0;
-            int invitecount = 0;
-            string x = (DropDownList1.SelectedIndex + 1).ToString();
+            default1();
+        }
+
+        protected void count_city_rows()
+        {
+            int rc = 0, wf =0, pf = 0, mf = 0;
             string s1, s2;
             s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-            s2 = "Select * from pb_city_event_plan where id=" + x;
+            s2 = "Select * from pb_city_data";
             MySqlConnection con = new MySqlConnection(s1);
             con.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(s2, s1);
@@ -61,47 +67,63 @@ namespace Police_Bharti.CityAdmin
             da.Fill(ds, "a");
             foreach (DataRow r1 in ds.Tables["a"].Rows)
             {
-                rowcount++;
-                if ((r1["id"].ToString() == x))
+                rc++;
+                if ((r1["written_flag"].ToString() == "1"))
                 {
-                    lblfrom.Text = r1["start_date"].ToString();
-                    lblto.Text = r1["end_date"].ToString();
-                    if ((r1["c_invited"].ToString() == "1"))
-                    {
-                        btnupdate.Text = "Invited";
-                        btnupdate.Enabled = false;
-                    }
-                    else
-                    {
-                        btnupdate.Text = "Invite";
-                        btnupdate.Enabled = true;
-                    }
+                    wf++;
                 }
-
-                
-                 
+                if ((r1["physical_flag"].ToString() == "1"))
+                {
+                    pf++;
+                }
+                if ((r1["medical_flag"].ToString() == "1"))
+                {
+                    mf++;
+                }
             }
-            Response.Write(invitecount);
+
+            if (rc == pf)
+            {
+                MySqlCommand cmd1 = new MySqlCommand("Update pb_city_event_plan set c_invited= 1 where id=1", con);
+                cmd1.ExecuteNonQuery();
+            }
+            else
+            {
+                MySqlCommand cmd1 = new MySqlCommand("Update pb_city_event_plan set c_invited= 0 where id=1", con);
+                cmd1.ExecuteNonQuery();
+            }
+
+            if (rc == wf)
+            {
+                MySqlCommand cmd1 = new MySqlCommand("Update pb_city_event_plan set c_invited= 1 where id=2", con);
+                cmd1.ExecuteNonQuery();
+            }
+            else
+            {
+                MySqlCommand cmd1 = new MySqlCommand("Update pb_city_event_plan set c_invited= 0 where id=2", con);
+                cmd1.ExecuteNonQuery();
+            }
+
+            if (rc == mf)
+            {
+                MySqlCommand cmd1 = new MySqlCommand("Update pb_city_event_plan set c_invited= 1 where id=3", con);
+                cmd1.ExecuteNonQuery();
+            }
+            else
+            {
+                MySqlCommand cmd1 = new MySqlCommand("Update pb_city_event_plan set c_invited= 0 where id=3", con);
+                cmd1.ExecuteNonQuery();
+            }
+
             con.Close();
+
         }
 
         protected void btnupdate_Click(object sender, EventArgs e)
         {
-            string s1;
-            s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-            string id = (DropDownList1.SelectedIndex + 1).ToString();
-            MySqlConnection conn = new MySqlConnection(s1);
-            conn.Open();
-
-            MySqlCommand cmd = new MySqlCommand("Update pb_city_event_plan set c_invited=@a where id=" + id, conn);
-
-            cmd.Parameters.AddWithValue("@a", "1");
+            count_city_rows();
+            default1();
             
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            Label1.Text = "Updated Successfully";
-            Label1.ForeColor = Color.Green;
-
             update_invitation_date_to_master_table();
         }
 
@@ -112,24 +134,20 @@ namespace Police_Bharti.CityAdmin
             s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             MySqlConnection conn = new MySqlConnection(s2);
             conn.Open();
-            if (String.Equals(test, "Physical Test"))
+            if (String.Equals(test, "1"))
             {
-                MySqlCommand cmd = new MySqlCommand("Update security_police_bharti.pb_city_data set physical_date = '" + txtdate.Text + "' , physical_flag=@a order by id limit '" + int.Parse(txtno.Text) + "' ", conn);
+                MySqlCommand cmd = new MySqlCommand("Update pb_city_data set physical_date =@b, physical_flag=@a where physical_flag!=1 limit @c", conn);
+                cmd.Parameters.AddWithValue("@b", txtdate.Text);
                 cmd.Parameters.AddWithValue("@a", "1");
-                if(cmd.ExecuteNonQuery()==1)
-                {
-                    Response.Write("<script>alert('Data inserted successfully....!')</script>");
-                }
-                else
-                {
-                    Response.Write("<script>alert('Failed...!')</script>");
-                }
-                
+                cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
+                cmd.ExecuteNonQuery();
             }
-            else if (String.Equals(test, "Written Test"))
+            else if (String.Equals(test, "2"))
             {
-                MySqlCommand cmd = new MySqlCommand("Update security_police_bharti.pb_city_data set written_date = '" + txtdate.Text + "' , written_flag=@a order by id limit '" + txtno.Text + "' ", conn);
+                MySqlCommand cmd = new MySqlCommand("Update pb_city_data set written_date=@b, written_flag=@a where written_flag!=1 limit @c", conn);
+                cmd.Parameters.AddWithValue("@b",txtdate.Text);
                 cmd.Parameters.AddWithValue("@a", "1");
+                cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
                 cmd.ExecuteNonQuery();
             }
             else if (String.Equals(test, "Medical Test"))
@@ -138,12 +156,7 @@ namespace Police_Bharti.CityAdmin
                 cmd.Parameters.AddWithValue("@a", "1");
                 cmd.ExecuteNonQuery();
             }
-
-            
             conn.Close();
-
-
-
         }
     }
 }

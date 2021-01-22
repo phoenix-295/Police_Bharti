@@ -115,7 +115,7 @@
         <tr>
             <td style="width:175px">&nbsp;</td>
             <td>
-                <asp:Button ID="btnupdate" runat="server" Text="Invited" OnClick="btnupdate_Click" />
+                <asp:Button ID="btnupdate" runat="server" Text="Invite" OnClick="btnupdate_Click" />
                 <br />
                 <h4><asp:Label ID="Label1" runat="server"></asp:Label></h4>
             </td>
