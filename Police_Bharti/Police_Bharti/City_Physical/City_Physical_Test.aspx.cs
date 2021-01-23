@@ -85,27 +85,39 @@ namespace Police_Bharti.City_Physical
                         lblg.Text = r1["gender"].ToString();
                         lblcast.Text = r1["cast"].ToString();
                         lblcategory.Text = r1["category"].ToString();
-                        //Image1.ImageUrl = r1["Image1"].ToString();
-                        //Image2.ImageUrl = r1["Image2"].ToString();
-                        //txtwas.Text = r1["Was_Price"].ToString();
-                        //txtnow.Text = r1["Now_price"].ToString();
+                        txtheight.Text = r1["height"].ToString();
+                        txtchest.Text = r1["chest"].ToString();
+                        txtweight.Text = r1["weight"].ToString();
                     }
                 }
                 con.Close();
 
                 if (lblg.Text == "M")
                 {
-                    if ((txtheight.Text != "") && (txtchest.Text != "") && (txtweight.Text != ""))
+                    if ((txtheight.Text != "0") && (txtchest.Text != "0") && (txtweight.Text != "0"))
                     {
                         btnsub.Enabled = false;
+                    }
+                    else
+                    {
+                        txtheight.Text = "";
+                        txtchest.Text = "";
+                        txtweight.Text = "";
+                        btnsub.Enabled = true;
                     }
                 }
 
                 if (lblg.Text == "F")
                 {
-                    if ((txtheight.Text != "") && (txtweight.Text != ""))
+                    if ((txtheight.Text != "0") && (txtweight.Text != "0"))
                     {
                         btnsub.Enabled = false;
+                    }
+                    else
+                    {
+                        txtheight.Text = "";
+                        txtweight.Text = "";
+                        btnsub.Enabled = true;
                     }
                 }
             }
@@ -122,12 +134,14 @@ namespace Police_Bharti.City_Physical
                 txtchest.Visible = false;
                 Label1.Visible = false;
                 RequiredFieldValidator1.Enabled = false;
+                rec.Enabled = false;
             }
             else
             {
                 txtchest.Visible = true;
                 Label1.Visible = true;
                 RequiredFieldValidator1.Enabled = true;
+                rec.Enabled = true;
             }
         }
 
@@ -150,7 +164,7 @@ namespace Police_Bharti.City_Physical
             string res = "0";
             if (lblg.Text == "M")
             {
-                if ((lblhr.Text == "Pass") && (lblcr.Text == "Pass"))
+                if ((hr.Value == "Pass") && (cr.Value == "Pass"))
                 {
                     res = "1";
                 }
@@ -170,25 +184,36 @@ namespace Police_Bharti.City_Physical
                     res = "0";
                 }
             }
-            //lblres.Text = lblhr.Text;
+            lblres.Text = lblhr.Text;
 
-            //string s2;
-            //s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-            //MySqlConnection conn = new MySqlConnection(s2);
-            //conn.Open();
-            //MySqlCommand cmd = new MySqlCommand("Update pb_city_data set height =@a, chest=@b, weight=@c where application_Id="+DropDownList2.Text, conn);
-            //cmd.Parameters.AddWithValue("@a", txtheight.Text);
-            //cmd.Parameters.AddWithValue("@b", txtchest.Text);
-            //cmd.Parameters.AddWithValue("@c", txtweight.Text);
-            //cmd.ExecuteNonQuery();
-
-
+            string s2;
+            s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            MySqlConnection conn = new MySqlConnection(s2);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set height =@a, chest=@b, weight=@c, p_flag=@d where application_Id='" + DropDownList2.Text+ "'", conn);
+            if (lblg.Text == "M")
+            {
+                cmd.Parameters.AddWithValue("@a", txtheight.Text);
+                cmd.Parameters.AddWithValue("@b", txtchest.Text);
+                cmd.Parameters.AddWithValue("@c", txtweight.Text);
+                cmd.Parameters.AddWithValue("@d", res);
+                cmd.ExecuteNonQuery();
+            }
+            if (lblg.Text == "F")
+            {
+                cmd.Parameters.AddWithValue("@a", txtheight.Text);
+                cmd.Parameters.AddWithValue("@b", "0");
+                cmd.Parameters.AddWithValue("@c", txtweight.Text);
+                cmd.Parameters.AddWithValue("@d", res);
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
 
             txtheight.Text = "";
             txtchest.Text = "";
             txtweight.Text = "";
             lblres.Text = "Submitted Successfully";
-            
+            fill_data();
         }
     }
 }

@@ -144,7 +144,7 @@
             
                <li class="nav-item">
             <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-registered"></i>
               <p>
                 Registration
                   <i class="fas fa-angle-left right"></i>
@@ -168,7 +168,7 @@
              
           <li class="nav-item">
             <a href="Add_Records.aspx" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-address-book"></i>
               <p>
                 Add records
               </p>
@@ -176,7 +176,7 @@
           </li>
           <li class="nav-item">
             <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 View records
                   <i class="fas fa-angle-left right"></i>

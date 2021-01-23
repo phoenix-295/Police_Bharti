@@ -129,7 +129,9 @@
                     </tr>
                     <tr>
                         <td style="width: 103px; height: 30px"></td>
-                        <td style="height: 30px"></td>
+                        <td style="height: 30px">
+                            <asp:HiddenField ID="hr" runat="server" />
+                        </td>
                     </tr>
                     <tr>
                         <td style="width: 103px"><h4>
@@ -153,7 +155,9 @@
                     </tr>
                     <tr>
                         <td style="width: 103px">&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td>
+                            <asp:HiddenField ID="cr" runat="server" />
+                        </td>
                     </tr>
                     <tr>
                         <td style="width: 103px"><h4>Weight:</h4></td>
@@ -213,18 +217,22 @@
             if (g == "M") {
                 if (h1 > 165) {
                     document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
+                    document.getElementById('<%= hr.ClientID %>').value = "Pass";
                 }
                 else {
                     document.getElementById('<%= lblhr.ClientID %>').textContent = "Fail";
+                    document.getElementById('<%= hr.ClientID %>').value = "Fail";
                 }
             }
 
             if (g == "F") {
                 if (h1 > 155) {
                     document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
+                    document.getElementById('<%= hr.ClientID %>').value = "Pass";
                 }
                 else {
                     document.getElementById('<%= lblhr.ClientID %>').textContent = "Fail";
+                    document.getElementById('<%= hr.ClientID %>').value = "Fail";
                 }
             }
         }
@@ -234,9 +242,11 @@
             if (g == "M") {
                 if ((c1 > 79) && (c1 < 84)) {
                     document.getElementById('<%= lblcr.ClientID %>').textContent = "Pass";
+                    document.getElementById('<%= cr.ClientID %>').value = "Pass";
                 }
                 else {
                     document.getElementById('<%= lblcr.ClientID %>').textContent = "Fail";
+                    document.getElementById('<%= cr.ClientID %>').value = "Fail";
                 }
             }
         }
