@@ -77,7 +77,7 @@ CREATE TABLE `my_aspnet_membership` (
 
 LOCK TABLES `my_aspnet_membership` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_membership` DISABLE KEYS */;
-INSERT INTO `my_aspnet_membership` VALUES (1,'nikhil295@gmail.com','','iSJfCYhYs0Xrayh2dXqXvHlk5Ul4/8Z/gUFy896OJVw=','L4N8uGKD9J0femSZsg88Eg==',1,'1','MV8CXWFPYRxlc8wrRveoa1iqty0smlCEhjsmC9wGJoo=',1,'2021-01-21 13:50:09','2021-01-21 13:50:09','2020-12-19 08:49:50','2020-12-19 08:49:50',0,'2020-12-19 08:49:50',1,'2020-12-19 10:15:08',0,'2020-12-19 08:49:50'),(5,'nikhil295@gmail.com','','9Q3QGKQAZq9U+OJu/t7QiIpq5WWJT9FWIWz1Dxe10Zs=','T/te0hddWKa4b1WNc+WsFQ==',1,'1','mhb+8Z87EIttpjDE5o7L3HsPcqXca3BtVXYFdJg/EfE=',1,'2021-01-20 12:10:41','2021-01-20 12:10:41','2021-01-10 09:48:55','2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55'),(8,'nikhil295@gmail.com','','gQayERrrL2J4CuG5n9X/xc5Djpis0Tej+/PSLsh3uZU=','RlSmVvHxW5iCpKcemM+lsQ==',1,'1','4bpxkwlmoRwtz9Uyd/seHyd2fqNQ7oWyhCpWZrcdg9w=',1,'2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35'),(9,'nikhil295@gmail.com','','7q8jzCmAm0i02vAkLhc9JUfkffCQuZjkKpKeHGnrJi0=','rvMR658DH8bFXY30P/VnQg==',1,'1','Syazs2hXYNhte8pcvnl3f8gpQu9fP1fGO25jMTAfxfM=',1,'2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12');
+INSERT INTO `my_aspnet_membership` VALUES (1,'nikhil295@gmail.com','','iSJfCYhYs0Xrayh2dXqXvHlk5Ul4/8Z/gUFy896OJVw=','L4N8uGKD9J0femSZsg88Eg==',1,'1','MV8CXWFPYRxlc8wrRveoa1iqty0smlCEhjsmC9wGJoo=',1,'2021-01-23 10:41:03','2021-01-23 10:41:03','2020-12-19 08:49:50','2020-12-19 08:49:50',0,'2020-12-19 08:49:50',1,'2020-12-19 10:15:08',0,'2020-12-19 08:49:50'),(5,'nikhil295@gmail.com','','9Q3QGKQAZq9U+OJu/t7QiIpq5WWJT9FWIWz1Dxe10Zs=','T/te0hddWKa4b1WNc+WsFQ==',1,'1','mhb+8Z87EIttpjDE5o7L3HsPcqXca3BtVXYFdJg/EfE=',1,'2021-01-20 12:10:41','2021-01-20 12:10:41','2021-01-10 09:48:55','2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55',0,'2021-01-10 09:48:55'),(8,'nikhil295@gmail.com','','gQayERrrL2J4CuG5n9X/xc5Djpis0Tej+/PSLsh3uZU=','RlSmVvHxW5iCpKcemM+lsQ==',1,'1','4bpxkwlmoRwtz9Uyd/seHyd2fqNQ7oWyhCpWZrcdg9w=',1,'2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35','2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35',0,'2021-01-19 11:23:35'),(9,'nikhil295@gmail.com','','7q8jzCmAm0i02vAkLhc9JUfkffCQuZjkKpKeHGnrJi0=','rvMR658DH8bFXY30P/VnQg==',1,'1','Syazs2hXYNhte8pcvnl3f8gpQu9fP1fGO25jMTAfxfM=',1,'2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12','2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12',0,'2021-01-19 11:25:12');
 /*!40000 ALTER TABLE `my_aspnet_membership` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -251,7 +251,7 @@ CREATE TABLE `my_aspnet_sessioncleanup` (
 
 LOCK TABLES `my_aspnet_sessioncleanup` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` DISABLE KEYS */;
-INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2021-01-22 10:05:07',10,1);
+INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2021-01-23 19:50:55',10,1);
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,7 +283,7 @@ CREATE TABLE `my_aspnet_sessions` (
 
 LOCK TABLES `my_aspnet_sessions` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_sessions` DISABLE KEYS */;
-INSERT INTO `my_aspnet_sessions` VALUES ('1p54ysrrtlei1hbuhndefgsy',1,'2021-01-22 10:14:13','2021-01-22 10:34:13','2021-01-22 10:14:13',1,20,0,NULL,0),('30z3rqqbrnk5cc3g0hiodwjy',1,'2021-01-22 09:47:06','2021-01-22 10:07:06','2021-01-22 09:47:06',1,20,0,NULL,0),('ahk0ug5r5tx5rvfdcjpegy04',1,'2021-01-22 09:52:32','2021-01-22 10:12:37','2021-01-22 09:52:37',4,20,0,NULL,0),('d5qvyo2ihisuykqcggz50q1t',1,'2021-01-22 09:53:25','2021-01-22 10:13:56','2021-01-22 09:53:34',3,20,0,NULL,0),('dhoniibv2blxvczlhnlonvj3',1,'2021-01-22 09:56:34','2021-01-22 10:16:34','2021-01-22 09:56:34',1,20,0,NULL,0),('ehog0ihaztjeqoqaydnaweb2',1,'2021-01-22 09:50:49','2021-01-22 10:10:49','2021-01-22 09:50:49',1,20,0,NULL,0),('geblaul5jbedwulk0bjyqply',1,'2021-01-22 09:54:48','2021-01-22 10:15:08','2021-01-22 09:55:08',4,20,0,NULL,0),('hk2za4zmwezo2lkc3sc1gu33',1,'2021-01-22 09:45:35','2021-01-22 10:05:35','2021-01-22 09:45:35',1,20,0,NULL,0),('hzrmeelr10eyr22tvlub4kdn',1,'2021-01-22 09:52:33','2021-01-22 10:12:33','2021-01-22 09:52:33',1,20,0,NULL,0),('idtlllk1o1og0pbnbnd1dsfm',1,'2021-01-22 10:05:08','2021-01-22 10:25:23','2021-01-22 10:05:23',4,20,0,NULL,0),('ie3iy5boutocqp0wmhkktzg1',1,'2021-01-22 09:50:46','2021-01-22 10:10:46','2021-01-22 09:50:46',1,20,0,NULL,0),('ipnoaslmpp2s3dub3o314gfe',1,'2021-01-22 09:45:35','2021-01-22 10:05:35','2021-01-22 09:45:35',1,20,0,NULL,0),('jlnasognek2xcdv2wkeijwep',1,'2021-01-22 09:56:25','2021-01-22 10:17:27','2021-01-22 09:57:30',9,20,1,NULL,0),('l2kqawgrzi0o22tom1eghx3b',1,'2021-01-22 09:50:17','2021-01-22 10:10:17','2021-01-22 09:50:17',1,20,0,NULL,0),('mo55uvknvana5garspq0mcgx',1,'2021-01-22 10:05:19','2021-01-22 10:25:19','2021-01-22 10:05:19',1,20,0,NULL,0),('mtvxeojpfajueg3wlhfn323w',1,'2021-01-22 09:54:53','2021-01-22 10:14:53','2021-01-22 09:54:53',1,20,0,NULL,0),('obaccwjuhw5u3vi14ianp5gy',1,'2021-01-22 10:05:08','2021-01-22 10:25:08','2021-01-22 10:05:08',1,20,0,NULL,0),('ptxjg5juxh3roytvr0fxjxoc',1,'2021-01-22 09:53:33','2021-01-22 10:13:33','2021-01-22 09:53:33',1,20,0,NULL,0),('r2uywupthzugd4sa1wckm4te',1,'2021-01-22 09:47:05','2021-01-22 10:07:50','2021-01-22 09:47:52',6,20,1,NULL,0),('r3zhhz0ixr1b2wzq1rt45x4b',1,'2021-01-22 09:49:54','2021-01-22 10:09:54','2021-01-22 09:49:54',1,20,0,NULL,0),('sf1so5tyllmtx2t3n0u4zxwk',1,'2021-01-22 09:54:48','2021-01-22 10:14:48','2021-01-22 09:54:48',1,20,0,NULL,0),('sfhbu5wtbahznviwva2u04ft',1,'2021-01-22 10:14:09','2021-01-22 10:34:16','2021-01-22 10:14:16',5,20,0,NULL,0),('tstqbsdj5fmglwy3ylpfxqxo',1,'2021-01-22 09:50:45','2021-01-22 10:11:03','2021-01-22 09:51:03',9,20,0,NULL,0),('vy4kjprl3njbuftikrcevbci',1,'2021-01-22 10:14:10','2021-01-22 10:34:10','2021-01-22 10:14:10',1,20,0,NULL,0),('w2moev2secqt0qn0hhx2yysi',1,'2021-01-22 09:47:08','2021-01-22 10:07:08','2021-01-22 09:47:08',1,20,0,NULL,0),('xm1jfa1mefpypbnmghkvvvct',1,'2021-01-22 09:56:26','2021-01-22 10:16:26','2021-01-22 09:56:26',1,20,0,NULL,0),('zoiel45bd511vmdml3lgdw0i',1,'2021-01-22 09:53:26','2021-01-22 10:13:26','2021-01-22 09:53:26',1,20,0,NULL,0),('zow2rkkqi4jn4cinhs505he2',1,'2021-01-22 09:52:35','2021-01-22 10:12:35','2021-01-22 09:52:35',1,20,0,NULL,0),('zucgk05k4ytvkvtoc0abrzfr',1,'2021-01-22 09:49:53','2021-01-22 10:10:24','2021-01-22 09:50:24',4,20,0,NULL,0);
+INSERT INTO `my_aspnet_sessions` VALUES ('0w33b32m2ksn3ddlx4afxncy',1,'2021-01-23 19:38:58','2021-01-23 19:58:59','2021-01-23 19:38:58',1,20,0,NULL,0),('14qop3h12zykiiwigxgw0iqm',1,'2021-01-23 19:50:55','2021-01-23 20:10:56','2021-01-23 19:51:06',2,20,1,NULL,0),('23tl5caunroxxxaxkcmpg2qa',1,'2021-01-23 19:51:32','2021-01-23 20:11:32','2021-01-23 19:51:46',2,20,1,NULL,0),('a2xzgeilk4rn5d2wwufc4dgp',1,'2021-01-23 19:52:11','2021-01-23 20:13:24','2021-01-23 19:52:32',2,20,0,NULL,0),('fufqph4vvxmawaasia22ifvv',1,'2021-01-23 19:41:10','2021-01-23 20:01:11','2021-01-23 19:41:11',1,20,0,NULL,0),('k1udylut3wtsgmfbh0kbj244',1,'2021-01-23 19:41:41','2021-01-23 20:01:41','2021-01-23 19:41:41',1,20,0,NULL,0),('nr2zjhy5lrm2i130eogb2oyf',1,'2021-01-23 19:39:41','2021-01-23 19:59:42','2021-01-23 19:39:41',1,20,0,NULL,0),('oer1ge5hkfuyu2fi51hzyfoz',1,'2021-01-23 19:43:39','2021-01-23 20:03:46','2021-01-23 19:43:46',4,20,0,NULL,0),('pyxvkfqlwbzlqy5yp1mefbt4',1,'2021-01-23 19:56:03','2021-01-23 20:16:16','2021-01-23 19:56:16',2,20,0,NULL,0),('r2s2nixc3ui2puligusakpav',1,'2021-01-23 19:55:14','2021-01-23 20:15:28','2021-01-23 19:55:28',2,20,0,NULL,0),('uh2scer2bkoaentcip1rmzif',1,'2021-01-23 19:40:48','2021-01-23 20:00:48','2021-01-23 19:40:48',1,20,0,NULL,0),('ws5b5w1rv2l3fa3mbavmtvdc',1,'2021-01-23 19:39:17','2021-01-23 19:59:17','2021-01-23 19:39:17',1,20,0,NULL,0),('y0ndk4q001rcinfeiwc5xj2l',1,'2021-01-23 19:38:39','2021-01-23 19:58:39','2021-01-23 19:38:39',1,20,0,NULL,0);
 /*!40000 ALTER TABLE `my_aspnet_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -337,7 +337,7 @@ CREATE TABLE `my_aspnet_users` (
 
 LOCK TABLES `my_aspnet_users` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_users` DISABLE KEYS */;
-INSERT INTO `my_aspnet_users` VALUES (1,1,'Admin',0,'2021-01-21 13:50:09'),(5,1,'cityadmin',0,'2021-01-20 12:10:41'),(8,1,'cground',0,'2021-01-19 11:23:35'),(9,1,'cwritten',0,'2021-01-19 11:25:12');
+INSERT INTO `my_aspnet_users` VALUES (1,1,'Admin',0,'2021-01-23 10:41:03'),(5,1,'cityadmin',0,'2021-01-20 12:10:41'),(8,1,'cground',0,'2021-01-19 11:23:35'),(9,1,'cwritten',0,'2021-01-19 11:25:12');
 /*!40000 ALTER TABLE `my_aspnet_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -403,7 +403,7 @@ DROP TABLE IF EXISTS `pb_city_data`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pb_city_data` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `application_Id` varchar(50) DEFAULT NULL,
+  `application_Id` varchar(50) NOT NULL,
   `full_name` varchar(200) DEFAULT NULL,
   `date_of_birth` varchar(50) DEFAULT NULL,
   `district` varchar(50) DEFAULT NULL,
@@ -416,12 +416,15 @@ CREATE TABLE `pb_city_data` (
   `show_data` tinyint DEFAULT '0',
   `show_invite` tinyint DEFAULT '0',
   `physical_date` varchar(45) DEFAULT NULL,
-  `written_date` varchar(45) DEFAULT NULL,
-  `medical_date` varchar(45) DEFAULT NULL,
   `physical_flag` tinyint DEFAULT '0',
+  `written_date` varchar(45) DEFAULT NULL,
   `written_flag` tinyint DEFAULT '0',
+  `medical_date` varchar(45) DEFAULT NULL,
   `medical_flag` tinyint DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `height` int DEFAULT '0',
+  `chest` int DEFAULT '0',
+  `weight` int DEFAULT '0',
+  PRIMARY KEY (`id`,`application_Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -431,7 +434,7 @@ CREATE TABLE `pb_city_data` (
 
 LOCK TABLES `pb_city_data` WRITE;
 /*!40000 ALTER TABLE `pb_city_data` DISABLE KEYS */;
-INSERT INTO `pb_city_data` VALUES (100,'A000001','Nilesh Sakpal','24/09/2013','Pune','M','Open','Maratha','a@a.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(101,'A000003','Ramesh lalit','24/09/2013','Pune','M','SC','Mahar','r12@gmail.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(102,'A000004','Payal Deshmukh','24/09/2013','Pune','F','SC','Mang','p12@gmail.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(103,'A000005','Saurabh Meheta','24/09/2013','Pune','M','SC','Mahar','s12@gmail.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(104,'A000006','Rajesh Purohit','24/09/2013','Pune','M','SC','Chambhar','rp12@gmail.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(105,'A000008','Keshav Pandit','24/09/2013','Pune','M','ST','Koli','kp12@gmail.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(106,'A000009','Vijender Shingh','24/09/2013','Pune','M','ST','Pardhi','vs@gmail.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(107,'A000010','Anjali Salvi','24/09/2014','Pune','F','ST','Koli','as123@gmail.com',9999,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(108,'A000011','Akash chakor','24/09/2015','Pune','M','Open','Maratha','ac96@gmail.com',9876545678,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(109,'A000017','Aniket Tekwade','24/09/2021','Pune','M','OBC','Mali','at67@gmail.com',9050505050,'City',1,0,'14/01/2021','22/01/2021','0',1,1,0),(110,'A000018','Swati Jadhav','24/09/2022','Pune','F','OBC','Kumbhar','sj@gmail.com',9040404040,'City',1,0,'14/01/2021','23/01/2021','0',1,1,0),(111,'A000019','Akshay Dhende','24/09/2023','Pune','M','OBC','Kumbhar','ad@gmail.com',9878987890,'City',1,0,'14/01/2021','23/01/2021','0',1,1,0),(112,'A000023','Harsha fara','24/09/2027','Pune','F','VJNT','Dhangar','hf1@gmail.com',9087656789,'City',1,0,'14/01/2021','23/01/2021','0',1,1,0),(113,'A000024','Somnath Gaikwad','24/09/2028','Pune','M','VJNT','Dhangar','sg1@gmail.com',9087656789,'City',1,0,'14/01/2021','23/01/2021','0',0,1,0),(114,'A000025','Ravi Avchar','24/09/2029','Pune','M','Open','Maratha','ra1@gmail.com',9087656789,'City',1,0,'14/01/2021','23/01/2021','0',0,1,0),(115,'A000027','Baban Pandhare','24/09/2031','Pune','M','SC','Mahar','bp1@gmail.com',9087656789,'City',1,0,'14/01/2021','23/01/2021','0',0,1,0),(116,'A000029','Nilam Sankpal','24/09/2033','Pune','F','ST','Koli','ns12@gmail.com',9087656789,'City',1,0,'14/01/2021','23/01/2021','0',0,1,0);
+INSERT INTO `pb_city_data` VALUES (100,'A000001','Nilesh Sakpal','24/09/2013','Pune','M','Open','Maratha','a@a.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'23/01/2021',1,0,0,0),(101,'A000003','Ramesh lalit','24/09/2013','Pune','M','SC','Mahar','r12@gmail.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'24/01/2021',1,0,0,0),(102,'A000004','Payal Deshmukh','24/09/2013','Pune','F','SC','Mang','p12@gmail.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(103,'A000005','Saurabh Meheta','24/09/2013','Pune','M','SC','Mahar','s12@gmail.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(104,'A000006','Rajesh Purohit','24/09/2013','Pune','M','SC','Chambhar','rp12@gmail.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(105,'A000008','Keshav Pandit','24/09/2013','Pune','M','ST','Koli','kp12@gmail.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(106,'A000009','Vijender Shingh','24/09/2013','Pune','M','ST','Pardhi','vs@gmail.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(107,'A000010','Anjali Salvi','24/09/2014','Pune','F','ST','Koli','as123@gmail.com',9999,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(108,'A000011','Akash chakor','24/09/2015','Pune','M','Open','Maratha','ac96@gmail.com',9876545678,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(109,'A000017','Aniket Tekwade','24/09/2021','Pune','M','OBC','Mali','at67@gmail.com',9050505050,'City',1,0,'14/01/2021',1,'22/01/2021',1,'0',0,0,0,0),(110,'A000018','Swati Jadhav','24/09/2022','Pune','F','OBC','Kumbhar','sj@gmail.com',9040404040,'City',1,0,'14/01/2021',1,'23/01/2021',1,'0',0,0,0,0),(111,'A000019','Akshay Dhende','24/09/2023','Pune','M','OBC','Kumbhar','ad@gmail.com',9878987890,'City',1,0,'14/01/2021',1,'23/01/2021',1,'0',0,0,0,0),(112,'A000023','Harsha fara','24/09/2027','Pune','F','VJNT','Dhangar','hf1@gmail.com',9087656789,'City',1,0,'14/01/2021',1,'23/01/2021',1,'0',0,0,0,0),(113,'A000024','Somnath Gaikwad','24/09/2028','Pune','M','VJNT','Dhangar','sg1@gmail.com',9087656789,'City',1,0,'07/01/2021',1,'23/01/2021',1,'0',0,0,0,0),(114,'A000025','Ravi Avchar','24/09/2029','Pune','M','Open','Maratha','ra1@gmail.com',9087656789,'City',1,0,'07/01/2021',1,'23/01/2021',1,'0',0,0,0,0),(115,'A000027','Baban Pandhare','24/09/2031','Pune','M','SC','Mahar','bp1@gmail.com',9087656789,'City',1,0,'07/01/2021',1,'23/01/2021',1,'0',0,0,0,0),(116,'A000029','Nilam Sankpal','24/09/2033','Pune','F','ST','Koli','ns12@gmail.com',9087656789,'City',1,0,'07/01/2021',1,'23/01/2021',1,'0',0,0,0,0);
 /*!40000 ALTER TABLE `pb_city_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -458,7 +461,7 @@ CREATE TABLE `pb_city_event_plan` (
 
 LOCK TABLES `pb_city_event_plan` WRITE;
 /*!40000 ALTER TABLE `pb_city_event_plan` DISABLE KEYS */;
-INSERT INTO `pb_city_event_plan` VALUES (1,'physical','04/01/2021','14/01/2021',0),(2,'written','22/01/2021','24/01/2021',1),(3,'medical','22/01/2021','24/01/2021',0);
+INSERT INTO `pb_city_event_plan` VALUES (1,'physical','04/01/2021','14/01/2021',1),(2,'written','22/01/2021','24/01/2021',1),(3,'medical','22/01/2021','24/01/2021',0);
 /*!40000 ALTER TABLE `pb_city_event_plan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -647,4 +650,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-22 10:16:59
+-- Dump completed on 2021-01-23 19:57:22

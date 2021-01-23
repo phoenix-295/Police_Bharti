@@ -121,6 +121,13 @@
             </td>
             <td>&nbsp;</td>
         </tr>
+        <tr>
+            <td style="width:175px">&nbsp;</td>
+            <td>
+                <asp:Label ID="lbldiff" runat="server"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
     </table>
                 </ContentTemplate>
 </asp:UpdatePanel>

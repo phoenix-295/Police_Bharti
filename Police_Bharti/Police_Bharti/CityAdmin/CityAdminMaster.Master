@@ -185,7 +185,7 @@
             <a href="Admin_Home.aspx" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                View records
+                Tests
                   <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -193,13 +193,13 @@
               <li class="nav-item">
                 <a href="View_City_Records.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>City Data</p>
+                  <p>Physical</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="View_Gramin_Records.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Gramin Data</p>
+                  <p></p>
                 </a>
               </li>
                   </ul>

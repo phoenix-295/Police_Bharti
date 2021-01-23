@@ -26,8 +26,24 @@ namespace Police_Bharti.CityAdmin
             DataSet ds = new DataSet();
             da.Fill(ds, "a");
             gvcity.DataSource = ds.Tables["a"].DefaultView;
+            ViewState["mydataset"] = ds;
             gvcity.DataBind();
             con.Close();
+        }
+
+        protected void btninv_Click(object sender, EventArgs e)
+        {
+            //Response.Write("<script>alert('Invitation sent successfully')</script>");
+            Response.Redirect("Invite_Candidates.aspx");
+        }
+
+        protected void gvcity_PageIndexChanging(object sender, System.Web.UI.WebControls.GridViewPageEventArgs e)
+        {
+            DataSet mydataset = (DataSet)ViewState["mydataset"];
+            DataTable myydatatable = mydataset.Tables["a"];
+            gvcity.DataSource = myydatatable;
+            gvcity.PageIndex = e.NewPageIndex;
+            gvcity.DataBind();
         }
     }
 

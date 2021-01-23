@@ -9,7 +9,7 @@
         <tr>
             <td style="width: 175px">&nbsp;</td>
             <td>
-                <asp:GridView ID="gvcity" runat="server" style="color: #000000; font-size: large;" ForeColor="Black" AllowPaging="True" BackColor="White" CellPadding="10" BorderColor="#CCCCCC" BorderWidth="1px" CellSpacing="2" GridLines="Horizontal" AutoGenerateColumns="False">
+                <asp:GridView ID="gvcity" runat="server" style="color: #000000; font-size: large;" ForeColor="Black" AllowPaging="True" BackColor="White" CellPadding="10" BorderColor="#CCCCCC" BorderWidth="1px" CellSpacing="2" GridLines="Horizontal" AutoGenerateColumns="False" OnPageIndexChanging="gvcity_PageIndexChanging">
                     <Columns>
                         <asp:TemplateField HeaderText="Application ID">
                             <ItemTemplate>
@@ -78,7 +78,7 @@
             <td style="width: 175px; height: 30px;"></td>
             <td  height: 30px;">
                 <span>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Number of Records to Invite" Width="291px"></asp:TextBox> <asp:Button ID="btninv" runat="server" Text="Invite" />
+                <asp:Button ID="btninv" runat="server" Text="Invite" OnClick="btninv_Click" />
                 
 
                 </span>

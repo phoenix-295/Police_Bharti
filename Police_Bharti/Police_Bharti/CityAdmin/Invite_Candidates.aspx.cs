@@ -8,12 +8,14 @@ namespace Police_Bharti.CityAdmin
 {
     public partial class Invite_Candidates : System.Web.UI.Page
     {
+        int d1, d2, d3;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 count_city_rows();
                 default1();
+                calc_diff();
             }
         }
 
@@ -51,7 +53,25 @@ namespace Police_Bharti.CityAdmin
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            count_city_rows();
             default1();
+            calc_diff();
+        }
+
+        protected void calc_diff()
+        {
+            if (DropDownList1.SelectedIndex == 0)
+            {
+                lbldiff.Text = "Remaning Candidates: " + d1.ToString();
+            }
+            if (DropDownList1.SelectedIndex == 1)
+            {
+                lbldiff.Text = "Remaning Candidates: " + d2.ToString();
+            }
+            if (DropDownList1.SelectedIndex == 2)
+            {
+                lbldiff.Text = "Remaning Candidates: " + d3.ToString();
+            }
         }
 
         protected void count_city_rows()
@@ -81,6 +101,12 @@ namespace Police_Bharti.CityAdmin
                     mf++;
                 }
             }
+
+            d1 = rc - pf;
+            d2 = rc - wf;
+            d3 = rc - mf;
+
+            
 
             if (rc == pf)
             {
@@ -114,17 +140,18 @@ namespace Police_Bharti.CityAdmin
                 MySqlCommand cmd1 = new MySqlCommand("Update pb_city_event_plan set c_invited= 0 where id=3", con);
                 cmd1.ExecuteNonQuery();
             }
-
             con.Close();
-
         }
 
         protected void btnupdate_Click(object sender, EventArgs e)
         {
             count_city_rows();
             default1();
-            
             update_invitation_date_to_master_table();
+            count_city_rows();
+            txtdate.Text = "";
+            txtno.Text = "";
+            calc_diff();
         }
 
         protected void update_invitation_date_to_master_table()
@@ -142,7 +169,8 @@ namespace Police_Bharti.CityAdmin
                 cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
                 cmd.ExecuteNonQuery();
                 //Response.Write("<script>alert('Invitation sent successfully')</script>");
-                Label1.Text = "Invitation sent Sucessfully...";
+                Label1.Text = "Invitation sent Sucessfully";
+                Label1.ForeColor = Color.Green;
             }
             else if (String.Equals(test, "2"))
             {
@@ -152,10 +180,11 @@ namespace Police_Bharti.CityAdmin
                 cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
                 cmd.ExecuteNonQuery();
                 //Response.Write("<script>alert('Invitation sent successfully')</script>");
-                Label1.Text = "Invitation sent Sucessfully...";
+                Label1.Text = "Invitation sent Sucessfully";
+                Label1.ForeColor = Color.Green;
 
             }
-            else if (String.Equals(test, "Medical Test"))
+            else if (String.Equals(test, "3"))
             {
                 MySqlCommand cmd = new MySqlCommand("Update pb_city_data set medical_date =@b, medical_flag=@a where medical_flag!=1 limit @c", conn);
                 cmd.Parameters.AddWithValue("@a", "1");
@@ -163,8 +192,8 @@ namespace Police_Bharti.CityAdmin
                 cmd.Parameters.AddWithValue("@c", Convert.ToInt32(txtno.Text));
                 cmd.ExecuteNonQuery();
                 //Response.Write("<script>alert('Invitation sent successfully')</script>");
-                Label1.Text = "Invitation sent Sucessfully...";
-
+                Label1.Text = "Invitation sent Sucessfully";
+                Label1.ForeColor = Color.Green;
             }
             conn.Close();
         }
