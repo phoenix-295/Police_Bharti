@@ -169,7 +169,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="View_Gramin_Records.aspx" class="nav-link">
+                <a href="City_Physical_Ground.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ground</p>
                 </a>

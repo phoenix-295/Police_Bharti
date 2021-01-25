@@ -141,6 +141,7 @@
     <Content Include="CityAdmin\Event_physical.aspx" />
     <Content Include="CityAdmin\Invite_Candidates.aspx" />
     <Content Include="CityAdmin\View_Data.aspx" />
+    <Content Include="City_Physical\City_Physical_Ground.aspx" />
     <Content Include="City_Physical\City_Physical_HomePage.aspx" />
     <Content Include="City_Physical\City_Physical_Test.aspx" />
     <Content Include="City_Physical\City_Physical_View_Data.aspx" />
@@ -357,6 +358,13 @@
     </Compile>
     <Compile Include="City_Physical\City_Physical.Master.designer.cs">
       <DependentUpon>City_Physical.Master</DependentUpon>
+    </Compile>
+    <Compile Include="City_Physical\City_Physical_Ground.aspx.cs">
+      <DependentUpon>City_Physical_Ground.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="City_Physical\City_Physical_Ground.aspx.designer.cs">
+      <DependentUpon>City_Physical_Ground.aspx</DependentUpon>
     </Compile>
     <Compile Include="City_Physical\City_Physical_HomePage.aspx.cs">
       <DependentUpon>City_Physical_HomePage.aspx</DependentUpon>
