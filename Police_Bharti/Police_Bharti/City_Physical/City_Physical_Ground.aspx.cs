@@ -181,16 +181,59 @@ namespace Police_Bharti.City_Physical
 
         protected void btnsub_Click(object sender, EventArgs e)
         {
-            string res = "0";
+            int res = 0;
             if (lblg.Text == "M")
             {
-                
+                res = Convert.ToInt32(r16.Value) + Convert.ToInt32(r100.Value) + Convert.ToInt32(hlj.Value) + Convert.ToInt32(hsp.Value) + Convert.ToInt32(hpu.Value);
             }
             if (lblg.Text == "F")
             {
-                
+                res = Convert.ToInt32(r8.Value) + Convert.ToInt32(r100.Value) + Convert.ToInt32(hlj.Value) + Convert.ToInt32(hsp.Value);
             }
-            lblres.Text = res;
+            lblres.Text = res.ToString();
+
+
+            string s2;
+            s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            MySqlConnection conn = new MySqlConnection(s2);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set race1600 =@r16, race800=@r800, race100=@r100, longjump=@lj, shotput=@sp, pullups=@pu, g_flag=@flag, ground_total=@total where application_Id='" + DropDownList2.Text + "'", conn);
+            if (lblg.Text == "M")
+            {
+                cmd.Parameters.AddWithValue("@r16", txt1600m.Text);
+                cmd.Parameters.AddWithValue("@r800", "0");
+                cmd.Parameters.AddWithValue("@r100", txt100m.Text);
+                cmd.Parameters.AddWithValue("@lj", txtlj.Text);
+                cmd.Parameters.AddWithValue("@sp", txtsp.Text);
+                cmd.Parameters.AddWithValue("@pu", txtpull.Text);
+                cmd.Parameters.AddWithValue("@total", res);
+                cmd.Parameters.AddWithValue("@flag", "1");          // flag true
+                cmd.ExecuteNonQuery();
+            }
+            if (lblg.Text == "F")
+            {
+                cmd.Parameters.AddWithValue("@r16", "0");
+                cmd.Parameters.AddWithValue("@r800", txt800m.Text);
+                cmd.Parameters.AddWithValue("@r100", txt100m.Text);
+                cmd.Parameters.AddWithValue("@lj", txtlj.Text);
+                cmd.Parameters.AddWithValue("@sp", txtsp.Text);
+                cmd.Parameters.AddWithValue("@pu", "0");
+                cmd.Parameters.AddWithValue("@flag", "1");          //flag true
+                cmd.Parameters.AddWithValue("@total", res);
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+
+            txt1600m.Text = "";
+            txt800m.Text = "";
+            txt100m.Text = "";
+            txtlj.Text = "";
+            txtsp.Text = "";
+            txtpull.Text = "";
+            lblres.Text = "Submitted Successfully";
+            fill_data();
+
+
         }
     }
 }
