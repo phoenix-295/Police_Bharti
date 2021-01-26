@@ -85,37 +85,49 @@ namespace Police_Bharti.City_Physical
                         lblg.Text = r1["gender"].ToString();
                         lblcast.Text = r1["cast"].ToString();
                         lblcategory.Text = r1["category"].ToString();
-                        
+
+                        txt1600m.Text = r1["race1600"].ToString();
+                        txt800m.Text = r1["race800"].ToString();
+                        txt100m.Text = r1["race100"].ToString();
+                        txtlj.Text = r1["longjump"].ToString();
+                        txtsp.Text = r1["shotput"].ToString();
+                        txtpull.Text = r1["pullups"].ToString();
+
                     }
                 }
                 con.Close();
 
                 if (lblg.Text == "M")
                 {
-                    if ((txt1600m.Text != "0") && (txt800m.Text != "0") && (txtlj.Text != "0"))
+                    if ((txt1600m.Text != "0") && (txt100m.Text != "0") && (txtlj.Text != "0") && (txtsp.Text != "0") && (txtpull.Text != "0"))
                     {
-                        //btnsub.Enabled = false;
+                        btnsub.Enabled = false;
                     }
                     else
                     {
                         txt1600m.Text = "";
-                        txt800m.Text = "";
+                        txt100m.Text = "";
                         txtlj.Text = "";
-                        //btnsub.Enabled = true;
+                        txtsp.Text = "";
+                        txtpull.Text = "";
+
+                        btnsub.Enabled = true;
                     }
                 }
 
                 if (lblg.Text == "F")
                 {
-                    if ((txt1600m.Text != "0") && (txtlj.Text != "0"))
+                    if ((txt800m.Text != "0") && (txt100m.Text != "0") && (txtlj.Text != "0") && (txtsp.Text != "0"))
                     {
-                       // btnsub.Enabled = false;
+                       btnsub.Enabled = false;
                     }
                     else
                     {
-                        txt1600m.Text = "";
+                        txt800m.Text = "";
+                        txt100m.Text = "";
                         txtlj.Text = "";
-                        //btnsub.Enabled = true;
+                        txtsp.Text = "";
+                        btnsub.Enabled = true;
                     }
                 }
             }
@@ -232,8 +244,6 @@ namespace Police_Bharti.City_Physical
             txtpull.Text = "";
             lblres.Text = "Submitted Successfully";
             fill_data();
-
-
         }
     }
 }
