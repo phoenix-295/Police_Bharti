@@ -142,12 +142,22 @@
                                     <td style="width: 310px; height: 31px;">
                             <asp:TextBox placeholder="Enter chest in cms" CssClass="form-control" Width="290px" ID="txtchest" runat="server" onchange="chk_c()" ValidationGroup="1"></asp:TextBox>
                                     </td>
+                                    <td style="width: 310px; height: 31px;">
+                            <asp:TextBox placeholder="Enter chest in cms" CssClass="form-control" Width="290px" ID="txtmaxchest" runat="server" onchange="chk_c()" ValidationGroup="1"></asp:TextBox>
+                                    </td>
+                                    
                                     <td style="width: 105px; height: 31px;">
                                         <asp:Label ID="lblcr" runat="server" style="color: #008000"></asp:Label>
                                     </td>
+                                </tr>
+                                <tr>
                                     <td style="height: 31px">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtchest" ErrorMessage="Chest is Required" style="color: #FF0000" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="rec" runat="server" ControlToValidate="txtchest" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
+                                    </td>
+                                    <td style="height: 31px">
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtmaxchest" ErrorMessage="Chest is Required" style="color: #FF0000" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtmaxchest" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
                                     </td>
                                 </tr>
                             </table>
@@ -215,7 +225,7 @@
             var h1 = document.getElementById('<%= txtheight.ClientID %>').value;
             var g = document.getElementById('<%= lblg.ClientID %>').textContent;
             if (g == "M") {
-                if (h1 > 165) {
+                if (h1 >= 165) {
                     document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                     document.getElementById('<%= hr.ClientID %>').value = "Pass";
                 }
@@ -238,9 +248,10 @@
         }
         function chk_c() {
             var c1 = document.getElementById('<%= txtchest.ClientID %>').value;
+            var c2 = document.getElementById('<%= txtmaxchest.ClientID %>').value;
             var g = document.getElementById('<%= lblg.ClientID %>').textContent;
             if (g == "M") {
-                if ((c1 > 79) && (c1 < 84)) {
+                if ((c1 > 78) && ((c2-c1) > 4)) {
                     document.getElementById('<%= lblcr.ClientID %>').textContent = "Pass";
                     document.getElementById('<%= cr.ClientID %>').value = "Pass";
                 }

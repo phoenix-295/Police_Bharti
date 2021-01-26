@@ -86,7 +86,8 @@ namespace Police_Bharti.City_Physical
                         lblcast.Text = r1["cast"].ToString();
                         lblcategory.Text = r1["category"].ToString();
                         txtheight.Text = r1["height"].ToString();
-                        txtchest.Text = r1["chest"].ToString();
+                        txtchest.Text = r1["minchest"].ToString();
+                        txtmaxchest.Text = r1["maxchest"].ToString();
                         txtweight.Text = r1["weight"].ToString();
                     }
                 }
@@ -132,6 +133,8 @@ namespace Police_Bharti.City_Physical
             if (lblg.Text == "F")
             {
                 txtchest.Visible = false;
+                txtmaxchest.Visible = false;
+
                 Label1.Visible = false;
                 RequiredFieldValidator1.Enabled = false;
                 rec.Enabled = false;
@@ -139,6 +142,7 @@ namespace Police_Bharti.City_Physical
             else
             {
                 txtchest.Visible = true;
+                txtmaxchest.Visible = true;
                 Label1.Visible = true;
                 RequiredFieldValidator1.Enabled = true;
                 rec.Enabled = true;
@@ -190,11 +194,12 @@ namespace Police_Bharti.City_Physical
             s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             MySqlConnection conn = new MySqlConnection(s2);
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set height =@a, chest=@b, weight=@c, p_flag=@d where application_Id='" + DropDownList2.Text+ "'", conn);
+            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set height =@a, minchest=@b, maxchest=@e, weight=@c, p_flag=@d where application_Id='" + DropDownList2.Text+ "'", conn);
             if (lblg.Text == "M")
             {
                 cmd.Parameters.AddWithValue("@a", txtheight.Text);
                 cmd.Parameters.AddWithValue("@b", txtchest.Text);
+                cmd.Parameters.AddWithValue("@e", txtmaxchest.Text);
                 cmd.Parameters.AddWithValue("@c", txtweight.Text);
                 cmd.Parameters.AddWithValue("@d", res);
                 cmd.ExecuteNonQuery();
@@ -203,6 +208,7 @@ namespace Police_Bharti.City_Physical
             {
                 cmd.Parameters.AddWithValue("@a", txtheight.Text);
                 cmd.Parameters.AddWithValue("@b", "0");
+                cmd.Parameters.AddWithValue("@e", "0");
                 cmd.Parameters.AddWithValue("@c", txtweight.Text);
                 cmd.Parameters.AddWithValue("@d", res);
                 cmd.ExecuteNonQuery();

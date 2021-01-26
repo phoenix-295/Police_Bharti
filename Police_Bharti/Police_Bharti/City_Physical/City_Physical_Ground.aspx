@@ -84,7 +84,7 @@
                                 <asp:Label ID="lblcategory" runat="server"></asp:Label>
                             </h6>
                         </td>
-                        <td style="width: 155px"><h4>Cast: </h4></td>
+                        <td style="width: 155px"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cast: </h4></td>
                         <td style="width: 168px">
                             <h6>
 
@@ -272,9 +272,47 @@
                         </td>
                     </tr>
                     <tr>
+                        <td style="width: 150px; height: 30px;">&nbsp;</td>
+                        <td style="height: 30px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px; height: 30px;"><h4><asp:Label ID="lblpullups" runat="server" Text="Pull ups:"></asp:Label></h4></td>
+                        <td style="height: 30px">
+                            <table class="w-100">
+                                <tr>
+                                    <td style="width: 305px">
+                                        <asp:TextBox ID="txtpull" runat="server" CssClass="form-control" placeholder="Enter count" TabIndex="5" Width="291px" onchange="chk_pu()"></asp:TextBox>
+                                        <asp:HiddenField ID="hpu" runat="server" />
+                                    </td>
+                                    <td style="width: 121px">
+                                        <asp:Label ID="lblpu" runat="server" style="color: #008000"></asp:Label>
+                                    </td>
+                                    <td style="width: 20px">
+                                        <asp:RequiredFieldValidator ID="reqpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="Pull ups count cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                    </td>
+                                    <td>
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 52px">
+                                                    <asp:RangeValidator ID="rnpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="pull ups result must be in proper format"  MinimumValue="0" Type="Double" ValidationGroup="1">*</asp:RangeValidator>
+                                                </td>
+                                                <td>
+                                                    <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="1" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
                         <td style="width: 150px; height: 41px;">&nbsp;</td>
                         <td style="height: 41px">
-                            <asp:Button ID="btnsub" runat="server" TabIndex="6" Text="Submit" ValidationGroup="1" />
+                            <asp:Button ID="btnsub" runat="server" TabIndex="6" Text="Submit" ValidationGroup="1" OnClick="btnsub_Click" />
                         </td>
                     </tr>
                     <tr>
@@ -314,6 +352,42 @@
     </table>
 
     <script>
+        //pull ups
+        function chk_pu() {
+            var pu = document.getElementById('<%= txtpull.ClientID %>').value;
+            var g = document.getElementById('<%= lblg.ClientID %>').textContent;
+
+            if (g == "M") {
+                if (pu >= 10) {
+                    document.getElementById('<%= lblpu.ClientID %>').textContent = "20";
+                    document.getElementById('<%= hpu.ClientID %>').value = "20";
+                }
+                else if (pu == 9) {
+                    document.getElementById('<%= lblpu.ClientID %>').textContent = "16";
+                    document.getElementById('<%= hpu.ClientID %>').value = "16";
+                }
+                else if (pu == 8) {
+                    document.getElementById('<%= lblpu.ClientID %>').textContent = "12";
+                    document.getElementById('<%= hpu.ClientID %>').value = "12";
+                }
+                else if (pu == 7) {
+                    document.getElementById('<%= lblpu.ClientID %>').textContent = "08";
+                    document.getElementById('<%= hpu.ClientID %>').value = "08";
+                }
+                else if (pu == 6) {
+                    document.getElementById('<%= lblpu.ClientID %>').textContent = "04";
+                    document.getElementById('<%= hpu.ClientID %>').value = "04";
+                }
+                else if (pu == 5) {
+                    document.getElementById('<%= lblpu.ClientID %>').textContent = "02";
+                    document.getElementById('<%= hpu.ClientID %>').value = "02";
+                }
+                else if (pu < 5) {
+                    document.getElementById('<%= lblpu.ClientID %>').textContent = "00";
+                    document.getElementById('<%= hpu.ClientID %>').value = "00";
+                }
+            }
+        }
         //1600m m
         function chk_16() {
             var r16 = document.getElementById('<%= txt1600m.ClientID %>').value;

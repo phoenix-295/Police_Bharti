@@ -14,6 +14,7 @@ namespace Police_Bharti.City_Physical
                 get_date();
                 get_cand();
                 fill_data();
+                c_hide();
             }
         }
 
@@ -128,17 +129,39 @@ namespace Police_Bharti.City_Physical
         {
             if (lblg.Text == "F")
             {
+                // hide 1600 meter if female candidate
                 txt1600m.Visible = false;
                 Label2.Visible = false;
                 rq16.Enabled = false;
                 re16.Enabled = false;
+                //show 800 meter race field for female
+                Label1.Visible = true;
+                txt800m.Visible = true;
+                lbl8.Visible = true;
+                rq800.Enabled = true;
+                re800.Enabled = true;
+                // hide pull ups field if female canidate
+                lblpullups.Visible = false;
+                txtpull.Visible = false;
+                reqpu.Enabled = false;
             }
             else
             {
+                // show 1600 meter race field for male candidate
                 txt1600m.Visible = true;
                 Label2.Visible = true;
                 rq16.Enabled = true;
                 re16.Enabled = true;
+                // hide 800 meter field if male candidate
+                Label1.Visible = false;
+                txt800m.Visible = false;
+                lbl8.Visible = false;
+                rq800.Enabled = false;
+                re800.Enabled = false;
+                // show pull ups field for male candidate
+                lblpullups.Visible = true;
+                txtpull.Visible = true;
+                reqpu.Enabled = true;
             }
         }
 
@@ -154,6 +177,20 @@ namespace Police_Bharti.City_Physical
             fill_data();
             c_hide();
             lblres.Text = "";
+        }
+
+        protected void btnsub_Click(object sender, EventArgs e)
+        {
+            string res = "0";
+            if (lblg.Text == "M")
+            {
+                
+            }
+            if (lblg.Text == "F")
+            {
+                
+            }
+            lblres.Text = res;
         }
     }
 }
