@@ -99,7 +99,7 @@ namespace Police_Bharti.City_Physical
 
                 if (lblg.Text == "M")
                 {
-                    if ((txt1600m.Text != "0") && (txt100m.Text != "0") && (txtlj.Text != "0") && (txtsp.Text != "0") && (txtpull.Text != "0"))
+                    if ((txt1600m.Text != "") && (txt100m.Text != "") && (txtlj.Text != "") && (txtsp.Text != "") && (txtpull.Text != ""))
                     {
                         btnsub.Enabled = false;
                     }
@@ -117,7 +117,7 @@ namespace Police_Bharti.City_Physical
 
                 if (lblg.Text == "F")
                 {
-                    if ((txt800m.Text != "0") && (txt100m.Text != "0") && (txtlj.Text != "0") && (txtsp.Text != "0"))
+                    if ((txt800m.Text != "") && (txt100m.Text != "") && (txtlj.Text != "") && (txtsp.Text != ""))
                     {
                        btnsub.Enabled = false;
                     }
