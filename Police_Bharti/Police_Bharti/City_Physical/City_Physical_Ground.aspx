@@ -127,7 +127,6 @@
                                                     <asp:RequiredFieldValidator ID="rq16" runat="server" ControlToValidate="txt1600m" Display="Dynamic" ErrorMessage="1600 cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
                                                 </td>
                                                 <td>
-                                                    <asp:RangeValidator ID="rn16" runat="server" ControlToValidate="txt1600m" Display="Dynamic" ErrorMessage="1600m result must be in proper format mm.ss" MaximumValue="12.00" MinimumValue="2.00" SetFocusOnError="True" Type="Double" ValidationGroup="1" Enabled="False">*</asp:RangeValidator>
                                                     <asp:RegularExpressionValidator ID="re16" runat="server" ControlToValidate="txt1600m" Display="Dynamic" ErrorMessage="Proper Format." SetFocusOnError="True" ValidationExpression="^(1[0-2]|0?[1-9]).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
                                                 </td>
                                             </tr>
@@ -137,23 +136,18 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width:150px">
-                                                    <h4>100 Meters:</h4>
-                                                </td>
+                                                    &nbsp;</td>
                                                 <td style="width:108px">
-                                                    <asp:TextBox placeholder="ss.msms" ID="txt100m" runat="server" Width="100px" onchange="chk_1()" CssClass="form-control" ToolTip="Enter time in ss.msms" TabIndex="2"></asp:TextBox>
-                                                </td>
+                                                    &nbsp;</td>
                                                 <td>
                                                     <table class="w-100">
                                                         <tr>
                                                             <td style="width: 74px">
-                                                                <asp:Label ID="lbl10" runat="server" style="color: #008000"></asp:Label>
-                                                            </td>
+                                                                &nbsp;</td>
                                                             <td style="width: 16px">
-                                                                <asp:RequiredFieldValidator ID="rq10" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                            </td>
+                                                                &nbsp;</td>
                                                             <td>
-                                                                <asp:RegularExpressionValidator ID="re100" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m result must be in proper range." SetFocusOnError="True" ValidationExpression="^([0-5][0-9]?).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
-                                                            </td>
+                                                                &nbsp;</td>
                                                         </tr>
                                                     </table>
                                                 </td>
@@ -178,7 +172,7 @@
                             <table class="w-100">
                                 <tr>
                                     <td style="width: 142px; height: 31px;">
-                            <asp:TextBox placeholder="mm.ss" CssClass="form-control" onchange="chk_8()" Width="100px" ID="txt800m" runat="server" ValidationGroup="1" TabIndex="3"></asp:TextBox>
+                            <asp:TextBox placeholder="mm.ss" CssClass="form-control" onchange="chk_8()" Width="100px" ID="txt800m" runat="server" ValidationGroup="1" TabIndex="2"></asp:TextBox>
                                     </td>
                                     <td style="width: 105px; height: 31px;">
                                         <asp:Label ID="lbl8" runat="server" style="color: #008000"></asp:Label>
@@ -204,6 +198,40 @@
                         <td>
                             <asp:HiddenField ID="r8" runat="server" />
                         </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px">
+                            <h4>100 Meters:</h4>
+                        </td>
+                        <td>
+                            <table class="w-100">
+                                <tr>
+                                    <td style="width: 146px">
+                                        <asp:TextBox ID="txt100m" runat="server" CssClass="form-control" onchange="chk_1()" placeholder="ss.msms" TabIndex="3" ToolTip="Enter time in ss.msms" Width="100px"></asp:TextBox>
+                                    </td>
+                                    <td style="width: 86px">
+                                        <asp:Label ID="lbl10" runat="server" style="color: #008000"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 37px">
+                                                    <asp:RequiredFieldValidator ID="rq10" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                </td>
+                                                <td>
+                                                    <asp:RegularExpressionValidator ID="re100" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m result must be in proper range." SetFocusOnError="True" ValidationExpression="^([0-5][0-9]?).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 150px">&nbsp;</td>
+                        <td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td style="width: 150px"><h4>Long Jump:</h4></td>
@@ -294,11 +322,10 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 52px">
-                                                    <asp:RangeValidator ID="rnpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="pull ups result must be in proper format"  MinimumValue="0" Type="Double" ValidationGroup="1">*</asp:RangeValidator>
+                                                    <asp:RangeValidator ID="rnpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="Pull ups result must be in proper format"  MinimumValue="0" Type="Integer" ValidationGroup="1" MaximumValue="30">*</asp:RangeValidator>
                                                 </td>
                                                 <td>
-                                                    <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="1" />
-                                                </td>
+                                                    &nbsp;</td>
                                             </tr>
                                         </table>
                                     </td>

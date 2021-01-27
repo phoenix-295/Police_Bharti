@@ -68,6 +68,7 @@ namespace Police_Bharti.City_Physical
 
         protected void fill_data()
         {
+            string p_f="";
             try
             {
                 string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
@@ -89,6 +90,7 @@ namespace Police_Bharti.City_Physical
                         txtchest.Text = r1["minchest"].ToString();
                         txtmaxchest.Text = r1["maxchest"].ToString();
                         txtweight.Text = r1["weight"].ToString();
+                        p_f = r1["p_flag"].ToString();
                     }
                 }
                 con.Close();
@@ -120,6 +122,17 @@ namespace Police_Bharti.City_Physical
                         txtweight.Text = "";
                         btnsub.Enabled = true;
                     }
+                }
+
+                if (p_f == "1")
+                {
+                    lblr1.ForeColor = Color.Green;
+                    lblr1.Text = "Pass";
+                }
+                else
+                {
+                    lblr1.ForeColor = Color.Red;
+                    lblr1.Text = "Fail";
                 }
             }
             catch(Exception e)
@@ -154,6 +167,7 @@ namespace Police_Bharti.City_Physical
             get_cand();
             fill_data();
             lblres.Text = "";
+            lblr1.Text = "";
         }
 
         protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,6 +175,7 @@ namespace Police_Bharti.City_Physical
             fill_data();
             c_hide();
             lblres.Text = "";
+            
         }
 
         protected void btnsub_Click(object sender, EventArgs e)
@@ -179,7 +194,7 @@ namespace Police_Bharti.City_Physical
             }
             if(lblg.Text == "F")
             {
-                if ((lblhr.Text == "Pass"))
+                if ((hr.Value == "Pass"))
                 {
                     res = "1";
                 }

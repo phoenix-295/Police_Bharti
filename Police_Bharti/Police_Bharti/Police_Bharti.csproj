@@ -142,8 +142,10 @@
     <Content Include="CityAdmin\Invite_Candidates.aspx" />
     <Content Include="CityAdmin\View_Data.aspx" />
     <Content Include="City_Physical\City_Physical_Ground.aspx" />
+    <Content Include="City_Physical\City_Physical_Ground_Data.aspx" />
     <Content Include="City_Physical\City_Physical_HomePage.aspx" />
     <Content Include="City_Physical\City_Physical_Test.aspx" />
+    <Content Include="City_Physical\City_Physical_Test_Data.aspx" />
     <Content Include="City_Physical\City_Physical_View_Data.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -366,6 +368,13 @@
     <Compile Include="City_Physical\City_Physical_Ground.aspx.designer.cs">
       <DependentUpon>City_Physical_Ground.aspx</DependentUpon>
     </Compile>
+    <Compile Include="City_Physical\City_Physical_Ground_Data.aspx.cs">
+      <DependentUpon>City_Physical_Ground_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="City_Physical\City_Physical_Ground_Data.aspx.designer.cs">
+      <DependentUpon>City_Physical_Ground_Data.aspx</DependentUpon>
+    </Compile>
     <Compile Include="City_Physical\City_Physical_HomePage.aspx.cs">
       <DependentUpon>City_Physical_HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -379,6 +388,13 @@
     </Compile>
     <Compile Include="City_Physical\City_Physical_Test.aspx.designer.cs">
       <DependentUpon>City_Physical_Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="City_Physical\City_Physical_Test_Data.aspx.cs">
+      <DependentUpon>City_Physical_Test_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="City_Physical\City_Physical_Test_Data.aspx.designer.cs">
+      <DependentUpon>City_Physical_Test_Data.aspx</DependentUpon>
     </Compile>
     <Compile Include="City_Physical\City_Physical_View_Data.aspx.cs">
       <DependentUpon>City_Physical_View_Data.aspx</DependentUpon>

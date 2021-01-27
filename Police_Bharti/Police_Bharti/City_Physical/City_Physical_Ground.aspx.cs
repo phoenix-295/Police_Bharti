@@ -47,7 +47,7 @@ namespace Police_Bharti.City_Physical
             try
             {
                 string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-                string s2 = "SELECT application_Id,physical_date FROM pb_city_data where physical_date='" + DropDownList1.Text + "'";
+                string s2 = "SELECT application_Id,physical_date FROM pb_city_data where physical_date='" + DropDownList1.Text + "' and p_flag = 1";
                 MySqlConnection conn = new MySqlConnection(s1);
                 conn.Open();
                 MySqlDataAdapter da1 = new MySqlDataAdapter(s2, s1);
@@ -87,20 +87,35 @@ namespace Police_Bharti.City_Physical
                         lblcategory.Text = r1["category"].ToString();
 
                         txt1600m.Text = r1["race1600"].ToString();
-                        txt800m.Text = r1["race800"].ToString();
-                        txt100m.Text = r1["race100"].ToString();
-                        txtlj.Text = r1["longjump"].ToString();
-                        txtsp.Text = r1["shotput"].ToString();
-                        txtpull.Text = r1["pullups"].ToString();
+                        lbl16.Text = r1["r16m"].ToString();
 
+                        txt800m.Text = r1["race800"].ToString();
+                        lbl8.Text = r1["r8m"].ToString();
+
+                        txt100m.Text = r1["race100"].ToString();
+                        lbl10.Text = r1["r1m"].ToString();
+
+                        txtlj.Text = r1["longjump"].ToString();
+                        lbllj.Text = r1["ljm"].ToString();
+
+                        txtsp.Text = r1["shotput"].ToString();
+                        lblsp.Text = r1["spm"].ToString();
+
+                        txtpull.Text = r1["pullups"].ToString();
+                        lblpu.Text = r1["pum"].ToString();
                     }
                 }
                 con.Close();
 
                 if (lblg.Text == "M")
                 {
-                    if ((txt1600m.Text != "") && (txt100m.Text != "") && (txtlj.Text != "") && (txtsp.Text != "") && (txtpull.Text != ""))
+                    if ((txt1600m.Text != "0") && (txt100m.Text != "0") && (txtlj.Text != "0") && (txtsp.Text != "0") && (txtpull.Text != "0"))
                     {
+                        txt1600m.Enabled = false;
+                        txt100m.Enabled = false;
+                        txtlj.Enabled = false;
+                        txtsp.Enabled = false;
+                        txtpull.Enabled = false;
                         btnsub.Enabled = false;
                     }
                     else
@@ -111,15 +126,27 @@ namespace Police_Bharti.City_Physical
                         txtsp.Text = "";
                         txtpull.Text = "";
 
+
+                        txt1600m.Enabled = true;
+                        txt100m.Enabled = true;
+                        txtlj.Enabled = true;
+                        txtsp.Enabled = true;
+                        txtpull.Enabled = true;
                         btnsub.Enabled = true;
                     }
                 }
 
                 if (lblg.Text == "F")
                 {
-                    if ((txt800m.Text != "") && (txt100m.Text != "") && (txtlj.Text != "") && (txtsp.Text != ""))
+                    
+                    if ((txt800m.Text != "0") && (txt100m.Text != "0") && (txtlj.Text != "0") && (txtsp.Text != "0"))
                     {
-                       btnsub.Enabled = false;
+                        txt800m.Enabled = false;
+                        txt100m.Enabled = false;
+                        txtlj.Enabled = false;
+                        txtsp.Enabled = false;
+
+                        btnsub.Enabled = false;
                     }
                     else
                     {
@@ -127,6 +154,11 @@ namespace Police_Bharti.City_Physical
                         txt100m.Text = "";
                         txtlj.Text = "";
                         txtsp.Text = "";
+
+                        txt800m.Enabled = true;
+                        txt100m.Enabled = true;
+                        txtlj.Enabled = true;
+                        txtsp.Enabled = true;
                         btnsub.Enabled = true;
                     }
                 }
@@ -141,6 +173,10 @@ namespace Police_Bharti.City_Physical
         {
             if (lblg.Text == "F")
             {
+                //hide 1600m score
+                lbl16.Visible = false;
+                lblpu.Visible = false;
+
                 // hide 1600 meter if female candidate
                 txt1600m.Visible = false;
                 Label2.Visible = false;
@@ -159,6 +195,10 @@ namespace Police_Bharti.City_Physical
             }
             else
             {
+
+                lbl16.Visible = true;
+                lblpu.Visible = true;
+
                 // show 1600 meter race field for male candidate
                 txt1600m.Visible = true;
                 Label2.Visible = true;
@@ -189,6 +229,7 @@ namespace Police_Bharti.City_Physical
             fill_data();
             c_hide();
             lblres.Text = "";
+            
         }
 
         protected void btnsub_Click(object sender, EventArgs e)
@@ -209,15 +250,27 @@ namespace Police_Bharti.City_Physical
             s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             MySqlConnection conn = new MySqlConnection(s2);
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set race1600 =@r16, race800=@r800, race100=@r100, longjump=@lj, shotput=@sp, pullups=@pu, g_flag=@flag, ground_total=@total where application_Id='" + DropDownList2.Text + "'", conn);
+            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set race1600 =@r16, r16m=@r16m, race800=@r800, race100=@r100, r8m=@r8m, r1m=@r1m, longjump=@lj, ljm=@ljm, shotput=@sp, spm=@spm, pullups=@pu, pum=@pum, g_flag=@flag, ground_total=@total where application_Id='" + DropDownList2.Text + "'", conn);
             if (lblg.Text == "M")
             {
                 cmd.Parameters.AddWithValue("@r16", txt1600m.Text);
+                cmd.Parameters.AddWithValue("@r16m", Convert.ToInt32(r16.Value));
+
                 cmd.Parameters.AddWithValue("@r800", "0");
+                cmd.Parameters.AddWithValue("@r8m", "0");
+
                 cmd.Parameters.AddWithValue("@r100", txt100m.Text);
+                cmd.Parameters.AddWithValue("@r1m", Convert.ToInt32(r100.Value));
+
                 cmd.Parameters.AddWithValue("@lj", txtlj.Text);
+                cmd.Parameters.AddWithValue("@ljm", Convert.ToInt32(hlj.Value));
+
                 cmd.Parameters.AddWithValue("@sp", txtsp.Text);
+                cmd.Parameters.AddWithValue("@spm", Convert.ToInt32(hsp.Value));
+
                 cmd.Parameters.AddWithValue("@pu", txtpull.Text);
+                cmd.Parameters.AddWithValue("@pum", Convert.ToInt32(hpu.Value));
+
                 cmd.Parameters.AddWithValue("@total", res);
                 cmd.Parameters.AddWithValue("@flag", "1");          // flag true
                 cmd.ExecuteNonQuery();
@@ -225,13 +278,25 @@ namespace Police_Bharti.City_Physical
             if (lblg.Text == "F")
             {
                 cmd.Parameters.AddWithValue("@r16", "0");
+                cmd.Parameters.AddWithValue("@r16m", "0");
+
                 cmd.Parameters.AddWithValue("@r800", txt800m.Text);
+                cmd.Parameters.AddWithValue("@r8m", Convert.ToInt32(r8.Value));
+
                 cmd.Parameters.AddWithValue("@r100", txt100m.Text);
+                cmd.Parameters.AddWithValue("@r1m", Convert.ToInt32(r100.Value));
+
                 cmd.Parameters.AddWithValue("@lj", txtlj.Text);
+                cmd.Parameters.AddWithValue("@ljm", Convert.ToInt32(hlj.Value));
+
                 cmd.Parameters.AddWithValue("@sp", txtsp.Text);
+                cmd.Parameters.AddWithValue("@spm", Convert.ToInt32(hsp.Value));
+
                 cmd.Parameters.AddWithValue("@pu", "0");
-                cmd.Parameters.AddWithValue("@flag", "1");          //flag true
+                cmd.Parameters.AddWithValue("@pum", "0");
+                
                 cmd.Parameters.AddWithValue("@total", res);
+                cmd.Parameters.AddWithValue("@flag", "1");          //flag true
                 cmd.ExecuteNonQuery();
             }
             conn.Close();

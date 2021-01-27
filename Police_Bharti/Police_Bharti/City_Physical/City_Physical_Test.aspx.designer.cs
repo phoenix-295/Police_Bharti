@@ -256,6 +256,15 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.Label lblres;
         
         /// <summary>
+        /// lblr1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblr1;
+        
+        /// <summary>
         /// btnsub control.
         /// </summary>
         /// <remarks>
