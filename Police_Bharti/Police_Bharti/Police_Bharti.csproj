@@ -136,6 +136,8 @@
     <Content Include="Admin\View_City_Records.aspx" />
     <Content Include="Admin\View_Gramin_Records.aspx" />
     <Content Include="CityAdmin\CityAdminHome.aspx" />
+    <Content Include="CityAdmin\CityGroundTestData.aspx" />
+    <Content Include="CityAdmin\CityPhysicalTestData.aspx" />
     <Content Include="CityAdmin\City_Ground_Reg.aspx" />
     <Content Include="CityAdmin\City_Written_Reg.aspx" />
     <Content Include="CityAdmin\Event_physical.aspx" />
@@ -318,6 +320,20 @@
     </Compile>
     <Compile Include="CityAdmin\CityAdminMaster.Master.designer.cs">
       <DependentUpon>CityAdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CityAdmin\CityGroundTestData.aspx.cs">
+      <DependentUpon>CityGroundTestData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\CityGroundTestData.aspx.designer.cs">
+      <DependentUpon>CityGroundTestData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityAdmin\CityPhysicalTestData.aspx.cs">
+      <DependentUpon>CityPhysicalTestData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityAdmin\CityPhysicalTestData.aspx.designer.cs">
+      <DependentUpon>CityPhysicalTestData.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityAdmin\City_Ground_Reg.aspx.cs">
       <DependentUpon>City_Ground_Reg.aspx</DependentUpon>

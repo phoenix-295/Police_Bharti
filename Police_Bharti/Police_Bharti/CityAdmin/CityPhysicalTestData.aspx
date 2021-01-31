@@ -1,6 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/City_Physical/City_Physical.Master" AutoEventWireup="true" CodeBehind="City_Physical_Test_Data.aspx.cs" Inherits="Police_Bharti.City_Physical.City_Physical_Test_Data" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityAdmin/CityAdminMaster.Master" AutoEventWireup="true" CodeBehind="CityPhysicalTestData.aspx.cs" Inherits="Police_Bharti.CityAdmin.CityPhysicalTestData" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ScriptManager ID="MainScriptManager" runat="server" />
+
+
+      <asp:ScriptManager ID="MainScriptManager" runat="server" />
         <asp:UpdatePanel ID="panel1" runat="server">
             <ContentTemplate>
     <table class="w-100">
@@ -121,16 +123,13 @@
     <tr>
         <td style="width:175px">&nbsp;</td>
         <td style="text-align:right">
-            <asp:Button ID="btnshow" runat="server" OnClick="btnshow_Click" Text="Send Data to Admin" />
-        </td>
+            &nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
         <td style="width:175px">&nbsp;</td>
-        <td style="color: #FF0000">Don&#39;t Send Before :&nbsp;
-            <asp:Label ID="Label10" runat="server"></asp:Label>
+        <td style="color: #FF0000">
             <br />
-            <asp:Label ID="Label11" runat="server" ForeColor="#339966"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -142,4 +141,6 @@
 </table>
                 </ContentTemplate>
                 </asp:UpdatePanel>
+
+
 </asp:Content>
