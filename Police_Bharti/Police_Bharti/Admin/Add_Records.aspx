@@ -41,7 +41,7 @@
     <tr>
         <td style="width: 191px"><h5>Import Excel File:</h5></td>
         <td>
-            <asp:FileUpload ID="FileUpload1" runat="server" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+            <asp:FileUpload CssClass="btn btn-sm" ID="FileUpload1" runat="server" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="FileUpload1" ErrorMessage="File Required" style="color: #FF0000"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="FileUpload1" ErrorMessage="Excel File required" ValidationExpression="(.*?)\.(xls|xlsx|XLS|XLSX)$" style="color: #FF0000"></asp:RegularExpressionValidator>
         </td>
@@ -57,7 +57,7 @@
     </tr>
     <tr>
         <td style="width: 191px">
-            <asp:Button ID="btnupload" runat="server" Text="Upload" OnClick="btnupload_Click" />
+            <asp:Button CssClass="btn btn-primary btn-sm" ID="btnupload" runat="server" Text="Upload" OnClick="btnupload_Click" />
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -82,7 +82,7 @@
         <td style="width: 191px; height: 80px;"></td>
         <td style="text-align:right; height: 80px;">
             <h6><asp:CheckBox ID="chkbx1" runat="server" Text="Delete previous data" /></h6>
-            <asp:Button ID="btninsert" runat="server" Text="Insert Records" OnClick="btninsert_Click" CausesValidation="False" />
+            <asp:Button CssClass="btn btn-success btn-sm" ID="btninsert" runat="server" Text="Insert Records" OnClick="btninsert_Click" CausesValidation="False" />
         </td>
         <td style="height: 80px"></td>
     </tr>

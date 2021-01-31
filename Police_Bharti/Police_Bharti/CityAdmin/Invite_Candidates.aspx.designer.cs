@@ -40,6 +40,33 @@ namespace Police_Bharti.CityAdmin {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
+        /// lbltotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltotal;
+        
+        /// <summary>
+        /// lblinvited control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblinvited;
+        
+        /// <summary>
+        /// lblremaning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblremaning;
+        
+        /// <summary>
         /// lblfrom control.
         /// </summary>
         /// <remarks>
@@ -101,14 +128,5 @@ namespace Police_Bharti.CityAdmin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// lbldiff control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbldiff;
     }
 }

@@ -8,12 +8,15 @@ namespace Police_Bharti.CityAdmin
 {
     public partial class Invite_Candidates : System.Web.UI.Page
     {
-        int d1, d2, d3;
+        int rc, d1, d2, d3;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 count_city_rows();
+                lbltotal.Text = rc.ToString();
+                lblremaning.Text = d1.ToString();
+                lblinvited.Text = (rc - d1).ToString();
                 default1();
                 calc_diff();
             }
@@ -56,27 +59,50 @@ namespace Police_Bharti.CityAdmin
             count_city_rows();
             default1();
             calc_diff();
+            Label1.Text = "";
+            if (DropDownList1.SelectedIndex == 0)
+            {
+                lblremaning.Text = d1.ToString();
+                lblinvited.Text = (rc - d1).ToString();
+            }
+            else if (DropDownList1.SelectedIndex == 1)
+            {
+                lblremaning.Text = d2.ToString();
+                lblinvited.Text = (rc - d2).ToString();
+            }
+            else if (DropDownList1.SelectedIndex == 2)
+            {
+                lblremaning.Text = d3.ToString();
+                lblinvited.Text = (rc - d3).ToString();
+            }
         }
 
         protected void calc_diff()
         {
             if (DropDownList1.SelectedIndex == 0)
             {
-                lbldiff.Text = "Remaning Candidates: " + d1.ToString();
+                
+                lblremaning.Text = d1.ToString();
+                lblinvited.Text = (rc - d1).ToString();
             }
             if (DropDownList1.SelectedIndex == 1)
             {
-                lbldiff.Text = "Remaning Candidates: " + d2.ToString();
+                
+                lblremaning.Text = d2.ToString();
+                lblinvited.Text = (rc - d2).ToString();
             }
             if (DropDownList1.SelectedIndex == 2)
             {
-                lbldiff.Text = "Remaning Candidates: " + d3.ToString();
+                
+                lblremaning.Text = d3.ToString();
+                lblinvited.Text = (rc - d3).ToString();
             }
         }
 
         protected void count_city_rows()
         {
-            int rc = 0, wf =0, pf = 0, mf = 0;
+            rc = 0;
+            int wf =0, pf = 0, mf = 0;
             string s1, s2;
             s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             s2 = "Select * from pb_city_data";
@@ -149,6 +175,7 @@ namespace Police_Bharti.CityAdmin
             default1();
             update_invitation_date_to_master_table();
             count_city_rows();
+            default1();
             txtdate.Text = "";
             txtno.Text = "";
             calc_diff();

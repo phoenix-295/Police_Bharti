@@ -16,7 +16,7 @@
         <tr>
             <td style="width:175px">&nbsp;</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" Width="291px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                <asp:DropDownList ID="DropDownList1" CssClass="form-control btn-info" runat="server" Width="291px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                     <asp:ListItem>Physical Test</asp:ListItem>
                     <asp:ListItem>Written Test</asp:ListItem>
                     <asp:ListItem>Medical Test</asp:ListItem>
@@ -51,11 +51,11 @@
         <tr>
             <td style="width:175px">&nbsp;</td>
             <td>
-                <asp:Button ID="btnupdate" runat="server" Text="Update" OnClick="btnupdate_Click" />
+                <asp:Button CssClass="btn btn-block btn-primary btn-sm" Width="100px" ID="btnupdate" runat="server" Text="Update" OnClick="btnupdate_Click" />
                 <br />
                 <h4><asp:Label ID="Label1" runat="server"></asp:Label></h4>
                 <p>
-                    <asp:Label ID="Label2" runat="server" CssClass="fa-inverse"></asp:Label>
+                    <asp:HiddenField ID="hf1" runat="server" />
                 </p>
             </td>
             <td>&nbsp;</td>
@@ -69,7 +69,7 @@
             var d1parts = d1.split("/");
             var d1Object = new Date(+d1parts[2], d1parts[1] - 1, +d1parts[0]);
 
-            var x = document.getElementById('<%= Label2.ClientID %>').textContent;
+            var x = document.getElementById('<%= hf1.ClientID %>').value;
 
             var d2 = document.getElementById('<%= txtto.ClientID %>').value;
             var d2parts = d2.split("/");

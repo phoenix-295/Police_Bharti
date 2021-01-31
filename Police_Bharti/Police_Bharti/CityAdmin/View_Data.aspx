@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityAdmin/CityAdminMaster.Master" AutoEventWireup="true" CodeBehind="View_Data.aspx.cs" Inherits="Police_Bharti.CityAdmin.View_Data" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="MainScriptManager" runat="server" />
+        <asp:UpdatePanel ID="panel1" runat="server">
+            <ContentTemplate>
     <table class="w-100">
         <tr>
             <td style="width: 175px">&nbsp;</td>
@@ -78,7 +81,7 @@
             <td style="width: 175px; height: 30px;"></td>
             <td  height: 30px;">
                 <span>
-                <asp:Button ID="btninv" runat="server" Text="Invite" OnClick="btninv_Click" />
+                <asp:Button CssClass="btn btn-primary" ID="btninv" runat="server" Text="Invite" OnClick="btninv_Click" />
                 
 
                 </span>
@@ -98,4 +101,6 @@
             <td>&nbsp;</td>
         </tr>
     </table>
+</ContentTemplate>
+</asp:UpdatePanel>
 </asp:Content>

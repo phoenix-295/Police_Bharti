@@ -40,6 +40,33 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
+        /// lbltotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltotal;
+        
+        /// <summary>
+        /// lblinvited control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblinvited;
+        
+        /// <summary>
+        /// lblremaning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblremaning;
+        
+        /// <summary>
         /// DropDownList2 control.
         /// </summary>
         /// <remarks>
@@ -112,22 +139,22 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.Label lblhr;
         
         /// <summary>
-        /// rqh control.
+        /// rqh0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqh;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqh0;
         
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// RegularExpressionValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
         
         /// <summary>
         /// hr control.
@@ -175,13 +202,13 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.Label lblcr;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// rec control.
@@ -193,22 +220,22 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator rec;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// RequiredFieldValidator4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
-        /// RegularExpressionValidator2 control.
+        /// RegularExpressionValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator;
         
         /// <summary>
         /// cr control.
@@ -229,13 +256,13 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.TextBox txtweight;
         
         /// <summary>
-        /// rqw control.
+        /// rqw0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqw;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqw0;
         
         /// <summary>
         /// rew control.

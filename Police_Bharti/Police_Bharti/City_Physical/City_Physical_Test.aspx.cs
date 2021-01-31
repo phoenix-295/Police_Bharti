@@ -15,7 +15,37 @@ namespace Police_Bharti.City_Physical
                 get_date();
                 get_cand();
                 fill_data();
+                findr();
             }
+        }
+
+        protected void findr()
+        {
+            int pd = 0, rc = 0;
+            int c = 0;
+            string date1 = DropDownList1.Text;
+            string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            MySqlConnection con = new MySqlConnection(s1);
+            con.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM  pb_city_data", con);
+            DataSet ds1 = new DataSet();
+            da.Fill(ds1, "t1");
+            foreach (DataRow r1 in ds1.Tables["t1"].Rows)
+            {
+                c++;
+                if ((r1["physical_date"].ToString() == date1))
+                {
+                    pd++;
+                    if ((r1["height"].ToString() == "0"))
+                    {
+                        rc++;
+                    }
+                }
+                lblremaning.Text = rc.ToString();
+                lbltotal.Text = pd.ToString();
+            }
+            
+            con.Close();
         }
 
         protected void get_date()
@@ -149,7 +179,7 @@ namespace Police_Bharti.City_Physical
                 txtmaxchest.Visible = false;
 
                 Label1.Visible = false;
-                RequiredFieldValidator1.Enabled = false;
+                RegularExpressionValidator.Enabled = false;
                 rec.Enabled = false;
             }
             else
@@ -157,7 +187,7 @@ namespace Police_Bharti.City_Physical
                 txtchest.Visible = true;
                 txtmaxchest.Visible = true;
                 Label1.Visible = true;
-                RequiredFieldValidator1.Enabled = true;
+                RegularExpressionValidator.Enabled = true;
                 rec.Enabled = true;
             }
         }
@@ -168,6 +198,7 @@ namespace Police_Bharti.City_Physical
             fill_data();
             lblres.Text = "";
             lblr1.Text = "";
+            findr();
         }
 
         protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)

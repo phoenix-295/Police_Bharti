@@ -13,6 +13,24 @@ namespace Police_Bharti.CityAdmin {
     public partial class View_Data {
         
         /// <summary>
+        /// MainScriptManager control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager MainScriptManager;
+        
+        /// <summary>
+        /// panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel panel1;
+        
+        /// <summary>
         /// gvcity control.
         /// </summary>
         /// <remarks>

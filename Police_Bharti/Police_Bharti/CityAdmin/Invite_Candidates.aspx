@@ -39,92 +39,160 @@
         <tr>
             <td style="width:175px">&nbsp;</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" Width="291px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-                    <asp:ListItem>Physical Test</asp:ListItem>
-                    <asp:ListItem>Written Test</asp:ListItem>
-                    <asp:ListItem>Medical Test</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width:175px">&nbsp;</td>
-            
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width:175px">&nbsp;</td>
-            
-            <td><h5>Dates given by District Admin: </h5></td>
-            <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-            <td style="width:175px">&nbsp;</td>
-            <td>
                 <table class="w-100">
                     <tr>
-                        <td style="width: 162px">
-                            
-                            <h5><asp:Label ID="lblfrom" runat="server"></asp:Label></h5>
-                            
+                        <td style="vertical-align:top">
+                            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="291px">
+                                <asp:ListItem>Physical Test</asp:ListItem>
+                                <asp:ListItem>Written Test</asp:ListItem>
+                                <asp:ListItem>Medical Test</asp:ListItem>
+                            </asp:DropDownList>
                         </td>
-                        <td style="width: 80px"><h5>to</h5></td>
-                        <td>
-                            
-                            <h5><asp:Label ID="lblto" runat="server"></asp:Label></h5>
-                            
+                        <td rowspan="4">&nbsp;</td>
+                        <td rowspan="4">&nbsp;</td>
+                        <td rowspan="4" style="width: 46px">&nbsp;</td>
+                        <td style="width:300px" rowspan="4">
+                            <div class="card card-widget widget-user-2">
+              <!-- Add the bg color to the header using any of the bg-* classes -->
+              <div class="bg-info">
+                
+                <!-- /.widget-user-image -->
+                <h3 class="widget-user-username">Candidate Info</h3>
+                
+              </div>
+              <div class="card-footer p-0">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      Total Candidates <span class="float-right badge bg-primary">
+                          <asp:Label ID="lbltotal" runat="server" Text=""></asp:Label></span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      Invited Candidates <span class="float-right badge bg-success">
+                          <asp:Label ID="lblinvited" runat="server" Text=""></asp:Label>
+                                         </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      Remaning Candidates <span class="float-right badge bg-danger">
+                          <asp:Label ID="lblremaning" runat="server" Text=""></asp:Label>
+                                          </span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
                         </td>
                     </tr>
-                </table>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width:175px; height: 30px;"></td>
-            
-            <td style="height: 30px"></td>
-            <td style="height: 30px"></td>
-        </tr>
-        <tr>
-            <td style="width:175px">&nbsp;</td>
-            
-            <td><h5>Send Invite:</h5></td>
-            <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-            <td style="width:175px">&nbsp;</td>
-            
-            <td>
-                <table class="w-100">
                     <tr>
-                        <td style="width: 338px">
-                <asp:TextBox ID="txtno" runat="server" CssClass="form-control" Width="291px" placeholder="Number of Records to Invite"></asp:TextBox>
-                        </td>
-                        <td>
-                <asp:TextBox ID="txtdate" runat="server" CssClass="form-control" Width="291px" placeholder="Pick a date" AutoPostBack="True" onchange="date()"></asp:TextBox>
-                      <cc1:CalendarExtender ID="cal1" PopupButtonID="TextBox1" runat="server" TargetControlID="txtdate" Format="dd/MM/yyyy"/>      
+                        <td style="vertical-align:top">
+                            <h5>Dates given by District Admin: </h5>
                         </td>
                     </tr>
+                    <tr>
+                        <td style="vertical-align:top">
+                            <table class="w-100">
+                                <tr>
+                                    <td style="width: 162px; height: 21px;">
+                                        <h5>
+                                            <asp:Label ID="lblfrom" runat="server"></asp:Label>
+                                        </h5>
+                                    </td>
+                                    <td style="width: 80px; height: 21px;">
+                                        <h5>to</h5>
+                                    </td>
+                                    <td style="height: 21px">
+                                        <h5>
+                                            <asp:Label ID="lblto" runat="server"></asp:Label>
+                                        </h5>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top">
+                            <h5>Send Invite:</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="w-100">
+                                <tr>
+                                    <td style="width: 338px">
+                                        <asp:TextBox ID="txtno" runat="server" CssClass="form-control" placeholder="Number of Records to Invite" Width="291px"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtdate" runat="server" AutoPostBack="True" CssClass="form-control" onchange="date()" placeholder="Pick a date" Width="291px"></asp:TextBox>
+                                        <cc1:CalendarExtender ID="cal1" runat="server" Format="dd/MM/yyyy" PopupButtonID="TextBox1" TargetControlID="txtdate" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="btnupdate" runat="server" CssClass="btn btn-primary" OnClick="btnupdate_Click" Text="Invite" />
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="Label1" runat="server"></asp:Label>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="width: 46px">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
                 </table>
-            </td>
-            <td><h4></h4></td>
-        </tr>
-        <tr>
-            <td style="width:175px">&nbsp;</td>
-            <td>
-                <asp:Button ID="btnupdate" runat="server" Text="Invite" OnClick="btnupdate_Click" />
-                <br />
-                <h4><asp:Label ID="Label1" runat="server"></asp:Label></h4>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width:175px">&nbsp;</td>
-            <td>
-                <asp:Label ID="lbldiff" runat="server"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>

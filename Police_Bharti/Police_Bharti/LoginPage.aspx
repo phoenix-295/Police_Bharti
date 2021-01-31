@@ -90,7 +90,9 @@
                                     </tr>
                                     <tr>
                                         <td align="right" class="auto-style3">
-                                            <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" />
+                                            
+                                            <asp:Button CssClass="btn btn-success btn-sm" ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" />
+                                                
                                         </td>
                                     </tr>
                                 </table>

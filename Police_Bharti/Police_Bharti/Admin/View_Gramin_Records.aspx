@@ -77,7 +77,7 @@
     <tr>
         <td style="width: 122px">&nbsp;</td>
         <td style="text-align:right">
-            <asp:Button ID="btnsend" runat="server" Text="Send to Gramin Admin" OnClick="btnsend_Click" /></td>
+            <asp:Button CssClass="btn btn-sm btn-primary" ID="btnsend" runat="server" Text="Send to Gramin Admin" OnClick="btnsend_Click" /></td>
         <td>&nbsp;</td>
     </tr>
     <tr>
@@ -90,7 +90,7 @@
     <tr>
         <td style="width: 122px">&nbsp;</td>
         <td>
-            <asp:Button ID="btnplan" runat="server" OnClick="btnplan_Click" Text="Plan Events" Visible="False" />
+            <asp:Button CssClass="btn btn-sm btn-primary" ID="btnplan" runat="server" OnClick="btnplan_Click" Text="Plan Events" Visible="False" />
         </td>
         <td>&nbsp;</td>
     </tr>

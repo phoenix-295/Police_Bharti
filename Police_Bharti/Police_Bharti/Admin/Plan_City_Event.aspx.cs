@@ -13,7 +13,8 @@ namespace Police_Bharti.Admin
             if(!IsPostBack)
             {
                 default1();
-                Label2.Text = txtto.Text;
+               
+                hf1.Value = txtto.Text;
             }
         }
 
