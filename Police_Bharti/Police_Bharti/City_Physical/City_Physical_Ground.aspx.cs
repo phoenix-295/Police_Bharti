@@ -7,6 +7,7 @@ namespace Police_Bharti.City_Physical
 {
     public partial class City_Physical_Ground : System.Web.UI.Page
     {
+        int tc, rc;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -15,6 +16,8 @@ namespace Police_Bharti.City_Physical
                 get_cand();
                 fill_data();
                 c_hide();
+                t1();
+                
             }
         }
 
@@ -66,8 +69,38 @@ namespace Police_Bharti.City_Physical
             }
         }
 
+        protected void t1()
+        {
+            tc = 0;
+            rc = 0;
+            try
+            {
+                string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+                MySqlConnection con = new MySqlConnection(s1);
+                con.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter("SELECT application_Id,physical_date,g_flag FROM pb_city_data where physical_date='" + DropDownList1.Text + "' and p_flag = 1", con);
+                DataSet ds1 = new DataSet();
+                da.Fill(ds1, "t1");
+                foreach (DataRow r1 in ds1.Tables["t1"].Rows)
+                {
+                    tc++;
+                    if ((r1["g_flag"].ToString() != "1"))
+                    {
+                        rc++;
+                    }
+                }
+                lbltotal.Text = tc.ToString();
+                lblremaning.Text = rc.ToString();
+            }
+            catch (Exception e)
+            {
+                Response.Write(e);
+            }
+        }
+
         protected void fill_data()
         {
+            
             try
             {
                 string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
@@ -76,35 +109,67 @@ namespace Police_Bharti.City_Physical
                 MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM  pb_city_data", con);
                 DataSet ds1 = new DataSet();
                 da.Fill(ds1, "t1");
-                foreach (DataRow r1 in ds1.Tables["t1"].Rows)
+                if (DropDownList2.Text != "")
                 {
-                    if ((r1["application_Id"].ToString() == DropDownList2.Text))
+                    foreach (DataRow r1 in ds1.Tables["t1"].Rows)
                     {
-                        lblname.Text = r1["full_name"].ToString();
-                        lbldob.Text = r1["date_of_birth"].ToString();
-                        lblg.Text = r1["gender"].ToString();
-                        lblcast.Text = r1["cast"].ToString();
-                        lblcategory.Text = r1["category"].ToString();
+                        if ((r1["application_Id"].ToString() == DropDownList2.Text))
+                        {
+                            lblname.Text = r1["full_name"].ToString();
+                            lbldob.Text = r1["date_of_birth"].ToString();
+                            lblg.Text = r1["gender"].ToString();
+                            lblcast.Text = r1["cast"].ToString();
+                            lblcategory.Text = r1["category"].ToString();
 
-                        txt1600m.Text = r1["race1600"].ToString();
-                        lbl16.Text = r1["r16m"].ToString();
+                            txt1600m.Text = r1["race1600"].ToString();
+                            lbl16.Text = r1["r16m"].ToString();
 
-                        txt800m.Text = r1["race800"].ToString();
-                        lbl8.Text = r1["r8m"].ToString();
+                            txt800m.Text = r1["race800"].ToString();
+                            lbl8.Text = r1["r8m"].ToString();
 
-                        txt100m.Text = r1["race100"].ToString();
-                        lbl10.Text = r1["r1m"].ToString();
+                            txt100m.Text = r1["race100"].ToString();
+                            lbl10.Text = r1["r1m"].ToString();
 
-                        txtlj.Text = r1["longjump"].ToString();
-                        lbllj.Text = r1["ljm"].ToString();
+                            txtlj.Text = r1["longjump"].ToString();
+                            lbllj.Text = r1["ljm"].ToString();
 
-                        txtsp.Text = r1["shotput"].ToString();
-                        lblsp.Text = r1["spm"].ToString();
+                            txtsp.Text = r1["shotput"].ToString();
+                            lblsp.Text = r1["spm"].ToString();
 
-                        txtpull.Text = r1["pullups"].ToString();
-                        lblpu.Text = r1["pum"].ToString();
+                            txtpull.Text = r1["pullups"].ToString();
+                            lblpu.Text = r1["pum"].ToString();
+
+                        }
+                        
                     }
                 }
+                else
+                {
+                    lblname.Text = "";
+                    lbldob.Text = "";
+                    lblg.Text = "";
+                    lblcast.Text = "";
+                    lblcategory.Text = "";
+
+                    txt1600m.Text = "";
+                    lbl16.Text = "";
+
+                    txt800m.Text = "";
+                    lbl8.Text = "";
+
+                    txt100m.Text = "";
+                    lbl10.Text = "";
+
+                    txtlj.Text = "";
+                    lbllj.Text = "";
+
+                    txtsp.Text = "";
+                    lblsp.Text = "";
+
+                    txtpull.Text = "";
+                    lblpu.Text = "";
+                }
+
                 con.Close();
 
                 if (lblg.Text == "M")
@@ -219,6 +284,8 @@ namespace Police_Bharti.City_Physical
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            t1();
+            
             get_cand();
             fill_data();
             lblres.Text = "";

@@ -124,7 +124,7 @@
                         <td rowspan="4" style=" width:300px; vertical-align:top">
                             <div class="card card-blue shadow-sm collapsed-card">
               <div class="card-header">
-                <h3 class="card-title">Height Creteria</h3>
+                <h3 class="card-title">Male 1600m</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -135,10 +135,16 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                Male : &nbsp; > 165 cms
-              </div>
-                <div class="card-body">
-                Female : &nbsp; >155 cms
+                <p>Upto 4.50 : &nbsp;  20 Points</p>
+                <p>4.51 to 5.10 : &nbsp; 18 Points</p>
+                <p>5.11 to 5.30 : &nbsp; 16 Points</p>
+                <p>5.31 to 5.50 : &nbsp; 14 Points</p>
+                <p>5.51 to 6.10 : &nbsp; 12 Points</p>
+                <p>6.11 to 6.30 : &nbsp; 10 Points</p>
+                <p>6.31 to 6.50 : &nbsp; 6 Points</p>
+                <p>6.51 to 7.10 : &nbsp; 2 Points</p>
+                <p>More than 7.10 : &nbsp; 0 Points</p>
+                    
               </div>
               <!-- /.card-body -->
             </div>
@@ -148,7 +154,7 @@
                                                     <td rowspan="4" style=" width:300px; vertical-align:top">
                                         <div class="card card-success shadow-sm collapsed-card">
                           <div class="card-header">
-                            <h3 class="card-title">Male Chest Creteria</h3>
+                            <h3 class="card-title">Female 800m</h3>
 
                             <div class="card-tools">
                               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -159,10 +165,238 @@
                           </div>
                           <!-- /.card-header -->
                           <div class="card-body">
-                            Minimun : &nbsp; > 79 cms
+                            <p>Upto 2.40 : &nbsp;  25 Points</p>
+                            <p>2.41 to 2.50 : &nbsp; 22 Points</p>
+                            <p>2.51 to 3.00 : &nbsp; 18 Points</p>
+                            <p>3.01 to 3.10 : &nbsp; 14 Points</p>
+                            <p>3.11 to 3.20 : &nbsp; 10 Points</p>
+                            <p>3.21 to 3.30 : &nbsp; 6 Points</p>
+                            <p>3.31 to 3.40 : &nbsp; 4 Points</p>
+                            <p>3.41 to 3.50 : &nbsp; 2 Points</p>
+                            <p>More than 3.50 : &nbsp; 0 Points</p>
                           </div>
-                            <div class="card-body">
-                            Maximum : &nbsp; Minimum + 5 cms
+                          <!-- /.card-body -->
+                        </div>
+
+                        </td>
+                                </tr>
+                            </table>
+
+                            <table class="w-100">
+                                <tr>
+                                                    <td rowspan="4" style=" width:300px; vertical-align:top">
+                                        <div class="card card-blue shadow-sm collapsed-card">
+                          <div class="card-header">
+                            <h3 class="card-title">Male 100m</h3>
+
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <p>Upto 11.50 : &nbsp;  20 Points</p>
+                            <p>11.51 to 12.50 : &nbsp; 18 Points</p>
+                            <p>12.51 to 13.50 : &nbsp; 16 Points</p>
+                            <p>13.51 to 14.50 : &nbsp; 14 Points</p>
+                            <p>14.51 to 15.50 : &nbsp; 10 Points</p>
+                            <p>15.51 to 16.50 : &nbsp; 06 Points</p>
+                            <p>16.51 to 17.50 : &nbsp; 02 Points</p>
+                            <p>More than 17.50 : &nbsp; 00 Points</p>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+
+                        </td>
+                                </tr>
+                            </table>
+
+                <table class="w-100">
+                                <tr>
+                                                    <td rowspan="4" style=" width:300px; vertical-align:top">
+                                        <div class="card card-success shadow-sm collapsed-card">
+                          <div class="card-header">
+                            <h3 class="card-title">Female 100m</h3>
+
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <p>Upto 15 : &nbsp; 22 Points</p>
+                            <p>Upto 17 : &nbsp; 18 Points</p>
+                            <p>Upto 18 : &nbsp; 10 Points</p>
+                            <p>Upto 19 : &nbsp; 06 Points</p>
+                            <p>Upto 20 : &nbsp; 02 Points</p>
+                            <p>20 or more : &nbsp; 10 Points</p>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+
+                        </td>
+                                </tr>
+                            </table>
+
+                            <table class="w-100">
+                                <tr>
+                                                    <td rowspan="4" style=" width:300px; vertical-align:top">
+                                        <div class="card card-blue shadow-sm collapsed-card">
+                          <div class="card-header">
+                            <h3 class="card-title">Male Long Jump</h3>
+
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <p>5.01 meter or more : &nbsp; 20 Points</p>
+                            <p>4.76 to 5.00 meter : &nbsp; 18 Points</p>
+                            <p>4.51 to 4.75 meter : &nbsp; 16 Points</p>
+                            <p>4.26 to 4.50 meter : &nbsp; 14 Points</p>
+                            <p>4.01 to 4.25 meter : &nbsp; 12 Points</p>
+                            <p>3.51 to 4.00 meter : &nbsp; 09 Points</p>
+                            <p>3.01 to 3.50 meter : &nbsp; 06 Points</p>
+                            <p>2.50 to 3.00 meter : &nbsp; 03 Points</p>
+                            <p>Less then 3 meter : &nbsp; 0 Points</p>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+
+                        </td>
+                                </tr>
+                            </table>
+
+                            <table class="w-100">
+                                <tr>
+                                                    <td rowspan="4" style=" width:300px; vertical-align:top">
+                                        <div class="card card-success shadow-sm collapsed-card">
+                          <div class="card-header">
+                            <h3 class="card-title">Female Long Jump</h3>
+
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <p>3.81 meter or more : &nbsp; 25 Points</p>
+                            <p>3.51 to 3.80 meter : &nbsp; 21 Points</p>
+                            <p>3.21 to 3.50 meter : &nbsp; 18 Points</p>
+                            <p>2.91 to 3.20 meter : &nbsp; 15 Points</p>
+                            <p>2.61 to 2.90 meter : &nbsp; 12 Points</p>
+                            <p>2.31 to 2.60 meter : &nbsp; 09 Points</p>
+                            <p>2.01 to 2.30 meter : &nbsp; 06 Points</p>
+                            <p>1.70 to 2.00 meter : &nbsp; 03 Points</p>
+                            <p>Less then 2 meter : &nbsp; 0 Points</p>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+
+                        </td>
+                                </tr>
+                            </table>
+
+                            <table class="w-100">
+                                <tr>
+                                                    <td rowspan="4" style=" width:300px; vertical-align:top">
+                                        <div class="card card-blue shadow-sm collapsed-card">
+                          <div class="card-header">
+                            <h3 class="card-title">Male Shot Put</h3>
+
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <p>8.51 meter or more : &nbsp; 20 Points</p>
+                            <p>7.91 to 8.50 meter : &nbsp; 18 Points</p>
+                            <p>7.31 to 7.90 meter : &nbsp; 16 Points</p>
+                            <p>6.71 to 7.30 meter : &nbsp; 14 Points</p>
+                            <p>6.11 to 6.70 meter : &nbsp; 12 Points</p>
+                            <p>5.51 to 6.10 meter : &nbsp; 10 Points</p>
+                            <p>4.91 to 5.50 meter : &nbsp; 08 Points</p>
+                            <p>4.31 to 4.90 meter : &nbsp; 06 Points</p>
+                            <p>3.71 to 4.30 meter : &nbsp; 04 Points</p>
+                            <p>3.11 to 3.70 meter : &nbsp; 02 Points</p>
+                            <p>Less then 3.70 meter : &nbsp; 00 Points</p>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+
+                        </td>
+                                </tr>
+                            </table>
+
+                            <table class="w-100">
+                                <tr>
+                                                    <td rowspan="4" style=" width:300px; vertical-align:top">
+                                        <div class="card card-success shadow-sm collapsed-card">
+                          <div class="card-header">
+                            <h3 class="card-title">Female Shot Put</h3>
+
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <p>6.01 meter or more : &nbsp; 25 Points</p>
+                            <p>5.51 to 6.00 meter : &nbsp; 20 Points</p>
+                            <p>5.01 to 5.50 meter : &nbsp; 15 Points</p>
+                            <p>4.51 to 5.00 meter : &nbsp; 10 Points</p>
+                            <p>4.00 to 4.50 meter : &nbsp; 05 Points</p>
+                            <p>Less then 4 meter : &nbsp; 00 Points</p>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+
+                        </td>
+                                </tr>
+                            </table>
+
+                            <table class="w-100">
+                                <tr>
+                                                    <td rowspan="4" style=" width:300px; vertical-align:top">
+                                        <div class="card card-blue shadow-sm collapsed-card">
+                          <div class="card-header">
+                            <h3 class="card-title">Male pull ups</h3>
+
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <p>10 Pull Ups or more : &nbsp;  20 Points</p>
+                            <p>09 Pull Ups : &nbsp; 16 Points</p>
+                            <p>08 Pull Ups : &nbsp; 12 Points</p>
+                            <p>07 Pull Ups : &nbsp; 08 Points</p>
+                            <p>06 Pull Ups : &nbsp; 04 Points</p>
+                            <p>05 Pull Ups : &nbsp; 02 Points</p>
                           </div>
                           <!-- /.card-body -->
                         </div>
@@ -206,111 +440,258 @@
                         <td style="vertical-align:top">
                             <table class="w-100">
                                 <tr>
-                                    <td style="width: 103px">
-                                        <h4>Height:</h4>
-                                    </td>
-                                    <td>
-                                        <table class="w-100">
-                                            <tr>
-                                                <td style="width: 306px">
-                                                    <asp:TextBox ID="txtheight" runat="server" CssClass="form-control" onchange="chk_h()" placeholder="Enter Height in cms" ValidationGroup="1" Width="290px"></asp:TextBox>
-                                                </td>
-                                                <td style="width: 108px">
-                                                    <asp:Label ID="lblhr" runat="server" style="color: #008000"></asp:Label>
-                                                </td>
-                                                <td>
-                                                    <asp:RequiredFieldValidator ID="rqh0" runat="server" ControlToValidate="txtheight" Display="Dynamic" ErrorMessage="Height is required" SetFocusOnError="True" style="color: #FF0000" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtheight" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 103px; height: 30px"></td>
-                                    <td style="height: 30px">
-                                        <asp:HiddenField ID="hr" runat="server" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 103px">
+                                    <td style="width: 150px">
                                         <h4>
-                                            <asp:Label ID="Label8" runat="server" Text="Chest:"></asp:Label>
+                                            <asp:Label ID="Label2" runat="server" Text="1600 Meters:"></asp:Label>
                                         </h4>
                                     </td>
                                     <td>
                                         <table class="w-100">
                                             <tr>
-                                                <td style="width: 310px; height: 31px;">
-                                                    <asp:TextBox ID="txtchest" runat="server" CssClass="form-control" onchange="chk_c()" placeholder="Enter chest in cms" ValidationGroup="1" Width="290px"></asp:TextBox>
+                                                <td style="width: 140px">
+                                                    <asp:TextBox ID="txt1600m" runat="server" CssClass="form-control" onchange="chk_16()" placeholder="mm.ss" TabIndex="1" ToolTip="Enter time in mm.ss" ValidationGroup="1" Width="100px"></asp:TextBox>
                                                 </td>
-                                                <td style="width: 310px; height: 31px;">
-                                                    <asp:TextBox ID="txtmaxchest" runat="server" CssClass="form-control" onchange="chk_c()" placeholder="Enter chest in cms" ValidationGroup="1" Width="290px"></asp:TextBox>
+                                                <td style="width: 200px">
+                                                    <table class="w-100" style="width: 131%">
+                                                        <tr>
+                                                            <td style="width: 107px">
+                                                                <asp:Label ID="lbl16" runat="server" style="color: #008000"></asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:RequiredFieldValidator ID="rq16" runat="server" ControlToValidate="txt1600m" Display="Dynamic" ErrorMessage="1600 cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                            </td>
+                                                            <td>
+                                                                <asp:RegularExpressionValidator ID="re16" runat="server" ControlToValidate="txt1600m" Display="Dynamic" ErrorMessage="Proper Format." SetFocusOnError="True" ValidationExpression="^(1[0-2]|0?[1-9]).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
-                                                <td style="width: 105px; height: 31px;">
-                                                    <asp:Label ID="lblcr" runat="server" style="color: #008000"></asp:Label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="height: 31px">
-                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtchest" ErrorMessage="Chest is Required" SetFocusOnError="True" style="color: #FF0000" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                    <asp:RegularExpressionValidator ID="rec" runat="server" ControlToValidate="txtchest" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
-                                                </td>
-                                                <td style="height: 31px">
-                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtmaxchest" ErrorMessage="Chest is Required" SetFocusOnError="True" style="color: #FF0000" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator" runat="server" ControlToValidate="txtmaxchest" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
+                                                <td>
+                                                    <table class="w-100">
+                                                        <tr>
+                                                            <td style="width:150px">&nbsp;</td>
+                                                            <td style="width:108px">&nbsp;</td>
+                                                            <td>
+                                                                <table class="w-100">
+                                                                    <tr>
+                                                                        <td style="width: 74px">&nbsp;</td>
+                                                                        <td style="width: 16px">&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 103px">&nbsp;</td>
-                                    <td>
-                                        <asp:HiddenField ID="cr" runat="server" />
+                                    <td style="width: 150px; height: 30px"></td>
+                                    <td style="height: 30px">
+                                        <asp:HiddenField ID="r16" runat="server" />
+                                        <asp:HiddenField ID="r100" runat="server" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 103px">
-                                        <h4>Weight:</h4>
+                                    <td style="width: 150px">
+                                        <h4>
+                                            <asp:Label ID="Label1" runat="server" Text="800 Meters:"></asp:Label>
+                                        </h4>
+                                    </td>
+                                    <td>
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 142px; height: 31px;">
+                                                    <asp:TextBox ID="txt800m" runat="server" CssClass="form-control" onchange="chk_8()" placeholder="mm.ss" TabIndex="2" ValidationGroup="1" Width="100px"></asp:TextBox>
+                                                </td>
+                                                <td style="width: 105px; height: 31px;">
+                                                    <asp:Label ID="lbl8" runat="server" style="color: #008000"></asp:Label>
+                                                </td>
+                                                <td style="height: 31px">
+                                                    <table class="w-100">
+                                                        <tr>
+                                                            <td style="width: 37px">
+                                                                <asp:RequiredFieldValidator ID="rq800" runat="server" ControlToValidate="txt800m" Display="Dynamic" ErrorMessage="800m cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                            </td>
+                                                            <td>
+                                                                <asp:RegularExpressionValidator ID="re800" runat="server" ControlToValidate="txt800m" Display="Dynamic" ErrorMessage="800m result must be in proper format." SetFocusOnError="True" ValidationExpression="^(1[0-2]|0?[1-9]).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px">&nbsp;</td>
+                                    <td>
+                                        <asp:HiddenField ID="r8" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px">
+                                        <h4>100 Meters:</h4>
+                                    </td>
+                                    <td>
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 146px">
+                                                    <asp:TextBox ID="txt100m" runat="server" CssClass="form-control" onchange="chk_1()" placeholder="ss.msms" TabIndex="3" ToolTip="Enter time in ss.msms" Width="100px"></asp:TextBox>
+                                                </td>
+                                                <td style="width: 86px">
+                                                    <asp:Label ID="lbl10" runat="server" style="color: #008000"></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <table class="w-100">
+                                                        <tr>
+                                                            <td style="width: 37px">
+                                                                <asp:RequiredFieldValidator ID="rq10" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                            </td>
+                                                            <td>
+                                                                <asp:RegularExpressionValidator ID="re100" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m result must be in proper range." SetFocusOnError="True" ValidationExpression="^([0-5][0-9]?).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px">
+                                        <h4>Long Jump:</h4>
                                     </td>
                                     <td>
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 311px">
-                                                    <asp:TextBox ID="txtweight" runat="server" CausesValidation="True" CssClass="form-control" placeholder="Enter weight in kg" ValidationGroup="1" Width="290px"></asp:TextBox>
+                                                    <asp:TextBox ID="txtlj" runat="server" CausesValidation="True" CssClass="form-control" onchange="chk_lj()" placeholder="Enter Distance in m" TabIndex="4" ValidationGroup="1" Width="290px"></asp:TextBox>
                                                 </td>
                                                 <td>
-                                                    <asp:RequiredFieldValidator ID="rqw0" runat="server" ControlToValidate="txtweight" ErrorMessage="Weight is Required" SetFocusOnError="True" style="color: #FF0000" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                    <asp:RegularExpressionValidator ID="rew" runat="server" ControlToValidate="txtweight" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
+                                                    <table class="w-100">
+                                                        <tr>
+                                                            <td style="width: 109px">
+                                                                <asp:Label ID="lbllj" runat="server" style="color: #008000"></asp:Label>
+                                                            </td>
+                                                            <td style="width: 23px">
+                                                                <asp:RequiredFieldValidator ID="rqlj" runat="server" ControlToValidate="txtlj" Display="Dynamic" ErrorMessage="Long jump cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                            </td>
+                                                            <td>
+                                                                <asp:RangeValidator ID="rnlj" runat="server" ControlToValidate="txtlj" ErrorMessage="Long jump value must be in proper format." MaximumValue="100" MinimumValue="0.2" SetFocusOnError="True" Type="Double" ValidationGroup="1">*</asp:RangeValidator>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 103px; height: 30px;"></td>
+                                    <td style="width: 150px; height: 30px;"></td>
                                     <td style="height: 30px">
-                                        <asp:Label ID="Label9" runat="server"></asp:Label>
+                                        <asp:HiddenField ID="hlj" runat="server" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 103px; height: 30px;">&nbsp;</td>
+                                    <td style="width: 150px; height: 30px;">
+                                        <h4>Shot Put: </h4>
+                                    </td>
                                     <td style="height: 30px">
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 305px">
+                                                    <asp:TextBox ID="txtsp" runat="server" CssClass="form-control" onchange="chk_sp()" placeholder="Enter distance in m" TabIndex="5" Width="291px"></asp:TextBox>
+                                                    <asp:HiddenField ID="hsp" runat="server" />
+                                                </td>
+                                                <td style="width: 121px">
+                                                    <asp:Label ID="lblsp" runat="server" style="color: #008000"></asp:Label>
+                                                </td>
+                                                <td style="width: 20px">
+                                                    <asp:RequiredFieldValidator ID="reqsp" runat="server" ControlToValidate="txtsp" Display="Dynamic" ErrorMessage="Shot put cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                </td>
+                                                <td>
+                                                    <table class="w-100">
+                                                        <tr>
+                                                            <td style="width: 52px">
+                                                                <asp:RangeValidator ID="rnsp" runat="server" ControlToValidate="txtsp" Display="Dynamic" ErrorMessage="Shot put result must be in proper format" MaximumValue="15" MinimumValue="1" Type="Double" ValidationGroup="1">*</asp:RangeValidator>
+                                                            </td>
+                                                            <td>
+                                                                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="1" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px; height: 30px;">&nbsp;</td>
+                                    <td style="height: 30px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px; height: 30px;">
                                         <h4>
-                                            <asp:Label ID="lblr1" runat="server"></asp:Label>
+                                            <asp:Label ID="lblpullups" runat="server" Text="Pull ups:"></asp:Label>
                                         </h4>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 103px; height: 41px;"></td>
-                                    <td style="height: 41px">
-                                        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="btnsub_Click" Text="Submit" ValidationGroup="1" />
+                                    <td style="height: 30px">
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 305px">
+                                                    <asp:TextBox ID="txtpull" runat="server" CssClass="form-control" onchange="chk_pu()" placeholder="Enter count" TabIndex="5" Width="291px"></asp:TextBox>
+                                                    <asp:HiddenField ID="hpu" runat="server" />
+                                                </td>
+                                                <td style="width: 121px">
+                                                    <asp:Label ID="lblpu" runat="server" style="color: #008000"></asp:Label>
+                                                </td>
+                                                <td style="width: 20px">
+                                                    <asp:RequiredFieldValidator ID="reqpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="Pull ups count cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                </td>
+                                                <td>
+                                                    <table class="w-100">
+                                                        <tr>
+                                                            <td style="width: 52px">
+                                                                <asp:RangeValidator ID="rnpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="Pull ups result must be in proper format" MaximumValue="30" MinimumValue="0" Type="Integer" ValidationGroup="1">*</asp:RangeValidator>
+                                                            </td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 103px">&nbsp;</td>
-                                    <td></td>
+                                    <td style="width: 150px; height: 41px;">&nbsp;</td>
+                                    <td style="height: 41px">
+                                        <asp:Button ID="btnsub" runat="server" OnClick="btnsub_Click" TabIndex="6" Text="Submit" ValidationGroup="1" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px; height: 41px;"></td>
+                                    <td style="height: 41px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px">&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="lblres" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px">&nbsp;</td>
+                                    <td>&nbsp;</td>
                                 </tr>
                             </table>
                         </td>
@@ -330,358 +711,6 @@
         </tr>
     </table> 
 
-    <table class="w-100">
-        <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td>
-                <table class="w-100">
-                    <tr>
-                        <td style="width: 115px"><h4>&nbsp;</h4></td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                </table>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td>
-                <table class="w-100">
-                    <tr>
-                        <td style="width: 115px">&nbsp;</td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                </table>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td>
-                <table class="w-100">
-                    <tr>
-                        <td style="width: 107px"><h4>Name: </h4></td>
-                        <td style="width: 176px">
-                            <h6>&nbsp;</h6>
-                        </td>
-                        <td style="width: 155px"><h4>Date Of Birth: </h4></td>
-                        <td style="width: 168px">
-                            <h6>&nbsp;</h6>
-                        </td>
-                        <td style="width: 94px"><h4>Gender: </h4></td>
-                        <td>
-                            <h6>&nbsp;</h6>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr style="height:20px">
-            <td style="width: 175px">&nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td>
-                <table class="w-100">
-                    <tr>
-                        <td style="width: 107px"><h4>Category: </h4></td>
-                        <td style="width: 176px">
-                            <h6>
-                                &nbsp;</h6>
-                        </td>
-                        <td style="width: 155px"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cast: </h4></td>
-                        <td style="width: 168px">
-                            <h6>
-
-                                &nbsp;</h6>
-                        </td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </table>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 175px">&nbsp;</td>
-            <td>
-                <table class="w-100">
-                    <tr>
-                        <td style="width: 150px"><h4>
-                            <asp:Label ID="Label2" runat="server" Text="1600 Meters:"></asp:Label></h4></td>
-                        <td>
-                            <table class="w-100">
-                                <tr>
-                                    <td style="width: 140px">
-                            <asp:TextBox placeholder="mm.ss" CssClass="form-control" Width="100px" ID="txt1600m" runat="server" onchange="chk_16()" ValidationGroup="1" ToolTip="Enter time in mm.ss" TabIndex="1"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 200px">
-                                        <table class="w-100" style="width: 131%">
-                                            <tr>
-                                                <td style="width: 107px">
-                                                    <asp:Label ID="lbl16" runat="server" style="color: #008000"></asp:Label>
-                                                </td>
-                                                <td>
-                                                    <asp:RequiredFieldValidator ID="rq16" runat="server" ControlToValidate="txt1600m" Display="Dynamic" ErrorMessage="1600 cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                </td>
-                                                <td>
-                                                    <asp:RegularExpressionValidator ID="re16" runat="server" ControlToValidate="txt1600m" Display="Dynamic" ErrorMessage="Proper Format." SetFocusOnError="True" ValidationExpression="^(1[0-2]|0?[1-9]).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table class="w-100">
-                                            <tr>
-                                                <td style="width:150px">
-                                                    &nbsp;</td>
-                                                <td style="width:108px">
-                                                    &nbsp;</td>
-                                                <td>
-                                                    <table class="w-100">
-                                                        <tr>
-                                                            <td style="width: 74px">
-                                                                &nbsp;</td>
-                                                            <td style="width: 16px">
-                                                                &nbsp;</td>
-                                                            <td>
-                                                                &nbsp;</td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px; height: 30px"></td>
-                        <td style="height: 30px">
-                            <asp:HiddenField ID="r16" runat="server" />
-                            <asp:HiddenField ID="r100" runat="server" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px"><h4>
-                            <asp:Label ID="Label1" runat="server" Text="800 Meters:"></asp:Label></h4></td>
-                        <td>
-                            <table class="w-100">
-                                <tr>
-                                    <td style="width: 142px; height: 31px;">
-                            <asp:TextBox placeholder="mm.ss" CssClass="form-control" onchange="chk_8()" Width="100px" ID="txt800m" runat="server" ValidationGroup="1" TabIndex="2"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 105px; height: 31px;">
-                                        <asp:Label ID="lbl8" runat="server" style="color: #008000"></asp:Label>
-                                    </td>
-                                    <td style="height: 31px">
-                                        <table class="w-100">
-                                            <tr>
-                                                <td style="width: 37px">
-                                                    <asp:RequiredFieldValidator ID="rq800" runat="server" ControlToValidate="txt800m" Display="Dynamic" ErrorMessage="800m cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                </td>
-                                                <td>
-                                                    <asp:RegularExpressionValidator ID="re800" runat="server" ControlToValidate="txt800m" Display="Dynamic" ErrorMessage="800m result must be in proper format." SetFocusOnError="True" ValidationExpression="^(1[0-2]|0?[1-9]).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px">&nbsp;</td>
-                        <td>
-                            <asp:HiddenField ID="r8" runat="server" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px">
-                            <h4>100 Meters:</h4>
-                        </td>
-                        <td>
-                            <table class="w-100">
-                                <tr>
-                                    <td style="width: 146px">
-                                        <asp:TextBox ID="txt100m" runat="server" CssClass="form-control" onchange="chk_1()" placeholder="ss.msms" TabIndex="3" ToolTip="Enter time in ss.msms" Width="100px"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 86px">
-                                        <asp:Label ID="lbl10" runat="server" style="color: #008000"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <table class="w-100">
-                                            <tr>
-                                                <td style="width: 37px">
-                                                    <asp:RequiredFieldValidator ID="rq10" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                </td>
-                                                <td>
-                                                    <asp:RegularExpressionValidator ID="re100" runat="server" ControlToValidate="txt100m" Display="Dynamic" ErrorMessage="100m result must be in proper range." SetFocusOnError="True" ValidationExpression="^([0-5][0-9]?).([0-5][0-9]?)" ValidationGroup="1">*</asp:RegularExpressionValidator>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px">&nbsp;</td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px"><h4>Long Jump:</h4></td>
-                        <td>
-                            <table class="w-100">
-                                <tr>
-                                    <td style="width: 311px">
-                            <asp:TextBox placeholder="Enter Distance in m" CssClass="form-control" Width="290px" onchange="chk_lj()" ID="txtlj" runat="server" ValidationGroup="1" CausesValidation="True" TabIndex="4"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <table class="w-100">
-                                            <tr>
-                                                <td style="width: 109px">
-                                                    <asp:Label ID="lbllj" runat="server" style="color: #008000"></asp:Label>
-                                                </td>
-                                                <td style="width: 23px">
-                                                    <asp:RequiredFieldValidator ID="rqlj" runat="server" ControlToValidate="txtlj" Display="Dynamic" ErrorMessage="Long jump cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                </td>
-                                                <td>
-                                                    <asp:RangeValidator ID="rnlj" runat="server" ControlToValidate="txtlj" ErrorMessage="Long jump value must be in proper format." MaximumValue="100" MinimumValue="0.2" SetFocusOnError="True" Type="Double" ValidationGroup="1">*</asp:RangeValidator>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px; height: 30px;"></td>
-                        <td style="height: 30px">
-                            <asp:HiddenField ID="hlj" runat="server" />
-                        </td>
-                        
-                        
-                    </tr>
-                    <tr>
-                        <td style="width: 150px; height: 30px;"><h4>Shot Put: </h4></td>
-                        <td style="height: 30px">
-                            <table class="w-100">
-                                <tr>
-                                    <td style="width: 305px">
-                                        <asp:TextBox ID="txtsp" runat="server" CssClass="form-control" placeholder="Enter distance in m" TabIndex="5" Width="291px" onchange="chk_sp()"></asp:TextBox>
-                                        <asp:HiddenField ID="hsp" runat="server" />
-                                    </td>
-                                    <td style="width: 121px">
-                                        <asp:Label ID="lblsp" runat="server" style="color: #008000"></asp:Label>
-                                    </td>
-                                    <td style="width: 20px">
-                                        <asp:RequiredFieldValidator ID="reqsp" runat="server" ControlToValidate="txtsp" Display="Dynamic" ErrorMessage="Shot put cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                    </td>
-                                    <td>
-                                        <table class="w-100">
-                                            <tr>
-                                                <td style="width: 52px">
-                                                    <asp:RangeValidator ID="rnsp" runat="server" ControlToValidate="txtsp" Display="Dynamic" ErrorMessage="Shot put result must be in proper format" MaximumValue="15" MinimumValue="1" Type="Double" ValidationGroup="1">*</asp:RangeValidator>
-                                                </td>
-                                                <td>
-                                                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="1" />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px; height: 30px;">&nbsp;</td>
-                        <td style="height: 30px">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px; height: 30px;"><h4><asp:Label ID="lblpullups" runat="server" Text="Pull ups:"></asp:Label></h4></td>
-                        <td style="height: 30px">
-                            <table class="w-100">
-                                <tr>
-                                    <td style="width: 305px">
-                                        <asp:TextBox ID="txtpull" runat="server" CssClass="form-control" placeholder="Enter count" TabIndex="5" Width="291px" onchange="chk_pu()"></asp:TextBox>
-                                        <asp:HiddenField ID="hpu" runat="server" />
-                                    </td>
-                                    <td style="width: 121px">
-                                        <asp:Label ID="lblpu" runat="server" style="color: #008000"></asp:Label>
-                                    </td>
-                                    <td style="width: 20px">
-                                        <asp:RequiredFieldValidator ID="reqpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="Pull ups count cannot be blank" SetFocusOnError="True" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                    </td>
-                                    <td>
-                                        <table class="w-100">
-                                            <tr>
-                                                <td style="width: 52px">
-                                                    <asp:RangeValidator ID="rnpu" runat="server" ControlToValidate="txtpull" Display="Dynamic" ErrorMessage="Pull ups result must be in proper format"  MinimumValue="0" Type="Integer" ValidationGroup="1" MaximumValue="30">*</asp:RangeValidator>
-                                                </td>
-                                                <td>
-                                                    &nbsp;</td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                        <td style="width: 150px; height: 41px;">&nbsp;</td>
-                        <td style="height: 41px">
-                            <asp:Button ID="btnsub" runat="server" TabIndex="6" Text="Submit" ValidationGroup="1" OnClick="btnsub_Click" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px; height: 41px;"></td>
-                        <td style="height: 41px">
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px">&nbsp;</td>
-                        <td>
-                           
-                            <asp:Label ID="lblres" runat="server"></asp:Label>
-                           
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px">&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 150px">&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </table>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
 </ContentTemplate>
 </asp:UpdatePanel>
      
