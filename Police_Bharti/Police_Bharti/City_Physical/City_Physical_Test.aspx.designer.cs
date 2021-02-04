@@ -49,15 +49,6 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.Label lbltotal;
         
         /// <summary>
-        /// lblinvited control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblinvited;
-        
-        /// <summary>
         /// lblremaning control.
         /// </summary>
         /// <remarks>
@@ -65,6 +56,24 @@ namespace Police_Bharti.City_Physical {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblremaning;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// lblinvited control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblinvited;
         
         /// <summary>
         /// DropDownList2 control.
@@ -299,5 +308,14 @@ namespace Police_Bharti.City_Physical {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsub;
+        
+        /// <summary>
+        /// btnabs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnabs;
     }
 }

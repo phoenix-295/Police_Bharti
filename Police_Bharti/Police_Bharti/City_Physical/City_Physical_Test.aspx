@@ -49,20 +49,29 @@
                           <asp:Label ID="lbltotal" runat="server" Text=""></asp:Label></span>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link">
-                      Invited Candidates <span class="float-right badge bg-success">
-                          <asp:Label ID="lblinvited" runat="server" Text=""></asp:Label>
-                                         </span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
+
+                    <li class="nav-item">
                     <a class="nav-link">
                       Remaning Candidates <span class="float-right badge bg-danger">
-                          <asp:Label ID="lblremaning" runat="server" Text=""></asp:Label>
-                                          </span>
+                          <asp:Label ID="lblremaning" runat="server" Text=""></asp:Label></span>
                     </a>
                   </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link">
+                      Done Candidates <span class="float-right badge bg-success">
+                          <asp:Label ID="Label2" runat="server" Text=""></asp:Label></span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      Absent Candidates <span class="float-right badge bg-dark">
+                          <asp:Label ID="lblinvited" runat="server" Text=""></asp:Label></span>
+                    </a>
+                  </li>
+                  
+                  
                   
                 </ul>
               </div>
@@ -305,7 +314,16 @@
                                 <tr>
                                     <td style="width: 103px; height: 41px;"></td>
                                     <td style="height: 41px">
-                                        <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" OnClick="btnsub_Click" Text="Submit" ValidationGroup="1" />
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 138px">
+                                                    <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" OnClick="btnsub_Click" Text="Submit" ValidationGroup="1" />
+                                                </td>
+                                                <td>
+                                                    <asp:Button CssClass="btn btn-danger" ID="btnabs" runat="server" Text="Absent" OnClick="btnabs_Click" />
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                                 <tr>

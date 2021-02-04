@@ -21,13 +21,13 @@ namespace Police_Bharti.City_Physical
 
         protected void findr()
         {
-            int pd = 0, rc = 0;
+            int pd = 0, rc = 0, ab=0, dc=0;
             int c = 0;
             string date1 = DropDownList1.Text;
             string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             MySqlConnection con = new MySqlConnection(s1);
             con.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM  pb_city_data", con);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM  pb_city_data ", con);
             DataSet ds1 = new DataSet();
             da.Fill(ds1, "t1");
             foreach (DataRow r1 in ds1.Tables["t1"].Rows)
@@ -40,11 +40,18 @@ namespace Police_Bharti.City_Physical
                     {
                         rc++;
                     }
+
+                    if ((r1["height"].ToString() == ""))
+                    {
+                        ab++;
+                    }
                 }
+                dc = pd - rc;
                 lblremaning.Text = rc.ToString();
                 lbltotal.Text = pd.ToString();
+                lblinvited.Text = ab.ToString();
+                Label2.Text = dc.ToString();
             }
-            
             con.Close();
         }
 
@@ -98,6 +105,7 @@ namespace Police_Bharti.City_Physical
 
         protected void fill_data()
         {
+            
             string p_f="";
             try
             {
@@ -121,22 +129,66 @@ namespace Police_Bharti.City_Physical
                         txtmaxchest.Text = r1["maxchest"].ToString();
                         txtweight.Text = r1["weight"].ToString();
                         p_f = r1["p_flag"].ToString();
+                        if ((r1["height"].ToString() == ""))
+                        {
+                            btnsub.Enabled = false;
+                            btnabs.Enabled = false;
+                        }
+                        else
+                        {
+                            btnsub.Enabled = true;
+                            btnabs.Enabled = true;
+                        }
                     }
+
+
                 }
                 con.Close();
+
+                if (p_f == "1")
+                {
+                    lblr1.ForeColor = Color.Green;
+                    lblr1.Text = "Pass";
+                    btnabs.Enabled = false;
+                }
+                else
+                {
+                    lblr1.ForeColor = Color.Red;
+                    lblr1.Text = "Fail";
+                    btnabs.Enabled = true;
+                }
 
                 if (lblg.Text == "M")
                 {
                     if ((txtheight.Text != "0") && (txtchest.Text != "0") && (txtweight.Text != "0"))
                     {
                         btnsub.Enabled = false;
+                        txtheight.Enabled = false;
+                        txtchest.Enabled = false;
+                        txtmaxchest.Enabled = false;
+                        txtweight.Enabled = false; 
+                    }
+                    else if(txtheight.Text == "")
+                    {
+                        btnsub.Enabled = false;
+                        txtheight.Enabled = false;
+                        txtchest.Enabled = false;
+                        txtmaxchest.Enabled = false;
+                        txtweight.Enabled = false;
+                        lblr1.Text = "Absent";
+                        lblr1.ForeColor = Color.Red;
                     }
                     else
                     {
                         txtheight.Text = "";
                         txtchest.Text = "";
                         txtweight.Text = "";
+                        lblr1.Text = "";
                         btnsub.Enabled = true;
+                        txtheight.Enabled = true;
+                        txtchest.Enabled = true;
+                        txtmaxchest.Enabled = true;
+                        txtweight.Enabled = true;
                     }
                 }
 
@@ -145,25 +197,36 @@ namespace Police_Bharti.City_Physical
                     if ((txtheight.Text != "0") && (txtweight.Text != "0"))
                     {
                         btnsub.Enabled = false;
+                        txtheight.Enabled = false;
+                        txtchest.Enabled = false;
+                        txtmaxchest.Enabled = false;
+                        txtweight.Enabled = false;
+                    }
+                    else if(txtheight.Text == "")
+                    {
+                        btnsub.Enabled = false;
+                        txtheight.Enabled = false;
+                        txtchest.Enabled = false;
+                        txtmaxchest.Enabled = false;
+                        txtweight.Enabled = false;
+                        lblr1.Text = "Absent";
+                        lblr1.ForeColor = Color.Red;
                     }
                     else
                     {
                         txtheight.Text = "";
+                        txtchest.Text = "";
                         txtweight.Text = "";
+                        lblr1.Text = "";
                         btnsub.Enabled = true;
+                        txtheight.Enabled = true;
+                        txtchest.Enabled = true;
+                        txtmaxchest.Enabled = true;
+                        txtweight.Enabled = true;
                     }
                 }
 
-                if (p_f == "1")
-                {
-                    lblr1.ForeColor = Color.Green;
-                    lblr1.Text = "Pass";
-                }
-                else
-                {
-                    lblr1.ForeColor = Color.Red;
-                    lblr1.Text = "Fail";
-                }
+                
             }
             catch(Exception e)
             {
@@ -266,6 +329,42 @@ namespace Police_Bharti.City_Physical
             txtweight.Text = "";
             lblres.Text = "Submitted Successfully";
             fill_data();
+            findr();
+        }
+
+        protected void btnabs_Click(object sender, EventArgs e)
+        {
+            string s2;
+            s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            MySqlConnection conn = new MySqlConnection(s2);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set height =@a, minchest=@b, maxchest=@e, weight=@c, p_flag=@d where application_Id='" + DropDownList2.Text + "'", conn);
+            if (lblg.Text == "M")
+            {
+                cmd.Parameters.AddWithValue("@a", null);
+                cmd.Parameters.AddWithValue("@b", null);
+                cmd.Parameters.AddWithValue("@e", null);
+                cmd.Parameters.AddWithValue("@c", null);
+                cmd.Parameters.AddWithValue("@d", "0");
+                cmd.ExecuteNonQuery();
+            }
+            if (lblg.Text == "F")
+            {
+                cmd.Parameters.AddWithValue("@a", null);
+                cmd.Parameters.AddWithValue("@b", null);
+                cmd.Parameters.AddWithValue("@e", null);
+                cmd.Parameters.AddWithValue("@c", null);
+                cmd.Parameters.AddWithValue("@d", "0");
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+            txtheight.Text = "";
+            txtchest.Text = "";
+            txtweight.Text = "";
+            lblres.ForeColor = Color.Red;
+            lblres.Text = "Marked Absent";
+            fill_data();
+            findr();
         }
     }
 }

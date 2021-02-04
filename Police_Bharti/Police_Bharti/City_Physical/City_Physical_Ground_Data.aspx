@@ -243,13 +243,17 @@
         <tr>
             <td style="width:175px">&nbsp;</td>
             <td style="text-align:right">
-                <asp:Button ID="btnshow" runat="server" Text="Send Data to Admin" />
+                <asp:Button ID="btnshow" runat="server" Text="Send Data to Admin" OnClick="btnshow_Click" />
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td style="width:175px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="color: #FF0000">Don&#39;t Send Before :&nbsp;
+                <asp:Label ID="Label10" runat="server"></asp:Label>
+                <br />
+                <asp:Label ID="Label11" runat="server" ForeColor="#339966"></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
     </table>

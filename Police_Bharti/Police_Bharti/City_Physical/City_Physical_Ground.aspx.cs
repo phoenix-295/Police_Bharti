@@ -2,12 +2,13 @@
 using System;
 using System.Configuration;
 using System.Data;
+using System.Drawing;
 
 namespace Police_Bharti.City_Physical
 {
     public partial class City_Physical_Ground : System.Web.UI.Page
     {
-        int tc, rc;
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -71,26 +72,33 @@ namespace Police_Bharti.City_Physical
 
         protected void t1()
         {
-            tc = 0;
-            rc = 0;
+            int remain = 0, tot = 0;
+            int ab = 0, dc = 0;
             try
             {
                 string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
                 MySqlConnection con = new MySqlConnection(s1);
                 con.Open();
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT application_Id,physical_date,g_flag FROM pb_city_data where physical_date='" + DropDownList1.Text + "' and p_flag = 1", con);
+                MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM pb_city_data where physical_date='" + DropDownList1.Text + "' and p_flag = 1", con);
                 DataSet ds1 = new DataSet();
                 da.Fill(ds1, "t1");
                 foreach (DataRow r1 in ds1.Tables["t1"].Rows)
                 {
-                    tc++;
+                    tot++;
                     if ((r1["g_flag"].ToString() != "1"))
                     {
-                        rc++;
+                        remain++;
+                    }
+                    if ((r1["race1600"].ToString() == ""))
+                    {
+                        ab++;
                     }
                 }
-                lbltotal.Text = tc.ToString();
-                lblremaning.Text = rc.ToString();
+                dc = tot - remain;
+                lbltotal.Text = tot.ToString();
+                lbldone.Text = dc.ToString();
+                lblremaning.Text = remain.ToString();
+                lblabs.Text = ab.ToString();
             }
             catch (Exception e)
             {
@@ -139,6 +147,16 @@ namespace Police_Bharti.City_Physical
                             txtpull.Text = r1["pullups"].ToString();
                             lblpu.Text = r1["pum"].ToString();
 
+                            if ((r1["race1600"].ToString() == ""))
+                            {
+                                btnsub.Enabled = false;
+                                btnabs.Enabled = false;
+                            }
+                            else
+                            {
+                                btnsub.Enabled = true;
+                                btnabs.Enabled = true;
+                            }
                         }
                         
                     }
@@ -376,6 +394,75 @@ namespace Police_Bharti.City_Physical
             txtpull.Text = "";
             lblres.Text = "Submitted Successfully";
             fill_data();
+        }
+
+        protected void btnabs_Click(object sender, EventArgs e)
+        {
+            string s2;
+            s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            MySqlConnection conn = new MySqlConnection(s2);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("Update pb_city_data set race1600=@r16, r16m=@r16m, race800=@r800, race100=@r100, r8m=@r8m, r1m=@r1m, longjump=@lj, ljm=@ljm, shotput=@sp, spm=@spm, pullups=@pu, pum=@pum, g_flag=@flag, ground_total=@total where application_Id='" + DropDownList2.Text + "'", conn);
+            if (lblg.Text == "M")
+            {
+                cmd.Parameters.AddWithValue("@r16", null);
+                cmd.Parameters.AddWithValue("@r16m", null);
+
+                cmd.Parameters.AddWithValue("@r800", null);
+                cmd.Parameters.AddWithValue("@r8m", null);
+
+                cmd.Parameters.AddWithValue("@r100", null);
+                cmd.Parameters.AddWithValue("@r1m", null);
+
+                cmd.Parameters.AddWithValue("@lj", null);
+                cmd.Parameters.AddWithValue("@ljm", null);
+
+                cmd.Parameters.AddWithValue("@sp", null);
+                cmd.Parameters.AddWithValue("@spm", null);
+
+                cmd.Parameters.AddWithValue("@pu", null);
+                cmd.Parameters.AddWithValue("@pum", null);
+
+                cmd.Parameters.AddWithValue("@total", null);
+                cmd.Parameters.AddWithValue("@flag", null);
+                cmd.ExecuteNonQuery();
+            }
+            if (lblg.Text == "F")
+            {
+                cmd.Parameters.AddWithValue("@r16", null);
+                cmd.Parameters.AddWithValue("@r16m", null);
+
+                cmd.Parameters.AddWithValue("@r800", null);
+                cmd.Parameters.AddWithValue("@r8m", null);
+
+                cmd.Parameters.AddWithValue("@r100", null);
+                cmd.Parameters.AddWithValue("@r1m", null);
+
+                cmd.Parameters.AddWithValue("@lj", null);
+                cmd.Parameters.AddWithValue("@ljm", null);
+
+                cmd.Parameters.AddWithValue("@sp", null);
+                cmd.Parameters.AddWithValue("@spm", null);
+
+                cmd.Parameters.AddWithValue("@pu", null);
+                cmd.Parameters.AddWithValue("@pum", null);
+
+                cmd.Parameters.AddWithValue("@total", null);
+                cmd.Parameters.AddWithValue("@flag", null);
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+
+            txt1600m.Text = "";
+            txt800m.Text = "";
+            txt100m.Text = "";
+            txtlj.Text = "";
+            txtsp.Text = "";
+            txtpull.Text = "";
+            lblres.ForeColor = Color.Red;
+            lblres.Text = "Marked Absent";
+            fill_data();
+            t1();
         }
     }
 }

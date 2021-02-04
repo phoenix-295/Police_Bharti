@@ -51,16 +51,21 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link">
-                      Invited Candidates <span class="float-right badge bg-success">
-                          <asp:Label ID="lblinvited" runat="server" Text=""></asp:Label>
+                      Done Candidates <span class="float-right badge bg-success">
+                          <asp:Label ID="lbldone" runat="server" Text=""></asp:Label>
                                          </span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link">
                       Remaning Candidates <span class="float-right badge bg-danger">
-                          <asp:Label ID="lblremaning" runat="server" Text=""></asp:Label>
-                                          </span>
+                          <asp:Label ID="lblremaning" runat="server" Text=""></asp:Label></span>
+                    </a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link">
+                      Absent Candidates <span class="float-right badge bg-dark">
+                          <asp:Label ID="lblabs" runat="server" Text=""></asp:Label></span>
                     </a>
                   </li>
                   
@@ -672,7 +677,16 @@
                                 <tr>
                                     <td style="width: 150px; height: 41px;">&nbsp;</td>
                                     <td style="height: 41px">
-                                        <asp:Button ID="btnsub" runat="server" OnClick="btnsub_Click" TabIndex="6" Text="Submit" ValidationGroup="1" />
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 154px">
+                                                    <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" OnClick="btnsub_Click" TabIndex="6" Text="Submit" ValidationGroup="1" />
+                                                </td>
+                                                <td>
+                                                    <asp:Button CssClass="btn btn-danger" ID="btnabs" runat="server" Text="Absent" OnClick="btnabs_Click" />
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                                 <tr>

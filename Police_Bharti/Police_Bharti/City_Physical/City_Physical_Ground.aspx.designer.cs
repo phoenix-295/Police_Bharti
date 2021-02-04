@@ -49,13 +49,13 @@ namespace Police_Bharti.City_Physical {
         protected global::System.Web.UI.WebControls.Label lbltotal;
         
         /// <summary>
-        /// lblinvited control.
+        /// lbldone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblinvited;
+        protected global::System.Web.UI.WebControls.Label lbldone;
         
         /// <summary>
         /// lblremaning control.
@@ -65,6 +65,15 @@ namespace Police_Bharti.City_Physical {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblremaning;
+        
+        /// <summary>
+        /// lblabs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblabs;
         
         /// <summary>
         /// DropDownList2 control.
@@ -434,6 +443,15 @@ namespace Police_Bharti.City_Physical {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsub;
+        
+        /// <summary>
+        /// btnabs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnabs;
         
         /// <summary>
         /// lblres control.
