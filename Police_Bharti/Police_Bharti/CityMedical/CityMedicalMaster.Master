@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GraminAdmin.master.cs" Inherits="Police_Bharti.GraminAdmin.GraminAdmin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CityMedicalMaster.master.cs" Inherits="Police_Bharti.CityMedical.CityMedicalMaster" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,10 +38,13 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a id="pbut" class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <%--<a href="index3.html" class="nav-link">Home</a>--%>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <%--<a href="#" class="nav-link">Contact</a>--%>
       </li>
     </ul>
 
@@ -104,8 +107,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="GraminAdminHome.aspx" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="Home.aspx" class="brand-link">
+      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Home</span>
     </a>
 
@@ -117,7 +120,7 @@
           <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
-          <a href="#" class="d-block">Gramin Admin</a>
+          <a href="City_Medical_Home.aspx" class="d-block">Medical</a>
         </div>
       </div>
 
@@ -141,56 +144,32 @@
           <li class="nav-item menu-open">
             
                <li class="nav-item">
-            <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <a href="City_Medical_ViewData.aspx" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
               <p>
-                Registration
-                  <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-              <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="City_Admin_registration.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>City Admin Registration</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="Gramin_Admin_Registration.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gramin Admin Registration</p>
-                </a>
-              </li>
-                  </ul>
-          </li>
-             
-          <li class="nav-item">
-            <a href="Add_Records.aspx" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Add records
+                View all data
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-walking"></i>
               <p>
-                View records
+                Tests
                   <i class="fas fa-angle-left right"></i>
               </p>
             </a>
               <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="View_City_Records.aspx" class="nav-link">
+                <a href="City_Physical_Test.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>City Data</p>
+                  <p>Physical</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="View_Gramin_Records.aspx" class="nav-link">
+                <a href="City_Physical_Ground.aspx" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Gramin Data</p>
+                  <p>Ground</p>
                 </a>
               </li>
                   </ul>
@@ -199,9 +178,24 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Charts
+                View Results
+                  <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="City_Physical_Test_Data.aspx" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Physical</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="City_Physical_Ground_Data.aspx" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ground</p>
+                </a>
+              </li>
+                  </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -723,5 +717,10 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard.js"></script>
    </form>
+    <script>
+            (function myFunction() {
+                document.getElementById("pbut").click(); // Click on the checkbox
+            })();
+    </script>
 </body>
 </html>
