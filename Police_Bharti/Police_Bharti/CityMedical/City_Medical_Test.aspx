@@ -709,17 +709,18 @@
 
             if (g == "M") {
                 if (age >= 18 && age <= 22) {
-                    if (height == 165 && height == 166) {
+                    if (height >= 165 && height <= 166) {
                         if (w >= 49.5 && w <= 60.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
+                            
                         }
                         else {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Fail";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 167 && height == 168) {
+                    if (height >= 167 && height <= 168) {
                         if (w >= 51 && w <= 62) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -729,7 +730,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 169 && height == 170) {
+                    if (height >= 169 && height <= 170) {
                         if (w >= 52 && w <= 64) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -739,7 +740,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 171 && height == 172) {
+                    if (height >= 171 && height <= 172) {
                         if (w >= 54 && w <= 66) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -749,7 +750,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 173 && height == 174) {
+                    if (height >= 173 && height <= 174) {
                         if (w >= 55 && w <= 67) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -759,7 +760,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 175 && height == 176) {
+                    if (height >= 175 && height <= 176) {
                         if (w >= 56.5 && w <= 69) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -769,7 +770,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 177 && height == 178) {
+                    if (height >= 177 && height <= 178) {
                         if (w >= 57.5 && w <= 70.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -779,17 +780,18 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 179 && height == 180) {
+                    if (height >= 179 && height <= 180) {
                         if (w >= 59 && w <= 72) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
+                            
                         }
                         else {
                            document.getElementById('<%= lblhr.ClientID %>').textContent = "Fail";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 181 && height == 182) {
+                    if (height >= 181 && height <= 182) {
                         if (w >= 61 && w <= 74.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -799,7 +801,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 183 && height == 184) {
+                    if (height >= 183 && height <= 184) {
                         if (w >= 63 && w <= 77) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -809,7 +811,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 185 && height == 186) {
+                    if (height >= 185 && height <= 186) {
                         if (w >= 63.5 && w <= 77.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -819,7 +821,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 187 && height == 188) {
+                    if (height >= 187 && height <= 188) {
                         if (w >= 65 && w <= 79) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -829,7 +831,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 189 && height == 190) {
+                    if (height >= 189 && height <= 190) {
                         if (w >= 66 && w <= 81) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -842,7 +844,7 @@
                 }
 
                 if (age >= 23 && age <= 27) {
-                    if (height == 165 && height == 166) {
+                    if (height >= 165 && height <= 166) {
                         if (w >= 51.5 && w <= 62.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -852,7 +854,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 167 && height == 168) {
+                    if (height >= 167 && height <= 168) {
                         if (w >= 52.5 && w <= 64.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -862,7 +864,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 169 && height == 170) {
+                    if (height >= 169 && height <= 170) {
                         if (w >= 54 && w <= 66) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -872,7 +874,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 171 && height == 172) {
+                    if (height >= 171 && height <= 172) {
                         if (w >= 55.5 && w <= 67.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -882,7 +884,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 173 && height == 174) {
+                    if (height >= 173 && height <= 174) {
                         if (w >= 57 && w <= 70) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -892,7 +894,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 175 && height == 176) {
+                    if (height >= 175 && height <= 176) {
                         if (w >= 58.5 && w <= 71.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -902,7 +904,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 177 && height == 178) {
+                    if (height >= 177 && height <= 178) {
                         if (w >= 60 && w <= 73) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -912,7 +914,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 179 && height == 180) {
+                    if (height >= 179 && height <= 180) {
                         if (w >= 61 && w <= 75) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -922,7 +924,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 181 && height == 182) {
+                    if (height >= 181 && height <= 182) {
                         if (w >= 62.5 && w <= 76.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -932,7 +934,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 183 && height == 184) {
+                    if (height >= 183 && height <= 184) {
                         if (w >= 64.5 && w <= 78.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -942,7 +944,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 185 && height == 186) {
+                    if (height >= 185 && height <= 186) {
                         if (w >= 65.5 && w <= 80.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -952,7 +954,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 187 && height == 188) {
+                    if (height >= 187 && height <= 188) {
                         if (w >= 67.5 && w <= 82.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -962,7 +964,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 189 && height == 190) {
+                    if (height >= 189 && height <= 190) {
                         if (w >= 68.5 && w <= 83.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -975,7 +977,7 @@
                 }
 
                 if (age >= 28 && age <= 32) {
-                    if (height == 165 && height == 166) {
+                    if (height >= 165 && height <= 166) {
                         if (w >= 53 && w <= 65) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -985,7 +987,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 167 && height == 168) {
+                    if (height >= 167 && height <= 168) {
                         if (w >= 54.5 && w <= 66.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -995,7 +997,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 169 && height == 170) {
+                    if (height >= 169 && height <= 170) {
                         if (w >= 56 && w <= 68) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1005,7 +1007,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 171 && height == 172) {
+                    if (height >= 171 && height <= 172) {
                         if (w >= 57 && w <= 70) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1015,7 +1017,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 173 && height == 174) {
+                    if (height >= 173 && height <= 174) {
                         if (w >= 59 && w <= 72) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1025,7 +1027,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 175 && height == 176) {
+                    if (height >= 175 && height <= 176) {
                         if (w >= 60.5 && w <= 73.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1035,7 +1037,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 177 && height == 178) {
+                    if (height >= 177 && height <= 178) {
                         if (w >= 61.5 && w <= 75.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1045,7 +1047,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 179 && height == 180) {
+                    if (height >= 179 && height <= 180) {
                         if (w >= 63.5 && w <= 77.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1055,7 +1057,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 181 && height == 182) {
+                    if (height >= 181 && height <= 182) {
                         if (w >= 65 && w <= 79) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1065,7 +1067,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 183 && height == 184) {
+                    if (height >= 183 && height <= 184) {
                         if (w >= 66.5 && w <= 81.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1075,7 +1077,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 185 && height == 186) {
+                    if (height >= 185 && height <= 186) {
                         if (w >= 68 && w <= 83) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1085,7 +1087,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 187 && height == 188) {
+                    if (height >= 187 && height <= 188) {
                         if (w >= 70 && w <= 85.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1095,7 +1097,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 189 && height == 190) {
+                    if (height >= 189 && height <= 190) {
                         if (w >= 70.5 && w <= 86.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1108,7 +1110,7 @@
                 }
 
                 if (age >= 33 && age <= 37) {
-                    if (height == 165 && height == 166) {
+                    if (height >= 165 && height <= 166) {
                         if (w >= 54.5 && w <= 66.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1118,7 +1120,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 167 && height == 168) {
+                    if (height <= 167 && height >= 168) {
                         if (w >= 56 && w <= 68) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1128,7 +1130,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 169 && height == 170) {
+                    if (height >= 169 && height <= 170) {
                         if (w >= 57.5 && w <= 70.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1138,7 +1140,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 171 && height == 172) {
+                    if (height >= 171 && height <= 172) {
                         if (w >= 59 && w <= 72) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1148,7 +1150,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 173 && height == 174) {
+                    if (height >= 173 && height <= 174) {
                         if (w >= 61 && w <= 74.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1158,7 +1160,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 175 && height == 176) {
+                    if (height >= 175 && height <= 176) {
                         if (w >= 62 && w <= 76) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1168,7 +1170,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 177 && height == 178) {
+                    if (height >= 177 && height <= 178) {
                         if (w >= 63.5 && w <= 77.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1178,7 +1180,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 179 && height == 180) {
+                    if (height >= 179 && height <= 180) {
                         if (w >= 65.5 && w <= 80) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1188,7 +1190,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 181 && height == 182) {
+                    if (height >= 181 && height <= 182) {
                         if (w >= 66.5 && w <= 81.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1198,7 +1200,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 183 && height == 184) {
+                    if (height >= 183 && height <= 184) {
                         if (w >= 68.5 && w <= 83.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1208,7 +1210,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 185 && height == 186) {
+                    if (height >= 185 && height <= 186) {
                         if (w >= 70 && w <= 86) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1218,7 +1220,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 187 && height == 188) {
+                    if (height >= 187 && height <= 188) {
                         if (w >= 71.5 && w <= 87.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
@@ -1228,7 +1230,7 @@
                             document.getElementById('<%= hfweight.ClientID %>').value = "Fail";
                         }
                     }
-                    if (height == 189 && height == 190) {
+                    if (height >= 189 && height <= 190) {
                         if (w >= 72.5 && w <= 88.5) {
                             document.getElementById('<%= lblhr.ClientID %>').textContent = "Pass";
                             document.getElementById('<%= hfweight.ClientID %>').value = "Pass";
