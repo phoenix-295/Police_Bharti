@@ -189,7 +189,7 @@ namespace Police_Bharti.CityMedical
 
         protected void btnsub_Click(object sender, EventArgs e)
         {
-            /*
+            
             int wight=0, eyetest=0, eartest=0, ntest=0, ph=0, kk=0, pc=0, ff=0, vv=0, fl=0, dt=0, s=0,
                 hr=0, sd=0, hb=0, fd=0, gt=0, at=0, tg=0, hydro=0, sv=0, pvt=0, aids=0, pls=0;
 
@@ -295,8 +295,8 @@ namespace Police_Bharti.CityMedical
             MySqlConnection conn = new MySqlConnection(s2);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand("Update pb_city_data set mweight=@a, rweight=@b, eyetest=@c, eartest=@d, nosetest=@e, phandi=@f, knee=@g, pchest=@h, feet=@i, vveins=@j, " +
-                                                " flimbs=@k, dteeth=@l, stammering=@m, hrigidus=@n, skin=@o, heartbeat=@p, fingured=@q, gender=@r, anal=@s, testicalg=@t, hydrocele=@u," +
-                                                " sveins=@v, pvtest=@w, aids=@x, piles=@y where application_Id='" + DropDownList2.Text + "'", conn);
+                                                " flimbs=@k, dteeth=@l, stammering=@m, hrigidus=@n, skin=@o, heartbeat=@p, fingured=@q, gendertest=@r, anal=@s, testicalg=@t, hydrocele=@u," +
+                                                " sveins=@v, pvtest=@w, aids=@x, piles=@y, m_flag=@z where application_Id='" + DropDownList2.Text + "'", conn);
 
             cmd.Parameters.AddWithValue("@a", float.Parse(txtweight.Text));
             cmd.Parameters.AddWithValue("@b", wight);
@@ -323,6 +323,7 @@ namespace Police_Bharti.CityMedical
             cmd.Parameters.AddWithValue("@w", pvt);
             cmd.Parameters.AddWithValue("@x", aids);
             cmd.Parameters.AddWithValue("@y", pls);
+            cmd.Parameters.AddWithValue("@z", "1");
 
             cmd.ExecuteNonQuery();
 
@@ -354,8 +355,9 @@ namespace Police_Bharti.CityMedical
             aidsFail.Checked = true;
             pilesFail.Checked = true;
             lblres.Text = "Submitted Successfully";
+            lblres.ForeColor = Color.Green;
             fill_data();
-            */
+            
         }
 
         protected void btnabs_Click(object sender, EventArgs e)
@@ -368,7 +370,7 @@ namespace Police_Bharti.CityMedical
 
             MySqlCommand cmd = new MySqlCommand("Update pb_city_data set mweight=@a, rweight=@b, eyetest=@c, eartest=@d, nosetest=@e, phandi=@f, knee=@g, pchest=@h, feet=@i, vveins=@j, " +
                                                 " flimbs=@k, dteeth=@l, stammering=@m, hrigidus=@n, skin=@o, heartbeat=@p, fingured=@q, gender=@r, anal=@s, testicalg=@t, hydrocele=@u," +
-                                                " sveins=@v, pvtest=@w, aids=@x, piles=@y where application_Id='" + DropDownList2.Text + "'", conn);
+                                                " sveins=@v, pvtest=@w, aids=@x, piles=@y, m_flag=@z where application_Id='" + DropDownList2.Text + "'", conn);
 
 
             cmd.Parameters.AddWithValue("@a", null);
@@ -396,7 +398,7 @@ namespace Police_Bharti.CityMedical
             cmd.Parameters.AddWithValue("@w", null);
             cmd.Parameters.AddWithValue("@x", null);
             cmd.Parameters.AddWithValue("@y", null);
-
+            cmd.Parameters.AddWithValue("@z", "1");
             cmd.ExecuteNonQuery();
 
             conn.Close();
