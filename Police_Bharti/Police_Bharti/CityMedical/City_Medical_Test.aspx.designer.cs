@@ -58,22 +58,22 @@ namespace Police_Bharti.CityMedical {
         protected global::System.Web.UI.WebControls.Label lblremaning;
         
         /// <summary>
-        /// Label2 control.
+        /// lbldone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lbldone;
         
         /// <summary>
-        /// lblinvited control.
+        /// lblabs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblinvited;
+        protected global::System.Web.UI.WebControls.Label lblabs;
         
         /// <summary>
         /// DropDownList2 control.
@@ -677,6 +677,33 @@ namespace Police_Bharti.CityMedical {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton pilesFail;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// txtxomm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtxomm;
+        
+        /// <summary>
+        /// rqcm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqcm;
         
         /// <summary>
         /// lblres control.

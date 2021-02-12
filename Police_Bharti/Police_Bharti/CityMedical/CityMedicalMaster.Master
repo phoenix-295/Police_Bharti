@@ -152,50 +152,23 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Admin_Home.aspx" class="nav-link">
+            <a href="City_Medical_Test.aspx" class="nav-link">
               <i class="nav-icon fas fa-walking"></i>
               <p>
                 Tests
-                  <i class="fas fa-angle-left right"></i>
+                  
               </p>
             </a>
-              <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="City_Physical_Test.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Physical</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="City_Physical_Ground.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ground</p>
-                </a>
-              </li>
-                  </ul>
+              
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="City_Medical_Test_Data.aspx" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 View Results
-                  <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-              <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="City_Physical_Test_Data.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Physical</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="City_Physical_Ground_Data.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ground</p>
-                </a>
-              </li>
-                  </ul>
+              
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">

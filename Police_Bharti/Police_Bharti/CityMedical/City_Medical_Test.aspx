@@ -61,14 +61,14 @@
                     <li class="nav-item">
                     <a class="nav-link">
                       Done Candidates <span class="float-right badge bg-success">
-                          <asp:Label ID="Label2" runat="server" Text=""></asp:Label></span>
+                          <asp:Label ID="lbldone" runat="server" Text=""></asp:Label></span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link">
                       Absent Candidates <span class="float-right badge bg-dark">
-                          <asp:Label ID="lblinvited" runat="server" Text=""></asp:Label></span>
+                          <asp:Label ID="lblabs" runat="server" Text=""></asp:Label></span>
                     </a>
                   </li>
                   
@@ -266,13 +266,13 @@
                                                 
                                                 <td style="width: 105px; height: 31px;">
                                                     <asp:Label ID="lblcr" runat="server" style="color: #008000"></asp:Label>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtage" ErrorMessage="Chest is Required" SetFocusOnError="True" style="color: #FF0000" ValidationGroup="1">*</asp:RequiredFieldValidator>
+                                                    <asp:RegularExpressionValidator ID="rec" runat="server" ControlToValidate="txtage" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1">*</asp:RegularExpressionValidator>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="height: 31px">
-                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtage" ErrorMessage="Chest is Required" SetFocusOnError="True" style="color: #FF0000" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                    <asp:RegularExpressionValidator ID="rec" runat="server" ControlToValidate="txtage" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
-                                                </td>
+                                                    &nbsp;</td>
                                                 
                                             </tr>
                                         </table>
@@ -297,7 +297,7 @@
                                                 <td><asp:Label ID="lblhr" runat="server" style="color: #008000"></asp:Label></td>
                                                 <td>
                                                     <asp:RequiredFieldValidator ID="rqw0" runat="server" ControlToValidate="txtweight" ErrorMessage="Weight is Required" SetFocusOnError="True" style="color: #FF0000" ValidationGroup="1">*</asp:RequiredFieldValidator>
-                                                    <asp:RegularExpressionValidator ID="rew" runat="server" ControlToValidate="txtweight" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1"></asp:RegularExpressionValidator>
+                                                    <asp:RegularExpressionValidator ID="rew" runat="server" ControlToValidate="txtweight" Display="Dynamic" ErrorMessage="Only 2-3 digit numbers Accepted" SetFocusOnError="True" ValidationExpression="^\d{2,3}$" ValidationGroup="1">*</asp:RegularExpressionValidator>
                                                 </td>
                                             </tr>
                                         </table>
@@ -318,8 +318,8 @@
                                                     <h5>Eye Sight and Squint:</h5>
                                                 </td>
                                                 <td style="width: 310px; height: 31px;">
-                                                   <h5> <asp:RadioButton ID="rbpass" Text="Pass" runat="server" GroupName="grpEyePass" />&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="rbfail" Text="Fail" runat="server" GroupName="grpEyePass" Checked="True" /></h5>
+                                                   <h5> <asp:RadioButton ID="rbpass" Text="Pass" runat="server" GroupName="grpEyePass" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="rbfail" Text="Fail" runat="server" GroupName="grpEyePass" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" /></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -337,13 +337,13 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 159px; height: 30px;">
-                                                   <h5> <asp:RadioButton ID="earPass" Text="Pass" runat="server" GroupName="grpEarPass" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="earFail" Text="Fail" runat="server" GroupName="grpEarPass" Checked="True"/></h5>
+                                                   <h5> <asp:RadioButton ID="earPass" Text="Pass" runat="server" GroupName="grpEarPass" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="earFail" Text="Fail" runat="server" GroupName="grpEarPass" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                                 <td style="width: 35px; height: 30px;"><h4 style="width: 125px">Nose Test</h4></td>
                                                 <td style="width: 127px; height: 30px;">
-                                                   <h5> <asp:RadioButton ID="nosePass" Text="Pass" runat="server" GroupName="grpNosePass" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="noseFail" Text="Fail" runat="server" GroupName="grpNosePass" Checked="True"/></h5>
+                                                   <h5> <asp:RadioButton ID="nosePass" Text="Pass" runat="server" GroupName="grpNosePass" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="noseFail" Text="Fail" runat="server" GroupName="grpNosePass" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -359,8 +359,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 128px; height: 30px;">
-                                                   <h5> <asp:RadioButton ID="handiPass" Text="Pass" runat="server" GroupName="grpHandiPass" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="handiFail" Text="Fail" runat="server" GroupName="grpHandiPass" Checked="True"/></h5>
+                                                   <h5> <asp:RadioButton ID="handiPass" Text="Pass" runat="server" GroupName="grpHandiPass" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="handiFail" Text="Fail" runat="server" GroupName="grpHandiPass" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table></td>
@@ -375,8 +375,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                   <h5> <asp:RadioButton ID="kneePass" Text="Pass" runat="server" GroupName="knockingKnee" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="kneeFail" Text="Fail" runat="server" GroupName="knockingKnee" Checked="True"/></h5>
+                                                   <h5> <asp:RadioButton ID="kneePass" Text="Pass" runat="server" GroupName="knockingKnee" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="kneeFail" Text="Fail" runat="server" GroupName="knockingKnee" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -392,8 +392,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                   <h5> <asp:RadioButton ID="pChestPass" Text="Pass" runat="server" GroupName="pigeonChest" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="pChestFail" Text="Fail" runat="server" GroupName="pigeonChest" Checked="True"/></h5>
+                                                   <h5> <asp:RadioButton ID="pChestPass" Text="Pass" runat="server" GroupName="pigeonChest" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="pChestFail" Text="Fail" runat="server" GroupName="pigeonChest" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -409,8 +409,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="footPass" Text="Pass" runat="server" GroupName="flatFoot" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="footFail" Text="Fail" runat="server" GroupName="flatFoot" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="footPass" Text="Pass" runat="server" GroupName="flatFoot" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="footFail" Text="Fail" runat="server" GroupName="flatFoot" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -426,8 +426,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="vvPass" Text="Pass" runat="server" GroupName="varicoseVeins" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="vvFail" Text="Fail" runat="server" GroupName="varicoseVeins" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="vvPass" Text="Pass" runat="server" GroupName="varicoseVeins" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="vvFail" Text="Fail" runat="server" GroupName="varicoseVeins" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -443,8 +443,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="fracturedLimbPass" Text="Pass" runat="server" GroupName="fracturedLimbs" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="fracturedLimbFail" Text="Fail" runat="server" GroupName="fracturedLimbs" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="fracturedLimbPass" Text="Pass" runat="server" GroupName="fracturedLimbs" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="fracturedLimbFail" Text="Fail" runat="server" GroupName="fracturedLimbs" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -460,8 +460,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                   <h5> <asp:RadioButton ID="teethPass" Text="Pass" runat="server" GroupName="decayedTeeth" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="teethFail" Text="Fail" runat="server" GroupName="decayedTeeth" Checked="True"/></h5>
+                                                   <h5> <asp:RadioButton ID="teethPass" Text="Pass" runat="server" GroupName="decayedTeeth" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="teethFail" Text="Fail" runat="server" GroupName="decayedTeeth" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -477,8 +477,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="stammeringPass" Text="Pass" runat="server" GroupName="stammering" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="stammeringFail" Text="Fail" runat="server" GroupName="stammering" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="stammeringPass" Text="Pass" runat="server" GroupName="stammering" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="stammeringFail" Text="Fail" runat="server" GroupName="stammering" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -494,8 +494,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="hrPass" Text="Pass" runat="server" GroupName="halluxRigidus" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="hrFail" Text="Fail" runat="server" GroupName="halluxRigidus" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="hrPass" Text="Pass" runat="server" GroupName="halluxRigidus" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="hrFail" Text="Fail" runat="server" GroupName="halluxRigidus" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -511,8 +511,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="sdPass" Text="Pass" runat="server" GroupName="skinDisease" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="sdFail" Text="Fail" runat="server" GroupName="skinDisease" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="sdPass" Text="Pass" runat="server" GroupName="skinDisease" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="sdFail" Text="Fail" runat="server" GroupName="skinDisease" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -528,8 +528,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="hbPass" Text="Pass" runat="server" GroupName="heartbeat" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="hbFail" Text="Fail" runat="server" GroupName="heartbeat" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="hbPass" Text="Pass" runat="server" GroupName="heartbeat" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="hbFail" Text="Fail" runat="server" GroupName="heartbeat" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -545,8 +545,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="fdPass" Text="  Pass" runat="server" GroupName="fingureDeformity" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="fdFail" Text="  Fail" runat="server" GroupName="fingureDeformity" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="fdPass" Text="  Pass" runat="server" GroupName="fingureDeformity" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="fdFail" Text="  Fail" runat="server" GroupName="fingureDeformity" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -563,8 +563,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="gtPass" Text="  Pass" runat="server" GroupName="genderTesting" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="gtFail" Text="  Fail" runat="server" GroupName="genderTesting" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="gtPass" Text="  Pass" runat="server" GroupName="genderTesting" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="gtFail" Text="  Fail" runat="server" GroupName="genderTesting" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -580,8 +580,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="atPass" Text="  Pass" runat="server" GroupName="analTesting" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="atFail" Text="  Fail" runat="server" GroupName="analTesting" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="atPass" Text="  Pass" runat="server" GroupName="analTesting" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="atFail" Text="  Fail" runat="server" GroupName="analTesting" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -597,8 +597,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="tgPass" Text="  Pass" runat="server" GroupName="testicalGrowth" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="tgFail" Text="  Fail" runat="server" GroupName="testicalGrowth" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="tgPass" Text="  Pass" runat="server" GroupName="testicalGrowth" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="tgFail" Text="  Fail" runat="server" GroupName="testicalGrowth" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -614,8 +614,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="hPass" Text="  Pass" runat="server" GroupName="hydrocele" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="hFail" Text="  Fail" runat="server" GroupName="hydrocele" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="hPass" Text="  Pass" runat="server" GroupName="hydrocele" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="hFail" Text="  Fail" runat="server" GroupName="hydrocele" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -631,8 +631,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="svPass" Text="  Pass" runat="server" GroupName="swollenVeins" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="svFail" Text="  Fail" runat="server" GroupName="swollenVeins" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="svPass" Text="  Pass" runat="server" GroupName="swollenVeins" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="svFail" Text="  Fail" runat="server" GroupName="swollenVeins" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -648,8 +648,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="ptPass" Text="  Pass" runat="server" GroupName="penisTesting" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="ptFail" Text="  Fail" runat="server" GroupName="penisTesting" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="ptPass" Text="  Pass" runat="server" GroupName="penisTesting" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="ptFail" Text="  Fail" runat="server" GroupName="penisTesting" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -665,8 +665,8 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="aidsPass" Text="  Pass" runat="server" GroupName="aids" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="aidsFail" Text="  Fail" runat="server" GroupName="aids" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="aidsPass" Text="  Pass" runat="server" GroupName="aids" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="aidsFail" Text="  Fail" runat="server" GroupName="aids" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
                                                 </td>
                                             </tr>
                                         </table>
@@ -682,8 +682,29 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 118px; height: 30px;">
-                                                    <h5><asp:RadioButton ID="pilesPass" Text="  Pass" runat="server" GroupName="piles" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:RadioButton ID="pilesFail" Text="  Fail" runat="server" GroupName="piles" Checked="True"/></h5>
+                                                    <h5><asp:RadioButton ID="pilesPass" Text="  Pass" runat="server" GroupName="piles" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:RadioButton ID="pilesFail" Text="  Fail" runat="server" GroupName="piles" Checked="True" AutoPostBack="True" OnCheckedChanged="pilesPass_CheckedChanged"/></h5>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 217px; height: 30px;">&nbsp;</td>
+                                    <td style="height: 30px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 217px; height: 30px;"><h4>
+                                        <asp:Label ID="Label2" runat="server" Text="Comment :"></asp:Label>
+                                        </h4></td>
+                                    <td style="height: 30px">
+                                        <table class="w-100">
+                                            <tr>
+                                                <td style="width: 231px; height: 33px">
+                                                    <asp:TextBox CssClass="form-control" ID="txtxomm" runat="server" Height="79px" TextMode="MultiLine" Width="222px"></asp:TextBox>
+                                                </td>
+                                                <td style="height: 33px">
+                                                    <asp:RequiredFieldValidator ID="rqcm" runat="server" ControlToValidate="txtxomm" ErrorMessage="Comment Box cannot be blank" ValidationGroup="1">*</asp:RequiredFieldValidator>
                                                 </td>
                                             </tr>
                                         </table>
