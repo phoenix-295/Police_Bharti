@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Police_Bharti.GraminAdmin
+namespace Police_Bharti.CityWritten
 {
-    public partial class GraminAdmin : System.Web.UI.MasterPage
+    public partial class CityWrittenMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -64,5 +64,23 @@ namespace Police_Bharti.CityAdmin
         {
             MultiView1.ActiveViewIndex = 1;
         }
+
+        protected void gvcity_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            DataSet mydataset = (DataSet)ViewState["vsPBm"];
+            DataTable myydatatable = mydataset.Tables["pb_datam"];
+            gvcity.DataSource = myydatatable;
+            gvcity.PageIndex = e.NewPageIndex;
+            gvcity.DataBind();
+        }
+
+        protected void gvcity0_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            DataSet mydataset = (DataSet)ViewState["vsPBf"];
+            DataTable myydatatable = mydataset.Tables["pb_dataf"];
+            gvcity0.DataSource = myydatatable;
+            gvcity0.PageIndex = e.NewPageIndex;
+            gvcity0.DataBind();
+        }
     }
 }

@@ -10,16 +10,16 @@
 namespace Police_Bharti.GraminAdmin {
     
     
-    public partial class GraminAdminHome {
+    public partial class Gramin_Ground_reg {
         
         /// <summary>
-        /// lbl1 control.
+        /// CreateUserWizard1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl1;
+        protected global::System.Web.UI.WebControls.CreateUserWizard CreateUserWizard1;
         
         /// <summary>
         /// Label1 control.
@@ -31,22 +31,13 @@ namespace Police_Bharti.GraminAdmin {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// pstart control.
+        /// txtid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pstart;
-        
-        /// <summary>
-        /// pend control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pend;
+        protected global::System.Web.UI.WebControls.TextBox txtid;
         
         /// <summary>
         /// Label2 control.
@@ -58,66 +49,75 @@ namespace Police_Bharti.GraminAdmin {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Label3 control.
+        /// txtbklno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.TextBox txtbklno;
         
         /// <summary>
-        /// Label4 control.
+        /// txtname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.TextBox txtname;
         
         /// <summary>
-        /// Label5 control.
+        /// txtbdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.TextBox txtbdate;
         
         /// <summary>
-        /// Label6 control.
+        /// toolScriptManageer3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::AjaxControlToolkit.ToolkitScriptManager toolScriptManageer3;
         
         /// <summary>
-        /// Label7 control.
+        /// cal3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::AjaxControlToolkit.CalendarExtender cal3;
         
         /// <summary>
-        /// lblmale control.
+        /// txtjdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmale;
+        protected global::System.Web.UI.WebControls.TextBox txtjdate;
         
         /// <summary>
-        /// lblfemale control.
+        /// CalendarExtender3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfemale;
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender3;
+        
+        /// <summary>
+        /// txtadd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtadd;
     }
 }

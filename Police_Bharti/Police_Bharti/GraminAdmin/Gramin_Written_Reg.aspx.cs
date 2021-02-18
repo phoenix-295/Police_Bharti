@@ -5,7 +5,7 @@ using System.Web.Security;
 
 namespace Police_Bharti.GraminAdmin
 {
-    public partial class Gramin_PSI_Reg : System.Web.UI.Page
+    public partial class Gramin_Written_Reg : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,7 +22,7 @@ namespace Police_Bharti.GraminAdmin
                 string mUserName = CreateUserWizard1.UserName;
                 string pass = CreateUserWizard1.Password;
                 string mailid = CreateUserWizard1.Email;
-                MySqlCommand cmd = new MySqlCommand("INSERT into pb_gramin_psi (police_id,buckle_no,name,birth_date,joining_date,address) values(@a,@b,@c,@d,@e,@f)", ocon);
+                MySqlCommand cmd = new MySqlCommand("INSERT into pb_gramin_written (police_id,buckle_no,name,birth_date,joining_date,address) values(@a,@b,@c,@d,@e,@f)", ocon);
                 cmd.Parameters.AddWithValue("@a", txtid.Text);
                 cmd.Parameters.AddWithValue("@b", txtbklno.Text);
                 cmd.Parameters.AddWithValue("@c", txtname.Text);
@@ -40,7 +40,7 @@ namespace Police_Bharti.GraminAdmin
 
         protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
         {
-            string newRole = "GPSI";
+            string newRole = "GWritten";
             Roles.AddUserToRole(CreateUserWizard1.UserName, newRole);
             areg();
         }

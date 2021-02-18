@@ -10,7 +10,7 @@
 namespace Police_Bharti.GraminAdmin {
     
     
-    public partial class Gramin_PSI_Reg {
+    public partial class Gramin_Written_Reg {
         
         /// <summary>
         /// CreateUserWizard1 control.
@@ -76,22 +76,22 @@ namespace Police_Bharti.GraminAdmin {
         protected global::System.Web.UI.WebControls.TextBox txtbdate;
         
         /// <summary>
-        /// toolScriptManageer3 control.
+        /// toolScriptManageer4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager toolScriptManageer3;
+        protected global::AjaxControlToolkit.ToolkitScriptManager toolScriptManageer4;
         
         /// <summary>
-        /// cal3 control.
+        /// cal4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender cal3;
+        protected global::AjaxControlToolkit.CalendarExtender cal4;
         
         /// <summary>
         /// txtjdate control.
@@ -103,13 +103,13 @@ namespace Police_Bharti.GraminAdmin {
         protected global::System.Web.UI.WebControls.TextBox txtjdate;
         
         /// <summary>
-        /// CalendarExtender3 control.
+        /// CalendarExtender4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender3;
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender4;
         
         /// <summary>
         /// txtadd control.

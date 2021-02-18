@@ -86,7 +86,7 @@ namespace Police_Bharti.Admin
 
         protected void btnplan_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("Plan_Gramin_Event.aspx");
         }
     }
 }

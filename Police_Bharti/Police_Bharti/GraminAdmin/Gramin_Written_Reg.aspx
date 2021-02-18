@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GraminAdmin/GraminAdmin.Master" AutoEventWireup="true" CodeBehind="Gramin_PSI_Reg.aspx.cs" Inherits="Police_Bharti.GraminAdmin.Gramin_PSI_Reg" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GraminAdmin/GraminAdminMaster.Master" AutoEventWireup="true" CodeBehind="Gramin_Written_Reg.aspx.cs" Inherits="Police_Bharti.GraminAdmin.Gramin_Written_Reg" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table class="w-100">
@@ -16,7 +16,7 @@
                             <table style="font-size:100%;width:502px;">
                                 <tr>
                                     <td align="center" colspan="2">
-                                        <h4>PSI office member Registration</h4>
+                                        <h4>Written Test Admin Registration</h4>
                                     </td>
                                 </tr>
                                 <tr>
@@ -51,9 +51,9 @@
                                     </td>
                                     <td style="height:60px">
                                         <asp:TextBox CssClass="form-control" Width="291px" ID="txtbdate" runat="server" ToolTip="Birth Date dd/mm/yyyy"></asp:TextBox>
-                                        <cc1:ToolkitScriptManager ID="toolScriptManageer3" runat="server">
+                                        <cc1:ToolkitScriptManager ID="toolScriptManageer4" runat="server">
                                         </cc1:ToolkitScriptManager>
-                                        <cc1:CalendarExtender ID="cal3" PopupButtonID="TextBox1" runat="server" TargetControlID="txtbdate"  
+                                        <cc1:CalendarExtender ID="cal4" PopupButtonID="TextBox1" runat="server" TargetControlID="txtbdate"  
                         Format="dd/MM/yyyy"/>
                                     </td>
                                 </tr>
@@ -63,7 +63,7 @@
                                     </td>
                                     <td  style="height:60px">
                                         <asp:TextBox CssClass="form-control" Width="291px" ID="txtjdate" runat="server" ToolTip="Joning Date dd/mm/yyyy"></asp:TextBox>
-                                        <cc1:CalendarExtender ID="CalendarExtender3" PopupButtonID="TextBox1" runat="server" TargetControlID="txtjdate"  
+                                        <cc1:CalendarExtender ID="CalendarExtender4" PopupButtonID="TextBox1" runat="server" TargetControlID="txtjdate"  
                         Format="dd/MM/yyyy"/>
                                     </td>
                                 </tr>
@@ -88,7 +88,7 @@
                                 <table style="font-size:100%;width:515px;">
                                     <tr>
                                         <td align="center" colspan="2" style="height: 24px">
-                                            <h4>PSI office member Registration</h4>
+                                            <h4>Written Test Admin Registration</h4>
                                         </td>
                                     </tr>
                                     <tr>
@@ -183,4 +183,3 @@
         </tr>
     </table>
 </asp:Content>
-

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CityAdminMaster.master.cs" Inherits="Police_Bharti.CityAdmin.CityAdminMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CityWrittenMaster.master.cs" Inherits="Police_Bharti.CityWritten.CityWrittenMaster" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -120,7 +120,7 @@
           <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
-          <a href="CityAdminHome.aspx" class="d-block">City Admin</a>
+          <a href="City_Medical_Home.aspx" class="d-block">Medical</a>
         </div>
       </div>
 
@@ -144,85 +144,31 @@
           <li class="nav-item menu-open">
             
                <li class="nav-item">
-            <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <a href="City_Medical_ViewData.aspx" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
               <p>
-                Registration
-                  <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-              <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="City_Ground_Reg.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ground Test</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="City_Written_Reg.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Written Test</p>
-                </a>
-              </li>
-            <li class="nav-item">
-                <a href="Gramin_Admin_Registration.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Medical Officer Registration</p>
-                </a>
-              </li>
-                  </ul>
-          </li>
-             
-          <li class="nav-item">
-            <a href="View_Data.aspx" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                View Records
+                View all data
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <a href="City_Medical_Test.aspx" class="nav-link">
+              <i class="nav-icon fas fa-walking"></i>
               <p>
-                View Data
-                  <i class="fas fa-angle-left right"></i>
+                Tests
+                  
               </p>
             </a>
-              <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="CityGroundTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ground</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="CityPhysicalTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Physical</p>
-                </a>
-              </li>
-                  <li class="nav-item">
-                <a href="CityPhysicalTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Medical</p>
-                </a>
-              </li>
-                  <li class="nav-item">
-                <a href="CityPhysicalTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Written</p>
-                </a>
-              </li>
-                  </ul>
+              
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="City_Medical_Test_Data.aspx" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Charts
+                View Results
               </p>
             </a>
+              
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">

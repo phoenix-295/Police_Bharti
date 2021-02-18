@@ -47,7 +47,7 @@ namespace Police_Bharti.CityAdmin
             string x = "1";
             string s1, s2;
             s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-            s2 = "Select * from pb_city_event_plan where id=" + 1;
+            s2 = "Select * from pb_city_event_plan";
             MySqlConnection con = new MySqlConnection(s1);
             con.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(s2, s1);
@@ -61,6 +61,20 @@ namespace Police_Bharti.CityAdmin
                     pend.Text = r1["end_date"].ToString();
                     
                 }
+                if ((r1["id"].ToString() == "2"))
+                {
+                    Label3.Text = r1["start_date"].ToString();
+                    Label4.Text = r1["end_date"].ToString();
+                    
+                }
+                if ((r1["id"].ToString() == "3"))
+                {
+                    Label6.Text = r1["start_date"].ToString();
+                    Label7.Text = r1["end_date"].ToString();
+                    
+                }
+
+
             }
             con.Close();
         }

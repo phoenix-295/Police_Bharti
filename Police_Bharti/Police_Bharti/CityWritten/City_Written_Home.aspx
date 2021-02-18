@@ -1,38 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GraminAdmin/GraminAdminMaster.Master" AutoEventWireup="true" CodeBehind="GraminAdminHome.aspx.cs" Inherits="Police_Bharti.GraminAdmin.GraminAdminHome" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityWritten/CityWrittenMaster.Master" AutoEventWireup="true" CodeBehind="City_Written_Home.aspx.cs" Inherits="Police_Bharti.CityWritten.City_Written_Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <table class="w-100">
+    <table class="w-100">
         <tr>
             <td style="width:175px">&nbsp;</td>
             <td>
-                <table class="w-100">
-                    <tr>
-                        <td style="width:260px">
-                            <div class="row">
-                                <div class="col-lg-3 col-6">
-                                    <div class="small-box bg-info" style="width:250px">
-                                        <div class="inner">
-                                            <h3>
-                                                <asp:Label ID="lbl1" runat="server" Text="Label"></asp:Label></h3>
-                                            <p>Total Candidates</p>
-                                        </div>
-                                        <div class="icon">
-                                            <i class="ion ion-person"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td style="width:260px">
+                        <table class="w-100">
+                            <tr>
+                                <td style="width:260px">
                                     <div class="row">
                     <div class="col-lg-3 col-6">
-                <div class="small-box bg-success" style="width:250px">
+                <div class="small-box bg-info" style="width:250px">
               <div class="inner">
                 <h3>
-                    <asp:Label ID="Label1" runat="server" Text="Physical"></asp:Label></h3>
-                <p><asp:Label ID="pstart" runat="server" Text=""></asp:Label>  to  <asp:Label ID="pend" runat="server" Text=""></asp:Label></p>
+                    <asp:Label ID="lbl1" runat="server" Text="Label"></asp:Label></h3>
+                <p>Total Candidates</p>
               </div>
               <div class="icon">
-                <i class="ion ion-calendar"></i>
+                <i class="ion ion-person"></i>
               </div>
             </div>
                         </div>
@@ -44,8 +28,8 @@
                 <div class="small-box bg-warning" style="width:250px">
               <div class="inner">
                 <h3>
-                    <asp:Label ID="Label2" runat="server" Text="Written"></asp:Label></h3>
-                <p><asp:Label ID="Label3" runat="server" Text=""></asp:Label>  to  <asp:Label ID="Label4" runat="server" Text=""></asp:Label></p>
+                    <asp:Label ID="Label1" runat="server" Text="Written"></asp:Label></h3>
+                <p><asp:Label ID="pstart" runat="server" Text=""></asp:Label>&nbsp;&nbsp; to&nbsp;&nbsp; <asp:Label ID="pend" runat="server" Text=""></asp:Label></p>
               </div>
               <div class="icon">
                 <i class="ion ion-calendar"></i>
@@ -54,23 +38,8 @@
                         </div>
                     </div>
                                 </td>
-                                <td style="width:260px">
-                                    <div class="row">
-                    <div class="col-lg-3 col-6">
-                <div class="small-box bg-danger" style="width:250px">
-              <div class="inner">
-                <h3>
-                    <asp:Label ID="Label5" runat="server" Text="Medical"></asp:Label></h3>
-                <p><asp:Label ID="Label6" runat="server" Text=""></asp:Label>  to  <asp:Label ID="Label7" runat="server" Text=""></asp:Label></p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-calendar"></i>
-              </div>
-            </div>
-                        </div>
-                    </div>
-
-                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
                                 <td>&nbsp;</td>
                             </tr>
                         </table>
@@ -115,8 +84,7 @@
                         <td>&nbsp;</td>
                     </tr>
                 </table>
-
-            </td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -136,3 +104,4 @@
         </tr>
     </table>
 </asp:Content>
+

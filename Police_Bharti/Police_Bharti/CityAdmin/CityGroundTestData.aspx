@@ -20,7 +20,7 @@
                 <asp:MultiView ID="MultiView1" runat="server">
                     <asp:View ID="View1" runat="server">
                         <div class="text-center">
-                            <asp:GridView ID="gvcity" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderWidth="1px" CellPadding="10" CellSpacing="2" ForeColor="Black" GridLines="Horizontal" style="color: #000000; font-size: large;">
+                            <asp:GridView ID="gvcity" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderWidth="1px" CellPadding="10" CellSpacing="2" ForeColor="Black" GridLines="Horizontal" style="color: #000000; font-size: large;" OnPageIndexChanging="gvcity_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Application ID"><ItemTemplate><asp:Label ID="Label1" runat="server" Text='<%# Eval("application_Id") %>'></asp:Label></ItemTemplate></asp:TemplateField>
                                     <asp:TemplateField HeaderText="Full Name"><ItemTemplate><asp:Label ID="Label2" runat="server" Text='<%# Eval("full_name") %>'></asp:Label></ItemTemplate></asp:TemplateField>
@@ -46,7 +46,7 @@
                     </asp:View>
                     <asp:View ID="View2" runat="server">
                         <div class="text-center">
-                            <asp:GridView ID="gvcity0" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderWidth="1px" CellPadding="10" CellSpacing="2" ForeColor="Black" GridLines="Horizontal" style="color: #000000; font-size: large; margin-right: 0px;">
+                            <asp:GridView ID="gvcity0" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderWidth="1px" CellPadding="10" CellSpacing="2" ForeColor="Black" GridLines="Horizontal" style="color: #000000; font-size: large; margin-right: 0px;" OnPageIndexChanging="gvcity0_PageIndexChanging">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Application ID"><ItemTemplate><asp:Label ID="Label6" runat="server" Text='<%# Eval("application_Id") %>'></asp:Label></ItemTemplate></asp:TemplateField>
                                     <asp:TemplateField HeaderText="Full Name"><ItemTemplate><asp:Label ID="Label7" runat="server" Text='<%# Eval("full_name") %>'></asp:Label></ItemTemplate></asp:TemplateField>
