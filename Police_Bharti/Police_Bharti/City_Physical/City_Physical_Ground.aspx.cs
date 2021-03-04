@@ -85,16 +85,21 @@ namespace Police_Bharti.City_Physical
                 foreach (DataRow r1 in ds1.Tables["t1"].Rows)
                 {
                     tot++;
-                    if ((r1["g_flag"].ToString() != "1"))
+                    if ((r1["race100"].ToString() == "0"))
                     {
                         remain++;
                     }
-                    if ((r1["race1600"].ToString() == ""))
+                    if ((r1["race100"].ToString() == ""))
                     {
                         ab++;
                     }
+
+                    if ((r1["race100"].ToString() != "") && (r1["race100"].ToString() != "0"))
+                    {
+                        dc++;
+                    }
                 }
-                dc = tot - remain;
+                //dc = tot - remain;
                 lbltotal.Text = tot.ToString();
                 lbldone.Text = dc.ToString();
                 lblremaning.Text = remain.ToString();
@@ -190,6 +195,16 @@ namespace Police_Bharti.City_Physical
 
                 con.Close();
 
+                if (txt100m.Text == "")
+                {
+                    lblabs1.Text = "Absent";
+                    lblabs1.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblabs1.Text = "";
+                }
+
                 if (lblg.Text == "M")
                 {
                     if ((txt1600m.Text != "0") && (txt100m.Text != "0") && (txtlj.Text != "0") && (txtsp.Text != "0") && (txtpull.Text != "0"))
@@ -245,6 +260,22 @@ namespace Police_Bharti.City_Physical
                         btnsub.Enabled = true;
                     }
                 }
+                if (txt100m.Text != "" || lblabs1.Text == "Absent")
+                {
+                    btnabs.Enabled = false;
+                }
+                else
+                {
+                    btnabs.Enabled = true;
+                }
+                //if (lblabs1.Text == "Absent")
+                //{
+                //    btnabs.Enabled = false;
+                //}
+                //else
+                //{
+                //    btnabs.Enabled = true;
+                //}
             }
             catch (Exception e)
             {

@@ -148,6 +148,7 @@
     <Content Include="CityMedical\City_Medical_Test_Data.aspx" />
     <Content Include="CityMedical\City_Medical_ViewData.aspx" />
     <Content Include="CityWritten\City_Written_Home.aspx" />
+    <Content Include="CityWritten\City_Written_Test.aspx" />
     <Content Include="CityWritten\City_Written_ViewData.aspx" />
     <Content Include="City_Physical\City_Physical_Ground.aspx" />
     <Content Include="City_Physical\City_Physical_Ground_Data.aspx" />
@@ -2379,6 +2380,13 @@
     </Compile>
     <Compile Include="CityWritten\City_Written_Home.aspx.designer.cs">
       <DependentUpon>City_Written_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityWritten\City_Written_Test.aspx.cs">
+      <DependentUpon>City_Written_Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityWritten\City_Written_Test.aspx.designer.cs">
+      <DependentUpon>City_Written_Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityWritten\City_Written_ViewData.aspx.cs">
       <DependentUpon>City_Written_ViewData.aspx</DependentUpon>

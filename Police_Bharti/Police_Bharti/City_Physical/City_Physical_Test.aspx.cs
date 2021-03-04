@@ -45,8 +45,13 @@ namespace Police_Bharti.City_Physical
                     {
                         ab++;
                     }
+
+                    if ((r1["height"].ToString() != "") && (r1["height"].ToString() != "0"))
+                    {
+                        dc++;
+                    }
                 }
-                dc = pd - rc;
+                
                 lblremaning.Text = rc.ToString();
                 lbltotal.Text = pd.ToString();
                 lblinvited.Text = ab.ToString();
@@ -155,8 +160,23 @@ namespace Police_Bharti.City_Physical
                 {
                     lblr1.ForeColor = Color.Red;
                     lblr1.Text = "Fail";
-                    btnabs.Enabled = true;
+                    //btnabs.Enabled = true;
                 }
+                if (p_f == "0" && txtheight.Text == "")
+                {
+                    lblr1.ForeColor = Color.Red;
+                    lblr1.Text = "Absent";
+                    btnabs.Enabled = false;
+                }
+                if (lblr1.Text == "Fail")
+                {
+                    btnabs.Enabled = false;
+                }
+                
+                //else
+                //{
+                    
+                //}
 
                 if (lblg.Text == "M")
                 {
@@ -225,8 +245,11 @@ namespace Police_Bharti.City_Physical
                         txtweight.Enabled = true;
                     }
                 }
+                if (lblr1.Text == "")
+                {
+                    btnabs.Enabled = true;
+                }
 
-                
             }
             catch(Exception e)
             {

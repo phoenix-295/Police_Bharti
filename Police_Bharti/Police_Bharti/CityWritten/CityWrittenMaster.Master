@@ -107,7 +107,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="Home.aspx" class="brand-link">
+    <a href="City_Written_Home.aspx" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Home</span>
     </a>
@@ -120,7 +120,7 @@
           <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
-          <a href="City_Medical_Home.aspx" class="d-block">Medical</a>
+          <a href="City_Written_Home.aspx" class="d-block">Written</a>
         </div>
       </div>
 
@@ -144,7 +144,7 @@
           <li class="nav-item menu-open">
             
                <li class="nav-item">
-            <a href="City_Medical_ViewData.aspx" class="nav-link">
+            <a href="City_Written_ViewData.aspx" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 View all data
@@ -152,7 +152,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="City_Medical_Test.aspx" class="nav-link">
+            <a href="City_Written_Test.aspx" class="nav-link">
               <i class="nav-icon fas fa-walking"></i>
               <p>
                 Tests

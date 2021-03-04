@@ -675,6 +675,18 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td style="width: 150px; height: 30px;">&nbsp;</td>
+                                    <td style="height: 30px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px; height: 41px;">&nbsp;</td>
+                                    <td style="height: 41px">
+                                        <h4>
+                                            <asp:Label ID="lblabs1" runat="server"></asp:Label>
+                                        </h4>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td style="width: 150px; height: 41px;">&nbsp;</td>
                                     <td style="height: 41px">
                                         <table class="w-100">
@@ -683,7 +695,7 @@
                                                     <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" OnClick="btnsub_Click" TabIndex="6" Text="Submit" ValidationGroup="1" />
                                                 </td>
                                                 <td>
-                                                    <asp:Button CssClass="btn btn-danger" ID="btnabs" runat="server" Text="Absent" OnClick="btnabs_Click" />
+                                                    <asp:Button ID="btnabs" runat="server" CssClass="btn btn-danger" OnClick="btnabs_Click" Text="Absent" />
                                                 </td>
                                             </tr>
                                         </table>
