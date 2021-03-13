@@ -1,13 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Web.Security;
+using System.Net.Mail;
+using System.Net;
+
 
 namespace Police_Bharti.CityMedical
 {
@@ -23,6 +22,7 @@ namespace Police_Bharti.CityMedical
                 fill_data();
                 //findr();
                 t1();
+                
             }
         }
 
@@ -134,6 +134,7 @@ namespace Police_Bharti.CityMedical
                         lblcast.Text = r1["cast"].ToString();
                         lblcategory.Text = r1["category"].ToString();
                         lblheight.Text = r1["height"].ToString();
+                        hemail.Value = r1["email"].ToString();
                         //txtxomm.Text = r1["m_comment"].ToString();
                         if (r1["m_comment"].ToString() != "")
                         {
@@ -602,6 +603,7 @@ namespace Police_Bharti.CityMedical
             cmd.Parameters.AddWithValue("@z", "1");
             if (txtxomm.Visible == true)
             {
+                string x = hemail.Value;
                 cmd.Parameters.AddWithValue("@aa", txtxomm.Text);
             }
             else
@@ -697,6 +699,132 @@ namespace Police_Bharti.CityMedical
         protected void pilesPass_CheckedChanged(object sender, EventArgs e)
         {
             commp();
+        }
+
+        protected void sendEmail()
+        {
+            string wight = "Fail", eyetest = "Fail", eartest = "Fail", ntest = "Fail", ph = "Fail", kk = "Fail", pc = "Fail", ff = "Fail", vv = "Fail", fl = "Fail", dt = "Fail", s = "Fail",
+                hr = "Fail", sd = "Fail", hb = "Fail", fd = "Fail", gt = "Fail", at = "Fail", tg = "Fail", hydro = "Fail", sv = "Fail", pvt = "Fail", aids = "Fail", pls = "Fail";
+
+            if (hfweight.Value == "Pass")
+            {
+                wight = "Pass";
+            }
+            if (rbpass.Checked)
+            {
+                eyetest = "Pass";
+            }
+            if (earPass.Checked)
+            {
+                eartest = "Pass";
+            }
+            if (nosePass.Checked)
+            {
+                ntest = "Pass";
+            }
+            if (handiPass.Checked)
+            {
+                ph = "Pass";
+            }
+            if (kneePass.Checked)
+            {
+                kk = "Pass";
+            }
+            if (pChestPass.Checked)
+            {
+                pc = "Pass";
+            }
+            if (footPass.Checked)
+            {
+                ff = "Pass";
+            }
+            if (vvPass.Checked)
+            {
+                vv = "Pass";
+            }
+            if (fracturedLimbPass.Checked)
+            {
+                fl = "Pass";
+            }
+            if (teethPass.Checked)
+            {
+                dt = "Pass";
+            }
+            if (stammeringPass.Checked)
+            {
+                s = "Pass";
+            }
+            if (hrPass.Checked)
+            {
+                hr = "Pass";
+            }
+            if (sdPass.Checked)
+            {
+                sd = "Pass";
+            }
+            if (hbPass.Checked)
+            {
+                hb = "Pass";
+            }
+            if (fdPass.Checked)
+            {
+                fd = "Pass";
+            }
+            if (gtPass.Checked)
+            {
+                gt = "Pass";
+            }
+            if (atPass.Checked)
+            {
+                at = "Pass";
+            }
+            if (tgPass.Checked)
+            {
+                tg = "Pass";
+            }
+            if (hPass.Checked)
+            {
+                hydro = "Pass";
+            }
+            if (svPass.Checked)
+            {
+                sv = "Pass";
+            }
+            if (ptPass.Checked)
+            {
+                pvt = "Pass";
+            }
+            if (aidsPass.Checked)
+            {
+                aids = "Pass";
+            }
+            if (pilesPass.Checked)
+            {
+                pls = "Pass";
+            }
+            MailMessage msg = new MailMessage();
+
+            msg.From = new MailAddress("projectpolice1@gmail.com");
+
+            msg.To.Add(hemail.Value);
+            //msg.To.Add("reddevil295@gmail.com");
+
+            msg.Subject = "Re-Medical;";
+
+            msg.Body = "<font color='red'>" + lblname.Text +  "</font> <br/> Your Report is </br>  ";
+
+            msg.IsBodyHtml = true;
+            SmtpClient smt = new SmtpClient();
+
+            smt.Host = "smtp.gmail.com";
+            NetworkCredential ntwd = new NetworkCredential();
+            ntwd.UserName = "projectpolice1@gmail.com";
+            ntwd.Password = "projectpolice@123";
+            smt.UseDefaultCredentials = true;
+            smt.Credentials = ntwd;
+            smt.Port = 587;
+            smt.EnableSsl = true;
+            smt.Send(msg);
         }
     }
 }

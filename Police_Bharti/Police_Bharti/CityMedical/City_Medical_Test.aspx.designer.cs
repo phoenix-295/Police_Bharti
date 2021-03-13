@@ -148,6 +148,15 @@ namespace Police_Bharti.CityMedical {
         protected global::System.Web.UI.WebControls.Label lblcast;
         
         /// <summary>
+        /// hemail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hemail;
+        
+        /// <summary>
         /// lblheight control.
         /// </summary>
         /// <remarks>

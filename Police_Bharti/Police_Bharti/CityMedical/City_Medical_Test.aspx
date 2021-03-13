@@ -223,7 +223,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:top">&nbsp;</td>
+                        <td style="vertical-align:top">
+                            <asp:HiddenField ID="hemail" runat="server" />
+                        </td>
                     </tr>
                     <tr>
                         <td style="vertical-align:top">
