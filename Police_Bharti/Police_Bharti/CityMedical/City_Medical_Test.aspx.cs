@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Web.Security;
 using System.Net.Mail;
 using System.Net;
-
+using System.Globalization;
 
 namespace Police_Bharti.CityMedical
 {
@@ -115,7 +115,7 @@ namespace Police_Bharti.CityMedical
         protected void fill_data()
         {
 
-            string m_f = "";
+            string m_f = "",m_w="";
             try
             {
                 string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
@@ -135,7 +135,9 @@ namespace Police_Bharti.CityMedical
                         lblcategory.Text = r1["category"].ToString();
                         lblheight.Text = r1["height"].ToString();
                         hemail.Value = r1["email"].ToString();
-                        //txtxomm.Text = r1["m_comment"].ToString();
+                        m_w = r1["mweight"].ToString();
+                        m_f = r1["m_flag"].ToString();
+                        txtxomm.Text = r1["m_comment"].ToString();
                         if (r1["m_comment"].ToString() != "")
                         {
                             txtxomm.Enabled = false;
@@ -384,11 +386,15 @@ namespace Police_Bharti.CityMedical
                         if ((r1["mweight"].ToString() != "0"))
                         {
                             txtweight.Text = r1["mweight"].ToString();
+                            txtweight.Enabled = false;
                             btnsub.Enabled = false;
                             btnabs.Enabled = false;
+                            
                         }
                         else
                         {
+                            txtweight.Text = "";
+                            txtweight.Enabled = true;
                             btnsub.Enabled = true;
                             btnabs.Enabled = true;
                         }
@@ -396,20 +402,25 @@ namespace Police_Bharti.CityMedical
                     }
                 }
                 con.Close();
-                /*
-                if (m_f == "1")
+
+                if (m_w == "0" && m_f == "0")
                 {
                     lblr1.ForeColor = Color.Green;
-                    lblr1.Text = "Pass";
-                    btnabs.Enabled = false;
+                    lblr1.Text = "Remaning";
+
                 }
-                else
+                else if ((m_w != "0" && m_w != "") && m_f == "1")
                 {
                     lblr1.ForeColor = Color.Red;
-                    lblr1.Text = "Fail";
-                    btnabs.Enabled = true;
+                    lblr1.Text = "Done";
+
                 }
-                */
+                else if (m_w == "" && m_f=="1")
+                {
+                    lblr1.ForeColor = Color.Red;
+                    lblr1.Text = "Absent";
+                }
+
             }
             catch (Exception e)
             {
@@ -469,7 +480,7 @@ namespace Police_Bharti.CityMedical
             
             int wight=0, eyetest=0, eartest=0, ntest=0, ph=0, kk=0, pc=0, ff=0, vv=0, fl=0, dt=0, s=0,
                 hr=0, sd=0, hb=0, fd=0, gt=0, at=0, tg=0, hydro=0, sv=0, pvt=0, aids=0, pls=0;
-
+            
             if (hfweight.Value == "Pass")
             {
                 wight = 1;
@@ -614,6 +625,15 @@ namespace Police_Bharti.CityMedical
             cmd.ExecuteNonQuery();
             conn.Close();
 
+            if (txtxomm.Visible == true)
+            {
+                sendEmail();
+            }
+            else
+            {
+                sendEmail_pass();
+            }
+
             lblres.Text = "Submitted Successfully";
             lblres.ForeColor = Color.Green;
             fill_data();
@@ -705,7 +725,7 @@ namespace Police_Bharti.CityMedical
         {
             string wight = "Fail", eyetest = "Fail", eartest = "Fail", ntest = "Fail", ph = "Fail", kk = "Fail", pc = "Fail", ff = "Fail", vv = "Fail", fl = "Fail", dt = "Fail", s = "Fail",
                 hr = "Fail", sd = "Fail", hb = "Fail", fd = "Fail", gt = "Fail", at = "Fail", tg = "Fail", hydro = "Fail", sv = "Fail", pvt = "Fail", aids = "Fail", pls = "Fail";
-
+            int wt = Convert.ToInt32(txtweight.Text), ht = Convert.ToInt32(lblheight.Text);
             if (hfweight.Value == "Pass")
             {
                 wight = "Pass";
@@ -802,16 +822,26 @@ namespace Police_Bharti.CityMedical
             {
                 pls = "Pass";
             }
+            string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
+            string currentDate = date.Replace("-", "/");
+            CultureInfo provider = CultureInfo.InvariantCulture;
+           
+            DateTime eDate = DateTime.ParseExact(DropDownList1.Text, new string[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" }, provider, DateTimeStyles.None);
+            DateTime cd = eDate.AddDays(7);
+
+
             MailMessage msg = new MailMessage();
+
+            string msg1 = "<table border=\"5\"><tr><th width=\"150px\">Test</th><th width=\"150px\">Result</th></tr>	<tr><td>Height</td><td>" + ht + "</td></tr>	<tr><td>Weight</td><td>" + wt + "</td></tr>	<tr><td>Weight Test</td><td>"+ wight + "</td></tr>	<tr><td>Eye Test</td><td>"+ eyetest +"</td></tr>	<tr><td>Ear Test</td><td>"+eartest+"</td></tr>	<tr><td>Nose Test</td><td>" + ntest + "</td></tr>	<tr><td>Physical Test</td><td>" + ph + "</td></tr>	<tr><td>Knocking Knees</td><td>" + kk + "</td></tr>	<tr><td>Pegion Test</td><td>" + pc + "</td></tr>	<tr><td>Flat Foot</td><td>" + ff + "</td></tr>	<tr><td>Vericose Veins</td><td>" + vv + "</td></tr>	<tr><td>Fractured Limbs</td><td>" + fl + "</td></tr>	<tr><td>Decayed Teeth</td><td>" + dt + "</td></tr>	<tr><td>Stammering Test</td><td>" + s + "</td></tr>	<tr><td>Hallux Rigidus</td><td>" + hr + "</td></tr>	<tr><td>Skin Disease</td><td>" + sd + "</td></tr>	<tr><td>Heartbeat</td><td>" + hb + "</td></tr>	<tr><td>Fingure\'s Deformity</td><td>" + fd + "</td></tr>	<tr><td>Gender testing</td><td>" + gt + "</td></tr>	<tr><td>Anal Testing</td><td>" + at + "</td></tr>	<tr><td>Testical Growth</td><td>" + tg + "</td></tr>	<tr><td>Hydrocele</td><td>" + hydro + "</td></tr>	<tr><td>Swollen Veins</td><td>" + sv + "</td></tr>	<tr><td>Penis/Viginal Test</td><td>" + pvt + "</td></tr>	<tr><td>AIDS</td><td>" + aids + "</td></tr>	<tr><td>Piles Test</td><td>" + pls +"</td></tr></table>";
 
             msg.From = new MailAddress("projectpolice1@gmail.com");
 
-            msg.To.Add(hemail.Value);
-            //msg.To.Add("reddevil295@gmail.com");
+            //msg.To.Add(hemail.Value);
+            msg.To.Add("reddevil295@gmail.com");
 
             msg.Subject = "Re-Medical;";
 
-            msg.Body = "<font color='red'>" + lblname.Text +  "</font> <br/> Your Report is </br>  ";
+            msg.Body = "<font color='red'>" + lblname.Text +  "</font> <br/> Your Report is </br>  " + msg1 + "</br> </br> If you wish you can come for remedical on " + cd.ToShortDateString() +"";
 
             msg.IsBodyHtml = true;
             SmtpClient smt = new SmtpClient();
@@ -824,7 +854,141 @@ namespace Police_Bharti.CityMedical
             smt.Credentials = ntwd;
             smt.Port = 587;
             smt.EnableSsl = true;
-            smt.Send(msg);
+            //smt.Send(msg);
+        }
+
+        protected void sendEmail_pass()
+        {
+            string wight = "Fail", eyetest = "Fail", eartest = "Fail", ntest = "Fail", ph = "Fail", kk = "Fail", pc = "Fail", ff = "Fail", vv = "Fail", fl = "Fail", dt = "Fail", s = "Fail",
+                hr = "Fail", sd = "Fail", hb = "Fail", fd = "Fail", gt = "Fail", at = "Fail", tg = "Fail", hydro = "Fail", sv = "Fail", pvt = "Fail", aids = "Fail", pls = "Fail";
+            int wt = Convert.ToInt32(txtweight.Text), ht = Convert.ToInt32(lblheight.Text);
+            if (hfweight.Value == "Pass")
+            {
+                wight = "Pass";
+            }
+            if (rbpass.Checked)
+            {
+                eyetest = "Pass";
+            }
+            if (earPass.Checked)
+            {
+                eartest = "Pass";
+            }
+            if (nosePass.Checked)
+            {
+                ntest = "Pass";
+            }
+            if (handiPass.Checked)
+            {
+                ph = "Pass";
+            }
+            if (kneePass.Checked)
+            {
+                kk = "Pass";
+            }
+            if (pChestPass.Checked)
+            {
+                pc = "Pass";
+            }
+            if (footPass.Checked)
+            {
+                ff = "Pass";
+            }
+            if (vvPass.Checked)
+            {
+                vv = "Pass";
+            }
+            if (fracturedLimbPass.Checked)
+            {
+                fl = "Pass";
+            }
+            if (teethPass.Checked)
+            {
+                dt = "Pass";
+            }
+            if (stammeringPass.Checked)
+            {
+                s = "Pass";
+            }
+            if (hrPass.Checked)
+            {
+                hr = "Pass";
+            }
+            if (sdPass.Checked)
+            {
+                sd = "Pass";
+            }
+            if (hbPass.Checked)
+            {
+                hb = "Pass";
+            }
+            if (fdPass.Checked)
+            {
+                fd = "Pass";
+            }
+            if (gtPass.Checked)
+            {
+                gt = "Pass";
+            }
+            if (atPass.Checked)
+            {
+                at = "Pass";
+            }
+            if (tgPass.Checked)
+            {
+                tg = "Pass";
+            }
+            if (hPass.Checked)
+            {
+                hydro = "Pass";
+            }
+            if (svPass.Checked)
+            {
+                sv = "Pass";
+            }
+            if (ptPass.Checked)
+            {
+                pvt = "Pass";
+            }
+            if (aidsPass.Checked)
+            {
+                aids = "Pass";
+            }
+            if (pilesPass.Checked)
+            {
+                pls = "Pass";
+            }
+            string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
+            string currentDate = date.Replace("-", "/");
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            
+            DateTime eDate = DateTime.ParseExact(DropDownList1.Text, new string[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" }, provider, DateTimeStyles.None);
+            DateTime cd = eDate.AddDays(7);
+
+
+            MailMessage msg = new MailMessage();
+
+            string msg1 = "<table border=\"5\"><tr><th width=\"150px\">Test</th><th width=\"150px\">Result</th></tr>	<tr><td>Height</td><td>" + ht + "</td></tr>	<tr><td>Weight</td><td>" + wt + "</td></tr>	<tr><td>Weight Test</td><td>" + wight + "</td></tr>	<tr><td>Eye Test</td><td>" + eyetest + "</td></tr>	<tr><td>Ear Test</td><td>" + eartest + "</td></tr>	<tr><td>Nose Test</td><td>" + ntest + "</td></tr>	<tr><td>Physical Test</td><td>" + ph + "</td></tr>	<tr><td>Knocking Knees</td><td>" + kk + "</td></tr>	<tr><td>Pegion Test</td><td>" + pc + "</td></tr>	<tr><td>Flat Foot</td><td>" + ff + "</td></tr>	<tr><td>Vericose Veins</td><td>" + vv + "</td></tr>	<tr><td>Fractured Limbs</td><td>" + fl + "</td></tr>	<tr><td>Decayed Teeth</td><td>" + dt + "</td></tr>	<tr><td>Stammering Test</td><td>" + s + "</td></tr>	<tr><td>Hallux Rigidus</td><td>" + hr + "</td></tr>	<tr><td>Skin Disease</td><td>" + sd + "</td></tr>	<tr><td>Heartbeat</td><td>" + hb + "</td></tr>	<tr><td>Fingure\'s Deformity</td><td>" + fd + "</td></tr>	<tr><td>Gender testing</td><td>" + gt + "</td></tr>	<tr><td>Anal Testing</td><td>" + at + "</td></tr>	<tr><td>Testical Growth</td><td>" + tg + "</td></tr>	<tr><td>Hydrocele</td><td>" + hydro + "</td></tr>	<tr><td>Swollen Veins</td><td>" + sv + "</td></tr>	<tr><td>Penis/Viginal Test</td><td>" + pvt + "</td></tr>	<tr><td>AIDS</td><td>" + aids + "</td></tr>	<tr><td>Piles Test</td><td>" + pls + "</td></tr></table>";
+
+            msg.From = new MailAddress("projectpolice1@gmail.com");
+
+            //msg.To.Add(hemail.Value);
+            msg.To.Add("reddevil295@gmail.com");
+            msg.Subject = "Re-Medical;";
+            msg.Body = "<font color='red'>" + lblname.Text + "</font> <br/> Your Report is </br>  " + msg1 + "</br> ";
+
+            msg.IsBodyHtml = true;
+            SmtpClient smt = new SmtpClient();
+
+            smt.Host = "smtp.gmail.com";
+            NetworkCredential ntwd = new NetworkCredential();
+            ntwd.UserName = "projectpolice1@gmail.com";
+            ntwd.Password = "projectpolice@123";
+            smt.UseDefaultCredentials = true;
+            smt.Credentials = ntwd;
+            smt.Port = 587;
+            smt.EnableSsl = true;
+            //smt.Send(msg);
         }
     }
 }

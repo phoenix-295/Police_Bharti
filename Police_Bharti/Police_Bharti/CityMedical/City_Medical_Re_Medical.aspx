@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityMedical/CityMedicalMaster.Master" AutoEventWireup="true" CodeBehind="City_Medical_Test.aspx.cs" Inherits="Police_Bharti.CityMedical.City_Medical_Test" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityMedical/CityMedicalMaster.Master" AutoEventWireup="true" CodeBehind="City_Medical_Re_Medical.aspx.cs" Inherits="Police_Bharti.CityMedical.City_Medical_Re_Medical" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <asp:ScriptManager ID="MainScriptManager" runat="server" />
     
         <asp:UpdatePanel ID="panel1" runat="server" UpdateMode="Conditional">
@@ -87,7 +86,7 @@
                                         <h4>Candidate: </h4>
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" CssClass="form-control" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="290px">
+                                        <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" CssClass="form-control" Width="290px">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -732,10 +731,10 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 138px">
-                                                    <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" OnClick="btnsub_Click" Text="Submit" ValidationGroup="1" />
+                                                    <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" Text="Submit" ValidationGroup="1" />
                                                 </td>
                                                 <td>
-                                                    <asp:Button CssClass="btn btn-danger" ID="btnabs" runat="server" Text="Absent" OnClick="btnabs_Click" ValidationGroup="1" />
+                                                    <asp:Button CssClass="btn btn-danger" ID="btnabs" runat="server" Text="Absent" ValidationGroup="1" />
                                                 </td>
                                             </tr>
                                         </table>

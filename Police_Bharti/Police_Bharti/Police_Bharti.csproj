@@ -144,6 +144,7 @@
     <Content Include="CityAdmin\Invite_Candidates.aspx" />
     <Content Include="CityAdmin\View_Data.aspx" />
     <Content Include="CityMedical\City_Medical_Home.aspx" />
+    <Content Include="CityMedical\City_Medical_Re_Medical.aspx" />
     <Content Include="CityMedical\City_Medical_Test.aspx" />
     <Content Include="CityMedical\City_Medical_Test_Data.aspx" />
     <Content Include="CityMedical\City_Medical_ViewData.aspx" />
@@ -2346,6 +2347,13 @@
     </Compile>
     <Compile Include="CityMedical\City_Medical_Home.aspx.designer.cs">
       <DependentUpon>City_Medical_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityMedical\City_Medical_Re_Medical.aspx.cs">
+      <DependentUpon>City_Medical_Re_Medical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityMedical\City_Medical_Re_Medical.aspx.designer.cs">
+      <DependentUpon>City_Medical_Re_Medical.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityMedical\City_Medical_Test.aspx.cs">
       <DependentUpon>City_Medical_Test.aspx</DependentUpon>
