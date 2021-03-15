@@ -86,7 +86,7 @@
                                         <h4>Candidate: </h4>
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" CssClass="form-control" Width="290px">
+                                        <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" CssClass="form-control" Width="290px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -131,62 +131,20 @@
                     <tr>
                         <td style="vertical-align:top">&nbsp;</td>
                         <td rowspan="4" style=" width:300px; vertical-align:top">
-                            <div style="width:500px" class="card card-blue shadow-sm collapsed-card">
-              <div class="card-header">
-                <h3 class="card-title">Male Creteria</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                  <asp:Image Width="500px" ImageUrl="~/dist/img2/male_weight_2.jpg" ID="Image1" runat="server" />
-              </div>
-              <!-- /.card-body -->
-            </div>
+                            
 
 
                             <table class="w-100">
                                 <tr>
                                     <td>
-                                        <div style="width:500px" class="card card-success shadow-sm collapsed-card">
-              <div class="card-header">
-                <h3 class="card-title">Female Creteria</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                  <asp:Image Width="500px" ImageUrl="~/dist/img2/female_weight_2.jpg" ID="Image2" runat="server" />
-              </div>
-              <!-- /.card-body -->
-            </div>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <%--<td>
-                                        <div class="card-body">
-                                        <div class="filter-container p-0 row">
-                    <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
-                                              <a href="../dist/img2/female_weight_2.jpg" data-toggle="lightbox" data-title="sample 1 - white">
-                                                <img src="../dist/img2/female_weight_2" class="img-fluid mb-2" alt="white sample"/>
-                                              </a>
-                                        </div>
-                                            </div>
-                                            </div>
-                                    </td>--%>
+                                    
                                 </tr>
                             </table>
 
@@ -731,10 +689,10 @@
                                         <table class="w-100">
                                             <tr>
                                                 <td style="width: 138px">
-                                                    <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" Text="Submit" ValidationGroup="1" />
+                                                    <asp:Button ID="btnsub" runat="server" CssClass="btn btn-primary" Text="Submit" ValidationGroup="1" OnClick="btnsub_Click" />
                                                 </td>
                                                 <td>
-                                                    <asp:Button CssClass="btn btn-danger" ID="btnabs" runat="server" Text="Absent" ValidationGroup="1" />
+                                                    <asp:Button CssClass="btn btn-danger" ID="btnabs" runat="server" Text="Absent" ValidationGroup="1" OnClick="btnabs_Click" />
                                                 </td>
                                             </tr>
                                         </table>

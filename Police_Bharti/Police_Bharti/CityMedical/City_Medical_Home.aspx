@@ -12,8 +12,8 @@
                 <div class="small-box bg-info" style="width:250px">
               <div class="inner">
                 <h3>
-                    <asp:Label ID="lbl1" runat="server" Text="Label"></asp:Label></h3>
-                <p>Total Candidates</p>
+                    <asp:Label ID="lbl1" runat="server" Text="Label" ></asp:Label></h3>
+                <p class="font-italic">Total Candidates</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -29,7 +29,7 @@
               <div class="inner">
                 <h3>
                     <asp:Label ID="Label1" runat="server" Text="Medical"></asp:Label></h3>
-                <p><asp:Label ID="pstart" runat="server" Text=""></asp:Label>&nbsp;&nbsp; to&nbsp;&nbsp; <asp:Label ID="pend" runat="server" Text=""></asp:Label></p>
+                <p class="font-italic"><asp:Label ID="pstart" runat="server" Text=""></asp:Label>&nbsp;&nbsp; to&nbsp;&nbsp; <asp:Label ID="pend" runat="server" Text=""></asp:Label></p>
               </div>
               <div class="icon">
                 <i class="ion ion-calendar"></i>
@@ -59,7 +59,7 @@
                               <div class="info-box-content">
                                 <span class="info-box-text">Male</span>
                                 <span class="info-box-number">
-                                    <asp:Label ID="lblmale" runat="server" Text=""></asp:Label>
+                                    <asp:Label CssClass="font-italic" ID="lblmale" runat="server" Text=""></asp:Label>
                                 </span>
                               </div>
               <!-- /.info-box-content -->
@@ -73,7 +73,7 @@
                               <div class="info-box-content">
                                 <span class="info-box-text">Female</span>
                                 <span class="info-box-number">
-                                    <asp:Label ID="lblfemale" runat="server" Text=""></asp:Label>
+                                    <asp:Label CssClass="font-italic" ID="lblfemale" runat="server" Text=""></asp:Label>
                                 </span>
                               </div>
               <!-- /.info-box-content -->

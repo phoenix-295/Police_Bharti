@@ -120,7 +120,7 @@
           <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
-          <a href="City_Medical_Home.aspx" class="d-block">Medical</a>
+          <a href="City_Medical_Home.aspx" class="d-block ion-home">  Medical</a>
         </div>
       </div>
 
@@ -145,7 +145,7 @@
             
                <li class="nav-item">
             <a href="City_Medical_ViewData.aspx" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-table ion-document-text"></i>
               <p>
                 View all data
               </p>
@@ -163,7 +163,7 @@
           </li>
           <li class="nav-item">
             <a href="City_Medical_Test_Data.aspx" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="nav-icon fas ion-pie-graph"></i>
               <p>
                 View Results
               </p>
@@ -171,14 +171,16 @@
               
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+            <a href="City_Medical_Re_Medical.aspx" class="nav-link">
+              <i class="nav-icon fas ion-edit"></i>
               <p>
-                UI Elements            
+                Re-Medical            
               </p>
             </a>
           </li>
-          <li class="nav-item">
+
+
+          <%--<li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
@@ -214,7 +216,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>--%>
+
+
+
           <%--<li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
             <a href="pages/calendar.html" class="nav-link">
