@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityMedical/CityMedicalMaster.Master" AutoEventWireup="true" CodeBehind="City_Medical_ViewData.aspx.cs" Inherits="Police_Bharti.CityMedical.City_Medical_ViewData" %>
+﻿<%@ Page Title="Candidate Data" Language="C#" MasterPageFile="~/CityMedical/CityMedicalMaster.Master" AutoEventWireup="true" CodeBehind="City_Medical_ViewData.aspx.cs" Inherits="Police_Bharti.CityMedical.City_Medical_ViewData" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="MainScriptManager" runat="server" />
         <asp:UpdatePanel ID="panel1" runat="server">

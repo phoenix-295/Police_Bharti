@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CityMedical/CityMedicalMaster.Master" AutoEventWireup="true" CodeBehind="City_Medical_Home.aspx.cs" Inherits="Police_Bharti.CityMedical.City_Medical_Home" %>
+﻿<%@ Page Title="City-Medical Home" Language="C#" MasterPageFile="~/CityMedical/CityMedicalMaster.Master" AutoEventWireup="true" CodeBehind="City_Medical_Home.aspx.cs" Inherits="Police_Bharti.CityMedical.City_Medical_Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="w-100">
         <tr>

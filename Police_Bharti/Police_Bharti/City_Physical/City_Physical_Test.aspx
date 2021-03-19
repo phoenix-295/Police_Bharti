@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/City_Physical/City_Physical.Master" AutoEventWireup="true" CodeBehind="City_Physical_Test.aspx.cs" Inherits="Police_Bharti.City_Physical.City_Physical_Test" %>
+﻿<%@ Page Title="Physical test" Language="C#" MasterPageFile="~/City_Physical/City_Physical.Master" AutoEventWireup="true" CodeBehind="City_Physical_Test.aspx.cs" Inherits="Police_Bharti.City_Physical.City_Physical_Test" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="MainScriptManager" runat="server" />
     

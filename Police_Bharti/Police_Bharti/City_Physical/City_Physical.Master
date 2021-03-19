@@ -120,7 +120,7 @@
           <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
-          <a href="City_Physical_HomePage.aspx" class="d-block">Physical/Ground</a>
+          <a href="City_Physical_HomePage.aspx" class="d-block ion-home">&nbsp &nbsp Physical/Ground</a>
         </div>
       </div>
 
@@ -145,7 +145,7 @@
             
                <li class="nav-item">
             <a href="City_Physical_View_Data.aspx" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-database"></i>
               <p>
                 View all data
               </p>
@@ -162,13 +162,13 @@
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="City_Physical_Test.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Physical</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="City_Physical_Ground.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Ground</p>
                 </a>
               </li>
@@ -185,19 +185,43 @@
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="City_Physical_Test_Data.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Physical</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="City_Physical_Ground_Data.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Ground</p>
                 </a>
               </li>
                   </ul>
           </li>
-          <li class="nav-item">
+            <li class="nav-item menu-open">
+            
+               <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas ion-person"></i>
+              <p>
+                Edit-Profile
+              </p>
+            </a>
+          </li>
+            <li class="nav-item menu-open">
+            
+               <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
+              <p>
+                Change-Password
+              </p>
+            </a>
+          </li>
+
+
+
+
+<%--          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
@@ -241,7 +265,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>--%>
+
+
+
           <%--<li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
             <a href="pages/calendar.html" class="nav-link">
