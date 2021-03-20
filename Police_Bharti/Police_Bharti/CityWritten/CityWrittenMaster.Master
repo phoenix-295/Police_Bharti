@@ -120,7 +120,7 @@
           <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
-          <a href="City_Written_Home.aspx" class="d-block">Written</a>
+          <a href="City_Written_Home.aspx" class="d-block ion-home">&nbsp&nbsp Written</a>
         </div>
       </div>
 
@@ -145,7 +145,7 @@
             
                <li class="nav-item">
             <a href="City_Written_ViewData.aspx" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-database"></i>
               <p>
                 View all data
               </p>
@@ -153,7 +153,7 @@
           </li>
           <li class="nav-item">
             <a href="City_Written_Test.aspx" class="nav-link">
-              <i class="nav-icon fas fa-walking"></i>
+              <i class="nav-icon fas fa-pen"></i>
               <p>
                 Tests
                   
@@ -172,13 +172,29 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+              <i class="nav-icon fas fa-edit"></i>
               <p>
-                UI Elements            
+                Edit Records            
               </p>
             </a>
           </li>
-          <li class="nav-item">
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas ion-person"></i>
+              <p>
+                Edit-Profile            
+              </p>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a href="City_Written_Change_Password.aspx" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
+              <p>
+                Change-Password            
+              </p>
+            </a>
+          </li>
+          <%--<li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
@@ -214,7 +230,10 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>--%>
+
+
+
           <%--<li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
             <a href="pages/calendar.html" class="nav-link">
@@ -640,7 +659,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong><a href="Home.aspx">Admin Home</a>.</strong>
+    <strong><a href="City_Written_Home.aspx">Admin Home</a></strong>
     
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.1.0-rc

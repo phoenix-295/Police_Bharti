@@ -13,7 +13,7 @@
                                         <div class="inner">
                                             <h3>
                                                 <asp:Label ID="lbl1" runat="server" Text="Label"></asp:Label></h3>
-                                            <p>Total Candidates</p>
+                                            <p><em>Total Candidates</em></p>
                                         </div>
                                         <div class="icon">
                                             <i class="ion ion-person"></i>
@@ -29,7 +29,7 @@
               <div class="inner">
                 <h3>
                     <asp:Label ID="Label1" runat="server" Text="Physical"></asp:Label></h3>
-                <p><asp:Label ID="pstart" runat="server" Text=""></asp:Label>  to  <asp:Label ID="pend" runat="server" Text=""></asp:Label></p>
+                <p><em><asp:Label ID="pstart" runat="server" Text=""></asp:Label>  to</em> <em>  <asp:Label ID="pend" runat="server" Text=""></asp:Label></em></p>
               </div>
               <div class="icon">
                 <i class="ion ion-calendar"></i>
@@ -45,7 +45,7 @@
               <div class="inner">
                 <h3>
                     <asp:Label ID="Label2" runat="server" Text="Written"></asp:Label></h3>
-                <p><asp:Label ID="Label3" runat="server" Text=""></asp:Label>  to  <asp:Label ID="Label4" runat="server" Text=""></asp:Label></p>
+                <p><em><asp:Label ID="Label3" runat="server" Text=""></asp:Label>  to</em> <em>  <asp:Label ID="Label4" runat="server" Text=""></asp:Label></em></p>
               </div>
               <div class="icon">
                 <i class="ion ion-calendar"></i>
@@ -61,7 +61,7 @@
               <div class="inner">
                 <h3>
                     <asp:Label ID="Label5" runat="server" Text="Medical"></asp:Label></h3>
-                <p><asp:Label ID="Label6" runat="server" Text=""></asp:Label>  to  <asp:Label ID="Label7" runat="server" Text=""></asp:Label></p>
+                <p><em><asp:Label ID="Label6" runat="server" Text=""></asp:Label>  to</em> <em>  <asp:Label ID="Label7" runat="server" Text=""></asp:Label></em></p>
               </div>
               <div class="icon">
                 <i class="ion ion-calendar"></i>
@@ -90,7 +90,9 @@
                               <div class="info-box-content">
                                 <span class="info-box-text">Male</span>
                                 <span class="info-box-number">
+                                    <em>
                                     <asp:Label ID="lblmale" runat="server" Text=""></asp:Label>
+                                  </em>
                                 </span>
                               </div>
               <!-- /.info-box-content -->
@@ -104,7 +106,9 @@
                               <div class="info-box-content">
                                 <span class="info-box-text">Female</span>
                                 <span class="info-box-number">
+                                    <em>
                                     <asp:Label ID="lblfemale" runat="server" Text=""></asp:Label>
+                                  </em>
                                 </span>
                               </div>
               <!-- /.info-box-content -->

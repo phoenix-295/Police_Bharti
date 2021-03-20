@@ -143,10 +143,14 @@
     <Content Include="CityAdmin\City_Written_Reg.aspx" />
     <Content Include="CityAdmin\Invite_Candidates.aspx" />
     <Content Include="CityAdmin\View_Data.aspx" />
+    <Content Include="CityMedical\City_Medical_Change_Password.aspx" />
     <Content Include="CityMedical\City_Medical_Home.aspx" />
+    <Content Include="CityMedical\City_Medical_Re_Medical.aspx" />
     <Content Include="CityMedical\City_Medical_Test.aspx" />
     <Content Include="CityMedical\City_Medical_Test_Data.aspx" />
     <Content Include="CityMedical\City_Medical_ViewData.aspx" />
+    <Content Include="CityMedical\favicon.ico" />
+    <Content Include="CityWritten\City_Written_Change_Password.aspx" />
     <Content Include="CityWritten\City_Written_Home.aspx" />
     <Content Include="CityWritten\City_Written_Test.aspx" />
     <Content Include="CityWritten\City_Written_test_Data.aspx" />
@@ -2340,12 +2344,26 @@
     <Compile Include="CityMedical\CityMedicalMaster.Master.designer.cs">
       <DependentUpon>CityMedicalMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="CityMedical\City_Medical_Change_Password.aspx.cs">
+      <DependentUpon>City_Medical_Change_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityMedical\City_Medical_Change_Password.aspx.designer.cs">
+      <DependentUpon>City_Medical_Change_Password.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CityMedical\City_Medical_Home.aspx.cs">
       <DependentUpon>City_Medical_Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CityMedical\City_Medical_Home.aspx.designer.cs">
       <DependentUpon>City_Medical_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityMedical\City_Medical_Re_Medical.aspx.cs">
+      <DependentUpon>City_Medical_Re_Medical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityMedical\City_Medical_Re_Medical.aspx.designer.cs">
+      <DependentUpon>City_Medical_Re_Medical.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityMedical\City_Medical_Test.aspx.cs">
       <DependentUpon>City_Medical_Test.aspx</DependentUpon>
@@ -2374,6 +2392,13 @@
     </Compile>
     <Compile Include="CityWritten\CityWrittenMaster.Master.designer.cs">
       <DependentUpon>CityWrittenMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CityWritten\City_Written_Change_Password.aspx.cs">
+      <DependentUpon>City_Written_Change_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityWritten\City_Written_Change_Password.aspx.designer.cs">
+      <DependentUpon>City_Written_Change_Password.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityWritten\City_Written_Home.aspx.cs">
       <DependentUpon>City_Written_Home.aspx</DependentUpon>

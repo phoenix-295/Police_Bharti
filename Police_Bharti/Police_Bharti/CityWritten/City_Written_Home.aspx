@@ -12,8 +12,8 @@
                 <div class="small-box bg-info" style="width:250px">
               <div class="inner">
                 <h3>
-                    <asp:Label ID="lbl1" runat="server" Text="Label"></asp:Label></h3>
-                <p>Total Candidates</p>
+                    <asp:Label ID="lbl1" runat="server" Text="Label" style="font-weight: normal"></asp:Label></h3>
+                <p>T<em>otal Candidates</em></p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -28,8 +28,8 @@
                 <div class="small-box bg-warning" style="width:250px">
               <div class="inner">
                 <h3>
-                    <asp:Label ID="Label1" runat="server" Text="Written"></asp:Label></h3>
-                <p><asp:Label ID="pstart" runat="server" Text=""></asp:Label>&nbsp;&nbsp; to&nbsp;&nbsp; <asp:Label ID="pend" runat="server" Text=""></asp:Label></p>
+                    <asp:Label ID="Label1" runat="server" Text="Written" style="font-weight: normal"></asp:Label></h3>
+                <p><em><asp:Label ID="pstart" runat="server" Text=""></asp:Label></em>&nbsp;&nbsp; <em>to</em>&nbsp;&nbsp; <em> <asp:Label ID="pend" runat="server" Text=""></asp:Label></em></p>
               </div>
               <div class="icon">
                 <i class="ion ion-calendar"></i>
@@ -59,7 +59,9 @@
                               <div class="info-box-content">
                                 <span class="info-box-text">Male</span>
                                 <span class="info-box-number">
+                                    <em>
                                     <asp:Label ID="lblmale" runat="server" Text=""></asp:Label>
+                                  </em>
                                 </span>
                               </div>
               <!-- /.info-box-content -->
@@ -73,7 +75,9 @@
                               <div class="info-box-content">
                                 <span class="info-box-text">Female</span>
                                 <span class="info-box-number">
+                                    <em>
                                     <asp:Label ID="lblfemale" runat="server" Text=""></asp:Label>
+                                  </em>
                                 </span>
                               </div>
               <!-- /.info-box-content -->

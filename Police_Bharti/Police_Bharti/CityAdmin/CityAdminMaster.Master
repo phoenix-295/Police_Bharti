@@ -107,7 +107,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="Home.aspx" class="brand-link">
+    <a href="CityAdminHome.aspx" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Home</span>
     </a>
@@ -120,7 +120,7 @@
           <%--<img src="dist/img/unauthorized-person.png" class="img-circle elevation-2" alt="User Image">--%>
         </div>
         <div class="info">
-          <a href="CityAdminHome.aspx" class="d-block">City Admin</a>
+          <a href="CityAdminHome.aspx" class="d-block ion-home">&nbsp&nbsp City Admin</a>
         </div>
       </div>
 
@@ -145,7 +145,7 @@
             
                <li class="nav-item">
             <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas ion-person-add"></i>
               <p>
                 Registration
                   <i class="fas fa-angle-left right"></i>
@@ -154,19 +154,19 @@
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="City_Ground_Reg.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Ground Test</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="City_Written_Reg.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Written Test</p>
                 </a>
               </li>
             <li class="nav-item">
                 <a href="Gramin_Admin_Registration.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Medical Officer Registration</p>
                 </a>
               </li>
@@ -175,48 +175,66 @@
              
           <li class="nav-item">
             <a href="View_Data.aspx" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-database"></i>
               <p>
-                View Records
+                View Data
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="Admin_Home.aspx" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas ion-stats-bars"></i>
               <p>
-                View Data
+                View Results
                   <i class="fas fa-angle-left right"></i>
               </p>
             </a>
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="CityGroundTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Ground</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="CityPhysicalTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Physical</p>
                 </a>
               </li>
                   <li class="nav-item">
                 <a href="CityPhysicalTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Medical</p>
                 </a>
               </li>
                   <li class="nav-item">
                 <a href="CityPhysicalTestData.aspx" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-dot-circle nav-icon"></i>
                   <p>Written</p>
                 </a>
               </li>
                   </ul>
           </li>
-          <li class="nav-item">
+        <li class="nav-item">
+            <a href="View_Data.aspx" class="nav-link">
+              <i class="nav-icon fas ion-person"></i>
+              <p>
+                Edit-Profile
+              </p>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a href="View_Data.aspx" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
+              <p>
+                Change-Password
+              </p>
+            </a>
+          </li>
+
+
+          <%--<li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
@@ -268,7 +286,11 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>--%>
+
+
+
+
           <%--<li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
             <a href="pages/calendar.html" class="nav-link">

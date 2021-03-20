@@ -3,14 +3,13 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
-using System.Web.Security;
-using System.Net.Mail;
-using System.Net;
 using System.Globalization;
+using System.Net;
+using System.Net.Mail;
 
 namespace Police_Bharti.CityMedical
 {
-    public partial class City_Medical_Test : System.Web.UI.Page
+    public partial class City_Medical_Re_Medical : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,9 +19,6 @@ namespace Police_Bharti.CityMedical
                 get_cand();
                 commp();
                 fill_data();
-                //findr();
-                t1();
-                
             }
         }
 
@@ -55,7 +51,7 @@ namespace Police_Bharti.CityMedical
             try
             {
                 string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-                string s2 = "SELECT application_Id,medical_date FROM pb_city_data where medical_date='" + DropDownList1.Text + "'";
+                string s2 = "SELECT application_Id,medical_date FROM pb_city_data where medical_date='" + DropDownList1.Text + "' and m_comment is not null";
                 MySqlConnection conn = new MySqlConnection(s1);
                 conn.Open();
                 MySqlDataAdapter da1 = new MySqlDataAdapter(s2, s1);
@@ -73,7 +69,7 @@ namespace Police_Bharti.CityMedical
                 Response.Write(e);
             }
         }
-        
+
         protected void t1()
         {
             int remain = 0, tot = 0;
@@ -110,12 +106,12 @@ namespace Police_Bharti.CityMedical
             }
         }
 
-        
+
 
         protected void fill_data()
         {
 
-            string m_f = "",m_w="";
+            string m_f = "", m_w = "";
             try
             {
                 string s1 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
@@ -152,7 +148,7 @@ namespace Police_Bharti.CityMedical
                             Label2.Visible = false;
                         }
 
-                        if (r1["eyetest"].ToString()=="1")
+                        if (r1["eyetest"].ToString() == "1")
                         {
                             rbfail.Checked = false;
                             rbpass.Checked = true;
@@ -163,7 +159,7 @@ namespace Police_Bharti.CityMedical
                             rbpass.Checked = false;
                         }
 
-                        if (r1["eartest"].ToString()=="1")
+                        if (r1["eartest"].ToString() == "1")
                         {
                             earFail.Checked = false;
                             earPass.Checked = true;
@@ -173,208 +169,234 @@ namespace Police_Bharti.CityMedical
                             earFail.Checked = true;
                             earPass.Checked = false;
                         }
-                        
-                        if (r1["nosetest"].ToString()=="1")
+
+                        if (r1["nosetest"].ToString() == "1")
                         {
                             noseFail.Checked = false;
                             nosePass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             noseFail.Checked = true;
                             nosePass.Checked = false;
                         }
 
-                        if (r1["phandi"].ToString()=="1")
+                        if (r1["phandi"].ToString() == "1")
                         {
                             handiFail.Checked = false;
                             handiPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             handiFail.Checked = true;
                             handiPass.Checked = false;
                         }
 
-                        if (r1["knee"].ToString()=="1")
+                        if (r1["knee"].ToString() == "1")
                         {
                             kneeFail.Checked = false;
                             kneePass.Checked = true;
-                        }else{
+                        }
+                        else
+                        {
                             kneeFail.Checked = true;
                             kneePass.Checked = false;
                         }
 
-                        if (r1["pchest"].ToString()=="1")
+                        if (r1["pchest"].ToString() == "1")
                         {
                             pChestFail.Checked = false;
                             pChestPass.Checked = true;
                         }
-                        else {
+                        else
+                        {
                             pChestFail.Checked = true;
                             pChestPass.Checked = false;
                         }
 
-                        if (r1["feet"].ToString()=="1")
+                        if (r1["feet"].ToString() == "1")
                         {
                             footFail.Checked = false;
                             footPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             footFail.Checked = true;
                             footPass.Checked = false;
                         }
 
-                        if (r1["vveins"].ToString()=="1")
+                        if (r1["vveins"].ToString() == "1")
                         {
                             vvFail.Checked = false;
                             vvPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             vvFail.Checked = true;
                             vvPass.Checked = false;
                         }
 
-                        if (r1["flimbs"].ToString()=="1")
+                        if (r1["flimbs"].ToString() == "1")
                         {
                             fracturedLimbFail.Checked = false;
                             fracturedLimbPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             fracturedLimbFail.Checked = true;
                             fracturedLimbPass.Checked = false;
                         }
 
-                        if (r1["dteeth"].ToString()=="1")
+                        if (r1["dteeth"].ToString() == "1")
                         {
                             teethFail.Checked = false;
                             teethPass.Checked = true;
                         }
-                        else {
+                        else
+                        {
                             teethFail.Checked = true;
                             teethPass.Checked = false;
                         }
 
-                        if (r1["stammering"].ToString()=="1")
+                        if (r1["stammering"].ToString() == "1")
                         {
                             stammeringFail.Checked = false;
                             stammeringPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             stammeringFail.Checked = true;
                             stammeringPass.Checked = false;
                         }
 
-                        if (r1["hrigidus"].ToString()=="1")
+                        if (r1["hrigidus"].ToString() == "1")
                         {
                             hrFail.Checked = false;
                             hrPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             hrFail.Checked = true;
                             hrPass.Checked = false;
                         }
 
-                        if (r1["skin"].ToString()=="1")
+                        if (r1["skin"].ToString() == "1")
                         {
                             sdFail.Checked = false;
                             sdPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             sdFail.Checked = true;
                             sdPass.Checked = false;
                         }
 
-                        if (r1["heartbeat"].ToString()=="1")
+                        if (r1["heartbeat"].ToString() == "1")
                         {
                             hbFail.Checked = false;
                             hbPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             hbFail.Checked = true;
                             hbPass.Checked = false;
                         }
 
-                        if (r1["fingured"].ToString()=="1")
+                        if (r1["fingured"].ToString() == "1")
                         {
                             fdFail.Checked = false;
                             fdPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             fdFail.Checked = true;
                             fdPass.Checked = false;
                         }
 
-                        if (r1["gendertest"].ToString()=="1")
+                        if (r1["gendertest"].ToString() == "1")
                         {
                             gtFail.Checked = false;
                             gtPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             gtFail.Checked = true;
                             gtPass.Checked = false;
                         }
 
-                        if (r1["anal"].ToString()=="1")
+                        if (r1["anal"].ToString() == "1")
                         {
                             atFail.Checked = false;
                             atPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             atFail.Checked = true;
                             atPass.Checked = false;
                         }
 
-                        if (r1["testicalg"].ToString()=="1")
+                        if (r1["testicalg"].ToString() == "1")
                         {
                             tgFail.Checked = false;
                             tgPass.Checked = true;
                         }
-                        else{
+                        else
+                        {
                             tgFail.Checked = true;
                             tgPass.Checked = false;
                         }
 
-                        if (r1["hydrocele"].ToString()=="1")
+                        if (r1["hydrocele"].ToString() == "1")
                         {
                             hFail.Checked = false;
                             hPass.Checked = true;
                         }
-                        else {
+                        else
+                        {
                             hFail.Checked = true;
                             hPass.Checked = false;
                         }
 
-                        if (r1["sveins"].ToString()=="1")
+                        if (r1["sveins"].ToString() == "1")
                         {
                             svFail.Checked = false;
                             svPass.Checked = true;
-                        }else{
+                        }
+                        else
+                        {
                             svFail.Checked = true;
                             svPass.Checked = false;
                         }
 
-                        if (r1["pvtest"].ToString()=="1")
+                        if (r1["pvtest"].ToString() == "1")
                         {
                             ptFail.Checked = false;
                             ptPass.Checked = true;
-                        }else{
+                        }
+                        else
+                        {
                             ptFail.Checked = true;
                             ptPass.Checked = false;
                         }
 
-                        if (r1["aids"].ToString()=="1")
+                        if (r1["aids"].ToString() == "1")
                         {
                             aidsFail.Checked = false;
                             aidsPass.Checked = true;
-                        }else{
+                        }
+                        else
+                        {
                             aidsFail.Checked = true;
                             aidsPass.Checked = false;
                         }
 
-                        if (r1["piles"].ToString()=="1")
+                        if (r1["piles"].ToString() == "1")
                         {
                             pilesFail.Checked = false;
                             pilesPass.Checked = true;
-                        }else{
+                        }
+                        else
+                        {
                             pilesFail.Checked = true;
                             pilesPass.Checked = false;
                         }
@@ -389,7 +411,7 @@ namespace Police_Bharti.CityMedical
                             txtweight.Enabled = false;
                             btnsub.Enabled = false;
                             btnabs.Enabled = false;
-                            
+
                         }
                         else
                         {
@@ -415,7 +437,7 @@ namespace Police_Bharti.CityMedical
                     lblr1.Text = "Done";
 
                 }
-                else if (m_w == "" && m_f=="1")
+                else if (m_w == "" && m_f == "1")
                 {
                     lblr1.ForeColor = Color.Red;
                     lblr1.Text = "Absent";
@@ -442,7 +464,7 @@ namespace Police_Bharti.CityMedical
                     txtxomm.Enabled = true;
                 }
                 Label2.Visible = true;
-                
+
                 txtxomm.Visible = true;
                 rqcm.Enabled = true;
             }
@@ -455,7 +477,6 @@ namespace Police_Bharti.CityMedical
             }
         }
 
-
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             get_cand();
@@ -465,6 +486,11 @@ namespace Police_Bharti.CityMedical
             lblr1.Text = "";
             t1();
             //findr();
+        }
+
+        protected void pilesPass_CheckedChanged(object sender, EventArgs e)
+        {
+            commp();
         }
 
         protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
@@ -477,10 +503,10 @@ namespace Police_Bharti.CityMedical
 
         protected void btnsub_Click(object sender, EventArgs e)
         {
-            
-            int wight=0, eyetest=0, eartest=0, ntest=0, ph=0, kk=0, pc=0, ff=0, vv=0, fl=0, dt=0, s=0,
-                hr=0, sd=0, hb=0, fd=0, gt=0, at=0, tg=0, hydro=0, sv=0, pvt=0, aids=0, pls=0;
-            
+
+            int wight = 0, eyetest = 0, eartest = 0, ntest = 0, ph = 0, kk = 0, pc = 0, ff = 0, vv = 0, fl = 0, dt = 0, s = 0,
+                hr = 0, sd = 0, hb = 0, fd = 0, gt = 0, at = 0, tg = 0, hydro = 0, sv = 0, pvt = 0, aids = 0, pls = 0;
+
             if (hfweight.Value == "Pass")
             {
                 wight = 1;
@@ -642,7 +668,7 @@ namespace Police_Bharti.CityMedical
 
         protected void btnabs_Click(object sender, EventArgs e)
         {
-            
+
             string s2;
             s2 = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             MySqlConnection conn = new MySqlConnection(s2);
@@ -713,12 +739,7 @@ namespace Police_Bharti.CityMedical
             lblres.Text = "Marked Absent";
             fill_data();
             t1();
-           
-        }
 
-        protected void pilesPass_CheckedChanged(object sender, EventArgs e)
-        {
-            commp();
         }
 
         protected void sendEmail()
@@ -825,14 +846,14 @@ namespace Police_Bharti.CityMedical
             string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             string currentDate = date.Replace("-", "/");
             CultureInfo provider = CultureInfo.InvariantCulture;
-           
+
             DateTime eDate = DateTime.ParseExact(DropDownList1.Text, new string[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" }, provider, DateTimeStyles.None);
             DateTime cd = eDate.AddDays(7);
 
 
             MailMessage msg = new MailMessage();
 
-            string msg1 = "<table border=\"5\"><tr><th width=\"150px\">Test</th><th width=\"150px\">Result</th></tr>	<tr><td>Height</td><td>" + ht + "</td></tr>	<tr><td>Weight</td><td>" + wt + "</td></tr>	<tr><td>Weight Test</td><td>"+ wight + "</td></tr>	<tr><td>Eye Test</td><td>"+ eyetest +"</td></tr>	<tr><td>Ear Test</td><td>"+eartest+"</td></tr>	<tr><td>Nose Test</td><td>" + ntest + "</td></tr>	<tr><td>Physical Test</td><td>" + ph + "</td></tr>	<tr><td>Knocking Knees</td><td>" + kk + "</td></tr>	<tr><td>Pegion Test</td><td>" + pc + "</td></tr>	<tr><td>Flat Foot</td><td>" + ff + "</td></tr>	<tr><td>Vericose Veins</td><td>" + vv + "</td></tr>	<tr><td>Fractured Limbs</td><td>" + fl + "</td></tr>	<tr><td>Decayed Teeth</td><td>" + dt + "</td></tr>	<tr><td>Stammering Test</td><td>" + s + "</td></tr>	<tr><td>Hallux Rigidus</td><td>" + hr + "</td></tr>	<tr><td>Skin Disease</td><td>" + sd + "</td></tr>	<tr><td>Heartbeat</td><td>" + hb + "</td></tr>	<tr><td>Fingure\'s Deformity</td><td>" + fd + "</td></tr>	<tr><td>Gender testing</td><td>" + gt + "</td></tr>	<tr><td>Anal Testing</td><td>" + at + "</td></tr>	<tr><td>Testical Growth</td><td>" + tg + "</td></tr>	<tr><td>Hydrocele</td><td>" + hydro + "</td></tr>	<tr><td>Swollen Veins</td><td>" + sv + "</td></tr>	<tr><td>Penis/Viginal Test</td><td>" + pvt + "</td></tr>	<tr><td>AIDS</td><td>" + aids + "</td></tr>	<tr><td>Piles Test</td><td>" + pls +"</td></tr></table>";
+            string msg1 = "<table border=\"5\"><tr><th width=\"150px\">Test</th><th width=\"150px\">Result</th></tr>	<tr><td>Height</td><td>" + ht + "</td></tr>	<tr><td>Weight</td><td>" + wt + "</td></tr>	<tr><td>Weight Test</td><td>" + wight + "</td></tr>	<tr><td>Eye Test</td><td>" + eyetest + "</td></tr>	<tr><td>Ear Test</td><td>" + eartest + "</td></tr>	<tr><td>Nose Test</td><td>" + ntest + "</td></tr>	<tr><td>Physical Test</td><td>" + ph + "</td></tr>	<tr><td>Knocking Knees</td><td>" + kk + "</td></tr>	<tr><td>Pegion Test</td><td>" + pc + "</td></tr>	<tr><td>Flat Foot</td><td>" + ff + "</td></tr>	<tr><td>Vericose Veins</td><td>" + vv + "</td></tr>	<tr><td>Fractured Limbs</td><td>" + fl + "</td></tr>	<tr><td>Decayed Teeth</td><td>" + dt + "</td></tr>	<tr><td>Stammering Test</td><td>" + s + "</td></tr>	<tr><td>Hallux Rigidus</td><td>" + hr + "</td></tr>	<tr><td>Skin Disease</td><td>" + sd + "</td></tr>	<tr><td>Heartbeat</td><td>" + hb + "</td></tr>	<tr><td>Fingure\'s Deformity</td><td>" + fd + "</td></tr>	<tr><td>Gender testing</td><td>" + gt + "</td></tr>	<tr><td>Anal Testing</td><td>" + at + "</td></tr>	<tr><td>Testical Growth</td><td>" + tg + "</td></tr>	<tr><td>Hydrocele</td><td>" + hydro + "</td></tr>	<tr><td>Swollen Veins</td><td>" + sv + "</td></tr>	<tr><td>Penis/Viginal Test</td><td>" + pvt + "</td></tr>	<tr><td>AIDS</td><td>" + aids + "</td></tr>	<tr><td>Piles Test</td><td>" + pls + "</td></tr></table>";
 
             msg.From = new MailAddress("projectpolice1@gmail.com");
 
@@ -841,7 +862,7 @@ namespace Police_Bharti.CityMedical
 
             msg.Subject = "Re-Medical;";
 
-            msg.Body = "<font color='red'>" + lblname.Text +  "</font> <br/> Your Report is </br>  " + msg1 + "</br> </br> If you wish you can come for remedical on " + cd.ToShortDateString() +"";
+            msg.Body = "<font color='red'>" + lblname.Text + "</font> <br/> Your Report is </br>  " + msg1 + "</br> </br> If you wish you can come for remedical on " + cd.ToShortDateString() + "";
 
             msg.IsBodyHtml = true;
             SmtpClient smt = new SmtpClient();
@@ -961,7 +982,7 @@ namespace Police_Bharti.CityMedical
             string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             string currentDate = date.Replace("-", "/");
             CultureInfo provider = CultureInfo.InvariantCulture;
-            
+
             DateTime eDate = DateTime.ParseExact(DropDownList1.Text, new string[] { "dd.MM.yyyy", "dd-MM-yyyy", "dd/MM/yyyy" }, provider, DateTimeStyles.None);
             DateTime cd = eDate.AddDays(7);
 

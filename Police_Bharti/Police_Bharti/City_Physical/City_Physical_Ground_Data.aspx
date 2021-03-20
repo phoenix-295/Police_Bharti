@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/City_Physical/City_Physical.Master" AutoEventWireup="true" CodeBehind="City_Physical_Ground_Data.aspx.cs" Inherits="Police_Bharti.City_Physical.City_Physical_Ground_Data" %>
+﻿<%@ Page Title="Result Ground" Language="C#" MasterPageFile="~/City_Physical/City_Physical.Master" AutoEventWireup="true" CodeBehind="City_Physical_Ground_Data.aspx.cs" Inherits="Police_Bharti.City_Physical.City_Physical_Ground_Data" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="MainScriptManager" runat="server" />
         <asp:UpdatePanel ID="panel1" runat="server">

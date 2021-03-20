@@ -10,7 +10,7 @@
 namespace Police_Bharti.CityMedical {
     
     
-    public partial class City_Medical_Test {
+    public partial class City_Medical_Re_Medical {
         
         /// <summary>
         /// MainScriptManager control.

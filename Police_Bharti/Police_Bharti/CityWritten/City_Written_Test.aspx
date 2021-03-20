@@ -131,50 +131,12 @@
                     <tr>
                         <td style="vertical-align:top">&nbsp;</td>
                         <td rowspan="4" style=" width:300px; vertical-align:top">
-                            <div class="card card-blue shadow-sm collapsed-card">
-              <div class="card-header">
-                <h3 class="card-title">Height Creteria</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                Male : &nbsp; > 165 cms
-              </div>
-                <div class="card-body">
-                Female : &nbsp; >155 cms
-              </div>
-              <!-- /.card-body -->
-            </div>
+                            
 
                             <table class="w-100">
                                 <tr>
                                                     <td rowspan="4" style=" width:300px; vertical-align:top">
-                                        <div class="card card-success shadow-sm collapsed-card">
-                          <div class="card-header">
-                            <h3 class="card-title">Male Chest Creteria</h3>
-
-                            <div class="card-tools">
-                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                <i class="fas fa-plus"></i>
-                              </button>
-                            </div>
-                            <!-- /.card-tools -->
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body">
-                            Minimun : &nbsp; > 79 cms
-                          </div>
-                            <div class="card-body">
-                            Maximum : &nbsp; Minimum + 5 cms
-                          </div>
-                          <!-- /.card-body -->
-                        </div>
+                                        
 
                         </td>
                                 </tr>
