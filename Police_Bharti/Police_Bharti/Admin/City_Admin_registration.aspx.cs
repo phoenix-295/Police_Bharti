@@ -41,7 +41,7 @@ namespace Police_Bharti.Admin
             }
             catch (Exception x)
             {
-                Response.Write(x);
+                //Response.Write(x);
             }
         }
 

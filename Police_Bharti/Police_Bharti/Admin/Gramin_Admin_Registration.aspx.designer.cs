@@ -40,6 +40,15 @@ namespace Police_Bharti.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtid;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace Police_Bharti.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtbklno;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// txtname control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace Police_Bharti.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtname;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// txtbdate control.
@@ -85,6 +112,15 @@ namespace Police_Bharti.Admin {
         protected global::AjaxControlToolkit.ToolkitScriptManager toolScriptManageer1;
         
         /// <summary>
+        /// RequiredFieldValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        
+        /// <summary>
         /// cal1 control.
         /// </summary>
         /// <remarks>
@@ -103,6 +139,15 @@ namespace Police_Bharti.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtjdate;
         
         /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        
+        /// <summary>
         /// CalendarExtender1 control.
         /// </summary>
         /// <remarks>
@@ -119,5 +164,23 @@ namespace Police_Bharti.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtadd;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
     }
 }

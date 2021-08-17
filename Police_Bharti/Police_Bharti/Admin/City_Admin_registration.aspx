@@ -25,7 +25,9 @@
                                                 <asp:Label ID="Label1" runat="server" Text="Label"><h5>ID No:</h5></asp:Label>
                                         </td>
                                         <td style="height: 60px">
-                                            <h5><asp:TextBox CssClass="form-control" Width="291px" ID="txtid" runat="server"></asp:TextBox></h5>
+                                            <h5><asp:TextBox CssClass="form-control" Width="291px" ID="txtid" runat="server"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtid" ErrorMessage="Id Cannot be empty" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                            </h5>
                                         </td>
                                     </tr>
                                     <tr>
@@ -34,6 +36,7 @@
                                         </td>
                                         <td style="height: 60px">
                                             <asp:TextBox CssClass="form-control" Width="291px" ID="txtbklno" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtbklno" ErrorMessage="Buckle Cannot be empty" SetFocusOnError="True">*</asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
                                     <tr>
@@ -42,6 +45,8 @@
                                         </td>
                                         <td style="height: 60px">
                                             <asp:TextBox CssClass="form-control" Width="291px" ID="txtname" runat="server"></asp:TextBox>
+                                            
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtname" ErrorMessage="Name cannot be empty" SetFocusOnError="True">*</asp:RequiredFieldValidator>
                                             
                                         </td>
                                     </tr>
@@ -52,6 +57,7 @@
                                         <td style="height:60px">
                                             <asp:TextBox CssClass="form-control" Width="291px" ID="txtbdate" runat="server" ToolTip="Birth Date dd/mm/yyyy"></asp:TextBox>
                                             <cc1:ToolkitScriptManager ID="toolScriptManageer1" runat="server"></cc1:ToolkitScriptManager> 
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtbdate" ErrorMessage="Birthdate cannot be empty" SetFocusOnError="True">*</asp:RequiredFieldValidator>
                                                     <cc1:CalendarExtender ID="cal1" PopupButtonID="TextBox1" runat="server" TargetControlID="txtbdate"  
                         Format="dd/MM/yyyy"/>
                                         </td>
@@ -62,6 +68,7 @@
                                         </td>
                                         <td  style="height:60px">
                                             <asp:TextBox CssClass="form-control" Width="291px" ID="txtjdate" runat="server" ToolTip="Joning Date dd/mm/yyyy"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtjdate" ErrorMessage="Joining date cannot be empty" SetFocusOnError="True">*</asp:RequiredFieldValidator>
                                             <cc1:CalendarExtender ID="CalendarExtender1" PopupButtonID="TextBox1" runat="server" TargetControlID="txtjdate"  
                         Format="dd/MM/yyyy"/>
                                         </td>
@@ -73,6 +80,8 @@
                                         <td  style="height:60px">
                                             <asp:TextBox CssClass="form-control" Width="291px" ID="txtadd" runat="server"></asp:TextBox>
                                             
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtadd" ErrorMessage="Address cannot be empty" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                            
                                         </td>
                                     </tr>
                                     <tr>
@@ -80,8 +89,9 @@
                                             &nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td align="center" colspan="2" style="color:Red;">
-                                            &nbsp;</td>
+                                        <td colspan="2" style="color:Red;" class="text-left">
+                                            <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                                        </td>
                                     </tr>
                                 </table>
                             

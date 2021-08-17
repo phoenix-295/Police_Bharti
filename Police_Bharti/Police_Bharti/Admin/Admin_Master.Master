@@ -143,7 +143,7 @@
           <li class="nav-item menu-open">
             
                <li class="nav-item">
-            <a href="Admin_Home.aspx" class="nav-link">
+            <a href="Home.aspx" class="nav-link">
               <i class="nav-icon fas fa-registered"></i>
               <p>
                 Registration
@@ -685,7 +685,7 @@
     <strong><a href="Home.aspx">Admin Home</a>.</strong>
     
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.1.0-rc
+      <%--<b>Version</b> 3.1.0-rc--%>
     </div>
   </footer>
 
